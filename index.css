@@ -1,0 +1,73 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #10252d, #1e3138, #1b2f38);
+    color: #eaeaea;
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle, #000000, #1a1a1a);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+header h1 a {
+    color: #00e5ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+header h1 a:hover {
+    color: #ffd700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+header img {
+    margin-top: 25px;
+    width: 260px;
+    border-radius: 50%;
+    border: 5px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+header img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 5
