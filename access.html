@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Question Papers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Previous Question Papers</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="questions.html">Papers</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <input type="text" id="search" placeholder="Search subject or year..." onkeyup="searchPapers()">
+
+  <select id="filter" onchange="filterClass()">
+    <option value="all">All</option>
+    <option value="10">10th</option>
+    <option value="12">12th</option>
+  </select>
+
+  <div id="papers">
+
+    <div class="paper 10">
+      <h3>10th Maths – 2023</h3>
+      <a href="papers/10th-maths-2023.pdf" download class="btn">Download</a>
+    </div>
+
+    <div class="paper 12">
+      <h3>12th Physics – 2022</h3>
+      <a href="papers/12th-physics-2022.pdf" download class="btn">Download</a>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 InfoAll</p>
+</footer>
+
+<script src="access.js"></script>
+</body>
+</html>
