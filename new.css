@@ -45,3 +45,134 @@ body {
 .btn:hover {
     background-color: #155ab6;
 }
+/* Page layout fix */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow */
+.main {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* mobile friendly */
+}
+
+/* Footer styling */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f5f9;
+  font-size: 14px;
+}
+
+/* Footer nav */
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-nav a {
+  color: #2563eb;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  text-align: center;
+  padding: 25px 15px;
+  background: linear-gradient(135deg, #2563eb, #1e40af); /* home page blue */
+  color: white;
+  font-size: 14px;
+}
+.footer-nav a {
+  color: #e0f2fe; /* light blue */
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.footer-nav span {
+  color: #bfdbfe;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/* Common pages: About, Contact, Privacy */
+.page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Page heading */
+.page-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb; /* Home page blue */
+}
+
+/* Paragraph text */
+.page-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* Links inside pages */
+.page-container a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-container a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Mobile friendly */
+@media (max-width: 600px) {
+  .page-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .page-container h1 {
+    font-size: 22px;
+  }
+
+  .page-container p {
+    font-size: 15px;
+  }
+}
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  background: #1e40af;
+}
+
