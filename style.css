@@ -1,0 +1,66 @@
+/* Common pages: About, Contact, Privacy */
+.page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Page heading */
+.page-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb; /* Home page blue */
+}
+
+/* Paragraph text */
+.page-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* Links inside pages */
+.page-container a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-container a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Mobile friendly */
+@media (max-width: 600px) {
+  .page-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .page-container h1 {
+    font-size: 22px;
+  }
+
+  .page-container p {
+    font-size: 15px;
+  }
+}
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  background: #1e40af;
+}
+
