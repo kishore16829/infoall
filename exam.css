@@ -1,0 +1,38 @@
+.site-header {
+  background: #1e40af;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.site-header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+.exam-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.exam-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background: #f1f5f9;
+  margin-top: 40px;
+}

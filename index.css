@@ -67,7 +67,7 @@ header img {
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
-header img:hover {
+ header img:hover {
     transform: scale(1.08);
     box-shadow: 0 0 5
+}
