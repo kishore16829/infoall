@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Quiz | InfoAll</title>
+  <link rel="stylesheet" href="career-quiz.css">
+</head>
+<body>
+
+<header class="quiz-header">
+  <h1>Career Guidance Quiz</h1>
+  <p>Answer honestly to discover the best career path for you</p>
+</header>
+
+<main class="quiz-container">
+
+  <form id="careerQuiz">
+
+    <div class="question">
+      <h3>1. Which class are you studying?</h3>
+      <label><input type="radio" name="class" value="10" required> Class 10</label>
+      <label><input type="radio" name="class" value="12"> Class 12</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Which subject do you enjoy the most?</h3>
+      <label><input type="radio" name="interest" value="science" required> Maths / Science</label>
+      <label><input type="radio" name="interest" value="biology"> Biology</label>
+      <label><input type="radio" name="interest" value="commerce"> Business / Accounts</label>
+      <label><input type="radio" name="interest" value="arts"> Arts / History / Language</label>
+    </div>
+
+    <div class="question">
+      <h3>3. What kind of work do you like?</h3>
+      <label><input type="radio" name="work" value="technical" required> Problem solving & technology</label>
+      <label><input type="radio" name="work" value="medical"> Helping people & healthcare</label>
+      <label><input type="radio" name="work" value="management"> Managing money & business</label>
+      <label><input type="radio" name="work" value="creative"> Creative & social work</label>
+    </div>
+
+    <div class="question">
+      <h3>4. What is your future goal?</h3>
+      <label><input type="radio" name="goal" value="highsalary" required> High salary</label>
+      <label><input type="radio" name="goal" value="service"> Government service</label>
+      <label><input type="radio" name="goal" value="business"> Own business</label>
+      <label><input type="radio" name="goal" value="passion"> Follow my passion</label>
+    </div>
+
+    <button type="submit" class="submit-btn">Get Career Suggestion</button>
+
+  </form>
+
+  <div id="result" class="result-box"></div>
+
+</main>
+
+<script src="career-quiz.js"></script>
+</body>
+</html>
