@@ -1,54 +1,64 @@
 document.getElementById("careerQuiz").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const studentClass = document.querySelector('input[name="class"]:checked').value;
-  const interest = document.querySelector('input[name="interest"]:checked').value;
-  const work = document.querySelector('input[name="work"]:checked').value;
+  const form = new FormData(this);
 
-  let resultText = "";
+  const studentClass = form.get("class");
+  const interest = form.get("interest");
+  const work = form.get("work");
+  const goal = form.get("goal");
 
+  let resultHTML = "";
+  let career = "";
+  let advice = "";
+
+  /* CAREER LOGIC */
   if (interest === "science" && work === "technical") {
-    resultText = `
-      <h2>Recommended Career: Engineering / Technology</h2>
-      <p>Suitable for students who enjoy problem solving, maths, and technology.</p>
-      <ul>
-        <li>Courses: BTech, BSc Computer Science</li>
-        <li>Exams: JEE, State Engineering Exams</li>
-      </ul>
-    `;
+    career = "Engineering / Technology";
+    advice = "You have strong analytical skills. Focus on Maths, Physics, and competitive exams like JEE.";
   } 
   else if (interest === "biology" && work === "medical") {
-    resultText = `
-      <h2>Recommended Career: Medical & Healthcare</h2>
-      <p>Best for students interested in biology and helping people.</p>
-      <ul>
-        <li>Courses: MBBS, Nursing, BSc Allied Health</li>
-        <li>Exams: NEET</li>
-      </ul>
-    `;
+    career = "Medical / Healthcare";
+    advice = "You enjoy helping others. Biology-based careers like MBBS, Nursing, or Pharmacy suit you.";
   } 
   else if (interest === "commerce" && work === "management") {
-    resultText = `
-      <h2>Recommended Career: Commerce & Business</h2>
-      <p>Ideal for finance, business, and management-oriented students.</p>
-      <ul>
-        <li>Courses: BCom, BBA, CA, CS</li>
-        <li>Careers: Accountant, Manager, Entrepreneur</li>
-      </ul>
-    `;
+    career = "Commerce & Business";
+    advice = "You have a business mindset. Consider CA, BBA, MBA, or Entrepreneurship.";
+  } 
+  else if (interest === "arts" && work === "creative") {
+    career = "Arts & Creative Fields";
+    advice = "Your creativity is your strength. Careers in design, media, teaching, or social sciences fit well.";
   } 
   else {
-    resultText = `
-      <h2>Recommended Career: Arts & Humanities</h2>
-      <p>Perfect for creative thinkers and social-oriented students.</p>
-      <ul>
-        <li>Courses: BA, LLB, Journalism</li>
-        <li>Careers: Civil Services, Teaching, Media</li>
-      </ul>
-    `;
+    career = "Multi-disciplinary Career";
+    advice = "You have flexible interests. Explore career counseling and skill-based courses.";
   }
 
-  document.getElementById("result").innerHTML = resultText;
-  document.getElementById("result").style.display = "block";
-  document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+  /* GOAL BASED SUGGESTION */
+  let goalTip = "";
+  if (goal === "highsalary") {
+    goalTip = "Choose skill-oriented courses and focus on industry demand.";
+  } else if (goal === "service") {
+    goalTip = "Start preparing early for government exams like UPSC, SSC, or TNPSC.";
+  } else if (goal === "business") {
+    goalTip = "Learn finance, marketing, and real-world business skills.";
+  } else {
+    goalTip = "Follow your passion but also build strong core skills.";
+  }
+
+  /* FINAL RESULT HTML */
+  resultHTML = `
+    <h2>🎯 Career Suggestion</h2>
+    <p><strong>Recommended Path:</strong> ${career}</p>
+    <p>${advice}</p>
+    <p><strong>Goal Tip:</strong> ${goalTip}</p>
+    <p style="margin-top:12px;"><em>This result is based on your answers. Explore more options and guidance.</em></p>
+  `;
+
+  const resultBox = document.getElementById("result");
+  resultBox.innerHTML = resultHTML;
+  resultBox.style.display = "block";
+
+  /* Smooth scroll to result */
+  resultBox.scrollIntoView({ behavior: "smooth" });
 });
