@@ -1,64 +1,66 @@
 document.getElementById("careerQuiz").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const form = new FormData(this);
+  // Career scores
+  let scores = {
+    engineering: 0,
+    medical: 0,
+    commerce: 0,
+    arts: 0
+  };
 
-  const studentClass = form.get("class");
-  const interest = form.get("interest");
-  const work = form.get("work");
-  const goal = form.get("goal");
+  // Collect all selected answers
+  const answers = document.querySelectorAll("input[type='radio']:checked");
 
-  let resultHTML = "";
-  let career = "";
-  let advice = "";
+  answers.forEach(answer => {
+    const value = answer.value;
 
-  /* CAREER LOGIC */
-  if (interest === "science" && work === "technical") {
-    career = "Engineering / Technology";
-    advice = "You have strong analytical skills. Focus on Maths, Physics, and competitive exams like JEE.";
-  } 
-  else if (interest === "biology" && work === "medical") {
-    career = "Medical / Healthcare";
-    advice = "You enjoy helping others. Biology-based careers like MBBS, Nursing, or Pharmacy suit you.";
-  } 
-  else if (interest === "commerce" && work === "management") {
-    career = "Commerce & Business";
-    advice = "You have a business mindset. Consider CA, BBA, MBA, or Entrepreneurship.";
-  } 
-  else if (interest === "arts" && work === "creative") {
-    career = "Arts & Creative Fields";
-    advice = "Your creativity is your strength. Careers in design, media, teaching, or social sciences fit well.";
-  } 
-  else {
-    career = "Multi-disciplinary Career";
-    advice = "You have flexible interests. Explore career counseling and skill-based courses.";
+    if (value === "engineering") scores.engineering += 10;
+    if (value === "medical") scores.medical += 10;
+    if (value === "commerce") scores.commerce += 10;
+    if (value === "arts") scores.arts += 10;
+  });
+
+  const total = scores.engineering + scores.medical + scores.commerce + scores.arts;
+
+  // Calculate percentage
+  const percent = {};
+  for (let career in scores) {
+    percent[career] = total === 0 ? 0 : Math.round((scores[career] / total) * 100);
   }
 
-  /* GOAL BASED SUGGESTION */
-  let goalTip = "";
-  if (goal === "highsalary") {
-    goalTip = "Choose skill-oriented courses and focus on industry demand.";
-  } else if (goal === "service") {
-    goalTip = "Start preparing early for government exams like UPSC, SSC, or TNPSC.";
-  } else if (goal === "business") {
-    goalTip = "Learn finance, marketing, and real-world business skills.";
-  } else {
-    goalTip = "Follow your passion but also build strong core skills.";
-  }
+  // Find best match
+  const bestCareer = Object.keys(percent).reduce((a, b) =>
+    percent[a] > percent[b] ? a : b
+  );
 
-  /* FINAL RESULT HTML */
-  resultHTML = `
-    <h2>🎯 Career Suggestion</h2>
-    <p><strong>Recommended Path:</strong> ${career}</p>
-    <p>${advice}</p>
-    <p><strong>Goal Tip:</strong> ${goalTip}</p>
-    <p style="margin-top:12px;"><em>This result is based on your answers. Explore more options and guidance.</em></p>
+  // Career descriptions
+  const careerInfo = {
+    engineering: "You enjoy problem-solving, technology, and innovation.",
+    medical: "You like helping people and are interested in biology and healthcare.",
+    commerce: "You have a business mindset and leadership qualities.",
+    arts: "You are creative and expressive with strong imagination."
+  };
+
+  // Result HTML
+  const resultHTML = `
+    <h2>🎯 Career Match Result</h2>
+    <p><strong>Best Career Match:</strong> ${bestCareer.toUpperCase()}</p>
+    <p>${careerInfo[bestCareer]}</p>
+
+    <h3>📊 Career Match Percentage</h3>
+    <ul>
+      <li>Engineering: ${percent.engineering}%</li>
+      <li>Medical: ${percent.medical}%</li>
+      <li>Commerce: ${percent.commerce}%</li>
+      <li>Arts: ${percent.arts}%</li>
+    </ul>
+
+    <p><em>This result is based on your answers. Explore more guidance before final decisions.</em></p>
   `;
 
   const resultBox = document.getElementById("result");
   resultBox.innerHTML = resultHTML;
   resultBox.style.display = "block";
-
-  /* Smooth scroll to result */
   resultBox.scrollIntoView({ behavior: "smooth" });
 });
