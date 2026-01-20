@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+  color: #000;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* CONTENT */
+.content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.content section {
+  margin-bottom: 35px;
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.content h2 {
+  color: #ffdd00;
+  margin-bottom: 10px;
+}
+
+/* AI BOX */
+.ai-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: #0f2027;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+}
+
+.ai-header {
+  background: linear-gradient(135deg, #ffdd00, #00f2fe);
+  color: #000;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ai-messages {
+  height: 180px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.ai-messages div {
+  margin-bottom: 8px;
+}
+
+#aiInput {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .ai-box {
+    width: 90%;
+    right: 5%;
+  }
+}
+/* Language buttons */
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.lang-switch button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.lang-switch button:hover {
+  transform: scale(1.1);
+}
+
+/* AI animation */
+.ai-messages div {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* College list */
+.college-list {
+  padding-left: 20px;
+}
+
+.college-list li {
+  margin: 8px 0;
+  transition: transform 0.2s ease;
+}
+
+.college-list li:hover {
+  transform: translateX(6px);
+  color: #ffdd00;
+}
+/* ===== Best Colleges Footer ===== */
+.college-footer {
+  background: linear-gradient(135deg, #1c1c1c, #232526, #414345);
+  color: #ffffff;
+  padding: 45px 20px 15px;
+  margin-top: 70px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.college-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: space-between;
+}
+
+.college-footer-box {
+  flex: 1;
+  min-width: 240px;
+}
+
+.college-footer h3,
+.college-footer h4 {
+  color: #ffcc70;
+  margin-bottom: 12px;
+}
+
+.college-footer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #dddddd;
+}
+
+.college-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.college-footer ul li {
+  margin-bottom: 8px;
+}
+
+.college-footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.college-footer ul li a:hover {
+  color: #ffcc70;
+  padding-left: 5px;
+}
+
+.college-footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  color: #bbbbbb;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .college-footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .college-footer ul li a:hover {
+    padding-left: 0;
+  }
+}
