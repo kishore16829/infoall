@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEE & NEET Preparation | InfoAll</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Complete JEE and NEET preparation guide with study tips, resources, mock tests, and interactive quiz for students.">
+  <meta name="keywords" content="JEE preparation, NEET preparation, IIT exam, medical entrance, study tips, online quiz">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+/* ===== Global ===== */
+:root{
+  --primary:#6a11cb;
+  --secondary:#2575fc;
+  --accent:#ffcc70;
+  --dark:#0f172a;
+  --light:#f8fafc;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#eef2ff,#f8fafc);
+  color:#1e293b;
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  border-radius:16px;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+img:hover{
+  transform:scale(1.03);
+  box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+/* ===== Header ===== */
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:90px 20px 70px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://www.transparenttextures.com/patterns/cubes.png");
+  opacity:.15;
+}
+
+header h1{
+  font-size:2.8rem;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+header p{
+  max-width:850px;
+  margin:auto;
+  opacity:.95;
+  font-size:1.05rem;
+}
+
+/* ===== Layout ===== */
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:60px 20px 20px;
+}
+
+section{
+  margin-bottom:70px;
+  background:#ffffffcc;
+  backdrop-filter:blur(8px);
+  border-radius:20px;
+  padding:35px 30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+section h2{
+  font-size:2rem;
+  margin-bottom:15px;
+  color:var(--primary);
+  position:relative;
+}
+
+section h2::after{
+  content:"";
+  width:60px;
+  height:4px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  border-radius:2px;
+}
+
+section p{
+  margin-bottom:15px;
+  text-align:justify;
+  color:#334155;
+}
+
+/* ===== Cards ===== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:linear-gradient(135deg,#ffffff,#f1f5ff);
+  padding:28px 22px;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+  transition:transform .35s ease, box-shadow .35s ease;
+  border-top:4px solid var(--secondary);
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.01);
+  box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:var(--secondary);
+}
+
+/* ===== Image Section ===== */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+/* ===== Quiz ===== */
+.quiz-box{
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
+  padding:35px 30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  max-width:720px;
+  margin:auto;
+  border:2px solid #e0e7ff;
+}
+
+.quiz-box h3{
+  margin-bottom:18px;
+  color:var(--primary);
+}
+
+.quiz-option{
+  background:#eef2ff;
+  padding:13px 16px;
+  border-radius:10px;
+  margin:10px 0;
+  cursor:pointer;
+  transition:all .25s ease;
+  border:1px solid #dbeafe;
+}
+
+.quiz-option:hover{
+  background:#dbeafe;
+  transform:translateX(5px);
+}
+
+.quiz-option.selected{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  border:none;
+}
+
+.quiz-btn{
+  margin-top:18px;
+  padding:12px 28px;
+  border:none;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:600;
+  letter-spacing:.5px;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.quiz-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(37,117,252,.4);
+}
+
+.quiz-result{
+  margin-top:15px;
+  font-weight:600;
+  color:#0f172a;
+}
+
+/* ===== Footer ===== */
+footer{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:#fff;
+  text-align:center;
+  padding:30px 15px;
+  margin-top:50px;
+}
+
+/* ===== Animations ===== */
+section{
+  animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);} 
+  to{opacity:1; transform:translateY(0);} 
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  header h1{font-size:2.1rem;}
+  section{padding:25px 18px;}
+}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>JEE & NEET Preparation Guide</h1>
+    <p>Complete study roadmap, expert tips, visual learning resources, and interactive quiz to help students crack IIT-JEE and NEET with confidence.</p>
+  </header>
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>The Joint Entrance Examination (JEE) and National Eligibility cum Entrance Test (NEET) are two of the most competitive entrance examinations in India. Every year, lakhs of students appear for these exams with the dream of entering top engineering and medical colleges. Proper planning, smart study techniques, and consistent practice are essential for success.</p>
+
+      <p>This page provides a complete professional guide for JEE and NEET preparation. It includes subject-wise strategies, daily study routines, motivational tips, and interactive tools to evaluate your readiness.</p>
+    </section>
+
+    <!-- Strategy Cards -->
+    <section>
+      <h2>Preparation Strategies</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>📘 Concept Clarity</h3>
+          <p>Focus on understanding basic concepts in Physics, Chemistry, and Mathematics/Biology. Strong fundamentals help solve complex problems easily.</p>
+        </div>
+
+        <div class="card">
+          <h3>🕒 Time Management</h3>
+          <p>Create a daily timetable and allocate fixed hours for each subject. Maintain balance between study and rest.</p>
+        </div>
+
+        <div class="card">
+          <h3>📝 Practice Tests</h3>
+          <p>Regular mock tests improve speed, accuracy, and exam confidence. Analyze mistakes carefully.</p>
+        </div>
+
+        <div class="card">
+          <h3>💪 Mental Strength</h3>
+          <p>Stay motivated, manage stress, and maintain a positive mindset throughout your preparation journey.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Images -->
+    <section>
+      <h2>Study Environment</h2>
+      <div class="image-grid">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Student studying">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Books and notes">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Online learning">
+      </div>
+    </section>
+
+    <!-- Detailed Guide -->
+    <section>
+      <h2>Detailed Study Guide</h2>
+
+      <p>JEE aspirants must focus on Mathematics, Physics, and Chemistry, while NEET students concentrate on Biology along with Physics and Chemistry. Each subject requires a different approach. Physics needs numerical problem-solving, Chemistry demands conceptual understanding and memory, and Mathematics requires continuous practice.</p>
+
+      <p>Students should revise formulas regularly, prepare short notes, and solve previous year question papers. Online platforms, video lectures, and digital mock tests can enhance preparation quality. A disciplined schedule combined with self-evaluation is the key to success.</p>
+
+      <p>It is equally important to take care of physical and mental health. Proper sleep, nutritious food, and short breaks during study sessions improve concentration and memory retention.</p>
+    </section>
+
+    <!-- Quiz -->
+    <section>
+      <h2>Self Assessment Quiz</h2>
+
+      <div class="quiz-box">
+        <h3 id="quiz-question"></h3>
+        <div id="quiz-options"></div>
+        <button class="quiz-btn" onclick="nextQuestion()">Next</button>
+        <div class="quiz-result" id="quiz-result"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 InfoAll | JEE & NEET Preparation Platform</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const quizData = [
+      {
+        q: "Which subject is most important for NEET?",
+        options: ["Mathematics", "Biology", "Computer", "Economics"],
+        answer: 1
+      },
+      {
+        q: "How many hours of study is ideal per day?",
+        options: ["2-3 Hours", "4-6 Hours", "8-10 Hours", "15 Hours"],
+        answer: 2
+      },
+      {
+        q: "Which exam is for engineering admission?",
+        options: ["NEET", "CAT", "JEE", "UPSC"],
+        answer: 2
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let selected = null;
+
+    const questionEl = document.getElementById("quiz-question");
+    const optionsEl = document.getElementById("quiz-options");
+    const resultEl = document.getElementById("quiz-result");
+
+    function loadQuestion() {
+      selected = null;
+      const data = quizData[current];
+      questionEl.textContent = data.q;
+      optionsEl.innerHTML = "";
+
+      data.options.forEach((opt, i) => {
+        const div = document.createElement("div");
+        div.className = "quiz-option";
+        div.textContent = opt;
+        div.onclick = () => selectOption(div, i);
+        optionsEl.appendChild(div);
+      });
+    }
+
+    function selectOption(el, index) {
+      document.querySelectorAll(".quiz-option").forEach(o => o.classList.remove("selected"));
+      el.classList.add("selected");
+      selected = index;
+    }
+
+    function nextQuestion() {
+      if (selected === null) {
+        alert("Please select an option");
+        return;
+      }
+
+      if (selected === quizData[current].answer) {
+        score++;
+      }
+
+      current++;
+
+      if (current < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      questionEl.textContent = "Quiz Completed!";
+      optionsEl.innerHTML = "";
+      resultEl.textContent = `Your Score: ${score} / ${quizData.length}`;
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>
