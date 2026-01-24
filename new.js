@@ -1,45 +1,37 @@
-// Simple button click effect
-document.querySelector('.btn').addEventListener('click', () => {
-    console.log("Button clicked! Redirecting...");
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("ai-input");
-  const messages = document.getElementById("ai-messages");
+const btn = document.getElementById("ai-btn");
+const box = document.getElementById("ai-box");
+const msg = document.getElementById("ai-msg");
+const text = document.getElementById("ai-text");
 
-  if (!input || !messages) {
-    console.error("AI elements not found");
-    return;
-  }
+btn.onclick = ()=>{
+  box.style.display = "block";
+  box.style.animation = "pop .3s ease";
+};
 
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" && input.value.trim() !== "") {
-      const userMsg = input.value.trim();
-      addMessage("You", userMsg);
-      input.value = "";
+function closeAI(){
+  box.style.display = "none";
+}
 
-      setTimeout(() => {
-        addMessage("AI", getAIReply(userMsg));
-      }, 600);
-    }
-  });
+function sendAI(){
 
-  function addMessage(sender, text) {
-    const msg = document.createElement("div");
-    msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
-    msg.style.marginBottom = "8px";
-    messages.appendChild(msg);
-    messages.scrollTop = messages.scrollHeight;
-  }
+  let q = text.value.trim();
+  if(!q) return;
 
-  function getAIReply(msg) {
-    msg = msg.toLowerCase();
+  msg.innerHTML += `<p><b>You:</b> ${q}</p>`;
 
-    if (msg.includes("10th")) return "📘 10th question papers & formulas are available on this website.";
-    if (msg.includes("12th")) return "📗 12th study materials and PDFs are available here.";
-    if (msg.includes("career")) return "🎯 Try the career quiz to find your best career option.";
-    if (msg.includes("formula")) return "📄 Formula PDFs are available for download.";
-    if (msg.includes("paper")) return "📝 Previous year question papers are available subject-wise.";
+  setTimeout(()=>{
+    msg.innerHTML += `<p><b>AI:</b> Please explore our learning sections 😊</p>`;
+    msg.scrollTop = msg.scrollHeight;
+  },500);
 
-    return "🤖 I can help with exams, question papers, formulas, and careers.";
-  }
-});
+  text.value="";
+}
+
+/* Animation */
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes pop{
+  from{transform:scale(.7);opacity:0}
+  to{transform:scale(1);opacity:1}
+}`;
+document.head.appendChild(style);

@@ -24,104 +24,79 @@
 </head>
 
 <body>
-  <div class="bg-animation">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 
-  
-
-<header class="site-header">
-  <h1>WELCOME TO MY WIKIPEDIA</h1>
+<header class="header">
+  <h1>InfoAll – Student Learning Hub</h1>
+  <p>Learn • Prepare • Succeed</p>
 </header>
 
 <main class="main">
 
-  <section class="cards">
+  <section class="grid">
 
-    <div class="container">
-      <p>Click the button to see information about Ajith Kumar</p>
-      <a href="new.html" class="btn">CLICK ME</a>
-    </div>
+    <a href="new.html" class="card">
+      <h3>Wikipedia</h3>
+      <p>Ajith Kumar Info</p>
+    </a>
 
-    <div class="container">
-      <p>Click the button to see previous 10th & 12th question papers</p>
-      <a href="main.html" class="btn">CLICK ME</a>
-    </div>
+    <a href="main.html" class="card">
+      <h3>Question Papers</h3>
+      <p>10th & 12th PDFs</p>
+    </a>
 
-    <div class="container">
-      <p>Click the button to see exam tips</p>
-      <a href="exam.html" class="btn">CLICK ME</a>
-    </div>
+    <a href="exam.html" class="card">
+      <h3>Exam Tips</h3>
+      <p>Smart Preparation</p>
+    </a>
 
-    <div class="container">
-      <p>Download 10th & 12th maths formula sheet</p>
-      <a href="formulamain.html" class="btn">CLICK ME</a>
-    </div>
-    <div class="container">
-      <p>Click the button to see career guidance after 10th and 12th </p>
-      <a href="career.html" class="btn">CLICK ME</a>
-    </div>
-     <div class="container">
-      <p>Click the button to see about Best colleges  </p>
-      <a href="best-colleges.html" class="btn">CLICK ME</a>
-    </div>
-     <div class="container">
-      <p>Click the button to see about JEE and NEET Preparation and Stratagies</p>
-      <a href="jee.html" class="btn">CLICK ME</a>
-    </div>
-    <div class="container">
-      <p>Click the button to see about Government Exams and Preparation </p>
-      <a href="government.html" class="btn">CLICK ME</a>
-    </div>
+    <a href="formulamain.html" class="card">
+      <h3>Formulas</h3>
+      <p>Maths Sheets</p>
+    </a>
+
+    <a href="career.html" class="card">
+      <h3>Career</h3>
+      <p>Guidance</p>
+    </a>
+
+    <a href="best-colleges.html" class="card">
+      <h3>Colleges</h3>
+      <p>Top Institutes</p>
+    </a>
+
+    <a href="jee.html" class="card">
+      <h3>JEE / NEET</h3>
+      <p>Preparation</p>
+    </a>
+
+    <a href="government.html" class="card">
+      <h3>Govt Exams</h3>
+      <p>UPSC, SSC, TNPSC</p>
+    </a>
 
   </section>
 
-  <!-- AdSense (inside content – SAFE) -->
-  <ins class="adsbygoogle"
-    style="display:block; margin:20px auto"
-    data-ad-client="ca-pub-6646790901746418"
-    data-ad-slot="XXXXXXXXXX"
-    data-ad-format="auto"></ins>
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
 </main>
-<!-- Google AdSense Ad -->
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-client="ca-pub-6646790901746418"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
 
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<!-- AI Button -->
+<button id="ai-btn">🤖 Help</button>
 
+<div id="ai-box">
+  <div class="ai-head">
+    Student AI
+    <span onclick="closeAI()">✖</span>
+  </div>
+  <div id="ai-msg"></div>
+  <input id="ai-text" placeholder="Ask here...">
+  <button onclick="sendAI()">Send</button>
+</div>
 
-<footer class="site-footer">
+<footer>
   <p>© 2025 InfoAll</p>
-  <nav class="footer-nav">
-    <a href="about.html">About</a>
-    <span>|</span>
-    <a href="contact.html">Contact</a>
-    <span>|</span>
-    <a href="privacy.html">Privacy Policy</a>
-  </nav>
 </footer>
 
 <script src="new.js"></script>
-<div id="ai-chat">
-  <div id="ai-header">🤖 Student AI Help</div>
-  <div id="ai-messages"></div>
-  <input type="text" id="ai-input" placeholder="Ask about exams, careers..." />
-</div>
 
 </body>
+
 </html>
