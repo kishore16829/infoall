@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Exam Preparation | InfoAll</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Complete Government Exam preparation guide for UPSC, SSC, Banking, Railways, TNPSC, and other competitive exams. Study plan, benefits, exam calendar, and practice quiz.">
+  <meta name="keywords" content="government exams, UPSC, SSC, Banking, TNPSC, railway exams, competitive exam preparation, govt jobs">
+  <meta name="author" content="InfoAll">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+   
+:root{
+  --primary:#2563eb;
+  --secondary:#7c3aed;
+  --dark:#0f172a;
+  --light:#f8fafc;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f8fafc;
+  color:#1e293b;
+  line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:70px 15px;
+  text-align:center;
+}
+
+header h1{
+  font-size:2.5rem;
+  margin-bottom:12px;
+}
+
+header p{
+  max-width:800px;
+  margin:auto;
+  font-size:1rem;
+}
+
+/* CONTAINER */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 15px;
+}
+
+/* SECTIONS */
+
+section{
+  background:#fff;
+  border-radius:14px;
+  padding:30px 25px;
+  margin-bottom:50px;
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+section h2{
+  color:var(--primary);
+  margin-bottom:15px;
+  font-size:1.9rem;
+}
+
+/* CARDS */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#f1f5f9;
+  padding:20px;
+  border-radius:12px;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* TABLE */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:10px;
+  border:1px solid #c7d2fe;
+}
+
+th{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* QUIZ */
+
+.quiz-box{
+  background:#f1f5f9;
+  padding:25px;
+  border-radius:15px;
+  max-width:600px;
+  margin:auto;
+}
+
+.quiz-option{
+  background:#fff;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid #e2e8f0;
+}
+
+.quiz-option:hover{
+  background:#e0e7ff;
+}
+
+.quiz-option.selected{
+  background:var(--primary);
+  color:#fff;
+}
+
+.quiz-btn{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:10px 25px;
+  border-radius:25px;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+.quiz-btn:hover{
+  opacity:.9;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+  header h1{font-size:2rem;}
+  section{padding:20px;}
+}
+/* AI Assistant */
+
+#ai-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:55px;
+  height:55px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  cursor:pointer;
+  z-index:9999;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+#ai-box{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:320px;
+  max-height:420px;
+  background:#fff;
+  border-radius:15px;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:9999;
+}
+
+#ai-header{
+  background:#2563eb;
+  color:#fff;
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+}
+
+#ai-chat{
+  flex:1;
+  padding:10px;
+  overflow-y:auto;
+  font-size:14px;
+}
+
+.ai-user{
+  text-align:right;
+  margin:6px 0;
+  color:#1e293b;
+}
+
+.ai-bot{
+  text-align:left;
+  margin:6px 0;
+  color:#2563eb;
+  font-weight:500;
+}
+
+#ai-input-box{
+  display:flex;
+  border-top:1px solid #ddd;
+}
+
+#ai-input{
+  flex:1;
+  padding:10px;
+  border:none;
+  outline:none;
+}
+
+#ai-input-box button{
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  padding:10px 15px;
+  cursor:pointer;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Government Exam Preparation Guide</h1>
+  <p>Your complete roadmap for UPSC, SSC, Banking, Railways, TNPSC, Defence, and other competitive exams with study plans, benefits, schedules, and practice tools.</p>
+</header>
+
+<div class="container">
+
+  <!-- INTRODUCTION -->
+  <section>
+    <h2>Introduction to Government Exams</h2>
+    <p>Government examinations in India are among the most competitive and prestigious career pathways for students and graduates. These exams provide opportunities to enter public service, administration, banking, defence, railways, and various government departments. Every year, millions of aspirants appear for these examinations with the aim of securing stable and respectable government jobs.</p>
+
+    <p>Popular exams such as UPSC Civil Services, SSC CGL, Banking PO/Clerk, TNPSC Group Exams, Railway Recruitment, and Defence Services attract candidates from all educational backgrounds. Success in these exams requires discipline, strategic planning, conceptual clarity, and continuous practice.</p>
+
+    <p>This page is designed as a comprehensive guide to help aspirants understand government exams, their benefits, preparation strategies, exam schedules, and career opportunities. With the right guidance and dedication, every student can achieve their dream of serving the nation.</p>
+  </section>
+
+  <!-- TYPES -->
+  <section>
+    <h2>Major Types of Government Exams</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>UPSC Exams</h3>
+        <p>Includes Civil Services, NDA, CDS, and Engineering Services. These exams recruit officers for IAS, IPS, IFS, and defence services.</p>
+      </div>
+
+      <div class="card">
+        <h3>SSC Exams</h3>
+        <p>SSC conducts CGL, CHSL, MTS, and GD exams for recruitment in central government departments.</p>
+      </div>
+
+      <div class="card">
+        <h3>Banking Exams</h3>
+        <p>IBPS, SBI, and RBI conduct PO, Clerk, and Officer exams for banking sector jobs.</p>
+      </div>
+
+      <div class="card">
+        <h3>State PSC</h3>
+        <p>TNPSC, APPSC, KPSC, and other state commissions recruit officers for state administration.</p>
+      </div>
+
+      <div class="card">
+        <h3>Railway Exams</h3>
+        <p>RRB conducts NTPC, Group D, and technical exams for Indian Railways.</p>
+      </div>
+
+      <div class="card">
+        <h3>Defence Exams</h3>
+        <p>Includes NDA, CDS, AFCAT, and CAPF for entry into armed forces and paramilitary services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section>
+    <h2>Benefits of Government Jobs</h2>
+
+    <p>Government jobs offer numerous benefits that make them highly attractive. One of the primary advantages is job security. Unlike private sector jobs, government positions are stable and protected from sudden layoffs.</p>
+
+    <p>Employees receive fixed salary structures, regular increments, pensions, medical benefits, housing facilities, and paid leaves. In addition, government jobs provide social respect, authority, and opportunities to contribute to national development.</p>
+
+    <p>Work-life balance is another major advantage. Most government jobs offer fixed working hours, allowing employees to maintain a healthy personal life. Training programs, promotions, and transfer opportunities further enhance career growth.</p>
+  </section>
+
+  <!-- EXAM CALENDAR -->
+  <section>
+    <h2>Annual Government Exam Calendar (Tentative)</h2>
+
+    <table>
+      <tr>
+        <th>Exam</th>
+        <th>Notification</th>
+        <th>Exam Month</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td>UPSC CSE</td>
+        <td>February</td>
+        <td>June</td>
+        <td>December</td>
+      </tr>
+      <tr>
+        <td>SSC CGL</td>
+        <td>March</td>
+        <td>July</td>
+        <td>November</td>
+      </tr>
+      <tr>
+        <td>Bank PO</td>
+        <td>August</td>
+        <td>October</td>
+        <td>January</td>
+      </tr>
+      <tr>
+        <td>TNPSC Group</td>
+        <td>April</td>
+        <td>September</td>
+        <td>December</td>
+      </tr>
+      <tr>
+        <td>RRB NTPC</td>
+        <td>May</td>
+        <td>August</td>
+        <td>November</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- STUDY PLAN -->
+  <section>
+    <h2>Smart Study Plan for Aspirants</h2>
+
+    <p>A systematic study plan is essential for cracking government exams. Aspirants should divide their preparation into three phases: foundation, practice, and revision. In the foundation phase, focus on understanding basic concepts of subjects like General Studies, Mathematics, Reasoning, English, and Current Affairs.</p>
+
+    <p>The practice phase involves solving previous year papers, mock tests, and sectional tests. This helps in improving speed and accuracy. The revision phase is crucial for retaining information and strengthening weak areas.</p>
+
+    <p>Daily newspaper reading, note-making, and regular self-evaluation must be included in the study routine. Consistency is more important than studying for long hours without focus.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section>
+    <h2>Government Exam Practice Quiz</h2>
+
+    <div class="quiz-box">
+      <h3 id="qText"></h3>
+      <div id="options"></div>
+      <button class="quiz-btn" onclick="nextQ()">Next Question</button>
+      <div class="quiz-result" id="result"></div>
+    </div>
+  </section>
+
+</div>
+<!-- AI Assistant Button -->
+<div id="ai-btn">🤖</div>
+
+<!-- AI Chat Box -->
+<div id="ai-box">
+
+  <div id="ai-header">
+    AI Study Assistant
+    <span onclick="closeAI()">✖</span>
+  </div>
+
+  <div id="ai-chat"></div>
+
+  <div id="ai-input-box">
+    <input type="text" id="ai-input" placeholder="Ask about exams...">
+    <button onclick="sendMsg()">Send</button>
+  </div>
+
+</div>
+
+
+<footer>
+  <p>© 2026 InfoAll | Government Exam Preparation Platform</p>
+</footer>
+
+<script>
+  const quiz = [
+    { q:"Which exam is conducted by UPSC?", o:["SSC CGL","Bank PO","Civil Services","RRB NTPC"], a:2 },
+    { q:"Which subject is important for all exams?", o:["Reasoning","History","Computer","Biology"], a:0 },
+    { q:"When is UPSC notification released?", o:["January","February","June","October"], a:1 },
+    { q:"Which bank conducts PO exam?", o:["RBI","SBI","IBPS","All"], a:3 },
+    { q:"Best way to improve speed?", o:["Reading","Mock Tests","Notes","Videos"], a:1 }
+  ];
+
+  let i=0, score=0, selected=null;
+
+  const qText=document.getElementById("qText");
+  const options=document.getElementById("options");
+  const result=document.getElementById("result");
+
+  function loadQ(){
+    selected=null;
+    qText.textContent=quiz[i].q;
+    options.innerHTML="";
+
+    quiz[i].o.forEach((opt,idx)=>{
+      const div=document.createElement("div");
+      div.className="quiz-option";
+      div.textContent=opt;
+      div.onclick=()=>selectOpt(div,idx);
+      options.appendChild(div);
+    });
+  }
+
+  function selectOpt(el,idx){
+    document.querySelectorAll(".quiz-option").forEach(o=>o.classList.remove("selected"));
+    el.classList.add("selected");
+    selected=idx;
+  }
+
+  function nextQ(){
+    if(selected===null){alert("Please select an option");return;}
+
+    if(selected===quiz[i].a) score++;
+    i++;
+
+    if(i<quiz.length) loadQ();
+    else showResult();
+  }
+
+  function showResult(){
+    qText.textContent="Quiz Completed!";
+    options.innerHTML="";
+    result.textContent=`Your Score: ${score} / ${quiz.length}`;
+  }
+
+  loadQ();
+</script>
+<script>
+async function sendMsg(){
+
+  let msg = document.getElementById("ai-input").value.trim();
+
+  if(msg==="") return;
+
+  addMsg("You",msg);
+
+  document.getElementById("ai-input").value="";
+
+  addMsg("AI","Typing...");
+
+  const res = await fetch("http://localhost:3000/chat",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({message:msg})
+  });
+
+  const data = await res.json();
+
+  document.querySelector(".ai-bot:last-child").remove();
+
+  addMsg("AI",data.reply);
+}
+
+function addMsg(sender,msg){
+
+  let div=document.createElement("div");
+
+  div.className = sender==="AI"?"ai-bot":"ai-user";
+
+  div.textContent = sender + ": " + msg;
+
+  document.getElementById("ai-chat").appendChild(div);
+
+}
+</script>
+
+</body>
+</html>
