@@ -31,6 +31,8 @@
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('ta')">தமிழ்</button>
 </div>
+ <!-- Voice Assistant -->
+<button class="voice-btn" onclick="startVoice()">🎤 Ask</button>
 
 
   <div class="logo">InfoAll</div>
@@ -190,6 +192,29 @@ Your complete platform for exams and careers.
   <input id="ai-text" placeholder="Ask here...">
   <button onclick="sendAI()">Send</button>
 </div>
+<!-- Study Planner -->
+
+<section class="planner" id="planner">
+
+  <h2>📅 Study Planner</h2>
+  <p>Plan your daily study and achieve your goals</p>
+
+  <div class="planner-box">
+    <input type="text" id="taskInput" placeholder="Enter subject or task">
+
+    <input type="time" id="timeInput">
+
+    <button onclick="addTask()">Add</button>
+    <button onclick="enableReminder()" class="remind-btn">
+  🔔 Enable Reminder
+</button>
+
+  </div>
+
+  <ul id="taskList"></ul>
+
+</section>
+
 
 <footer>
   <p>© 2025 InfoAll</p>
