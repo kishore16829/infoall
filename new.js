@@ -35,3 +35,64 @@ style.innerHTML = `
   to{transform:scale(1);opacity:1}
 }`;
 document.head.appendChild(style);
+// Search Function
+function searchSite(){
+
+  let q = document.getElementById("searchInput").value.toLowerCase();
+
+  if(q.includes("jee") || q.includes("neet")){
+    window.location.href="jee.html";
+  }
+
+  else if(q.includes("career")){
+    window.location.href="career.html";
+  }
+
+  else if(q.includes("college")){
+    window.location.href="best-colleges.html";
+  }
+
+  else if(q.includes("government") || q.includes("upsc")){
+    window.location.href="government.html";
+  }
+
+  else if(q===""){
+    alert("Type something to search");
+  }
+
+  else{
+    alert("No result found");
+  }
+}
+// Language Switch System
+
+function setLang(lang){
+
+  localStorage.setItem("lang", lang);
+
+  applyLang(lang);
+}
+
+function applyLang(lang){
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+
+    if(lang === "ta"){
+      el.textContent = el.getAttribute("data-ta");
+    }
+    else{
+      el.textContent = el.getAttribute("data-en");
+    }
+
+  });
+}
+
+// Load saved language
+window.addEventListener("load", () => {
+
+  let savedLang = localStorage.getItem("lang") || "en";
+
+  applyLang(savedLang);
+
+});
+

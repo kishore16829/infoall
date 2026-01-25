@@ -24,11 +24,111 @@
 </head>
 
 <body>
+  <!-- Navbar -->
+<nav class="navbar">
+  <!-- Language Switch -->
+<div class="lang-switch">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('ta')">தமிழ்</button>
+</div>
 
-<header class="header">
+
+  <div class="logo">InfoAll</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="jee.html">JEE / NEET</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="best-colleges.html">Colleges</a></li>
+    <li><a href="government.html">Govt Exams</a></li>
+  </ul>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search courses...">
+    <button onclick="searchSite()">🔍</button>
+  </div>
+
+</nav>
+
+  <header class="header">
   <h1>InfoAll – Student Learning Hub</h1>
   <p>Learn • Prepare • Succeed</p>
 </header>
+
+<!-- Premium Hero Section -->
+<section class="hero">
+
+  <div class="hero-content">
+   <h1 data-en="Learn Smart. Achieve More."
+    data-ta="புத்திசாலித்தனமாக படித்து வெற்றி பெறுங்கள்">
+Learn Smart. Achieve More.
+</h1>
+
+    <p data-en="Your complete platform for exams and careers."
+   data-ta="தேர்வுகள் மற்றும் தொழில்களுக்கு முழுமையான தளம்">
+Your complete platform for exams and careers.
+</p>
+
+
+    <div class="hero-btns">
+      <a href="jee.html" class="btn-primary">Start Learning</a>
+      <a href="career.html" class="btn-secondary">Explore Careers</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Students Learning">
+  </div>
+
+</section>
+
+<!-- Feature Section -->
+<section class="features">
+
+  <h2>Why Choose InfoAll?</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>🎯 Smart Preparation</h3>
+      <p>Structured study plans for exams like JEE, NEET, TNPSC, and UPSC.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🤖 AI Support</h3>
+      <p>24/7 AI assistant to solve doubts and guide your learning journey.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>📚 Quality Content</h3>
+      <p>Updated notes, quizzes, and expert-curated materials.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🏆 Career Guidance</h3>
+      <p>Personalized career recommendations and college information.</p>
+    </div>
+
+  </div>
+
+</section>
+<section class="quick">
+
+  <h2>Quick Access</h2>
+
+  <div class="quick-grid">
+
+    <a href="jee.html">📘 JEE/NEET</a>
+    <a href="career.html">🎯 Career</a>
+    <a href="best-colleges.html">🏫 Colleges</a>
+    <a href="government.html">🏛 Govt Exams</a>
+
+  </div>
+
+</section>
+
+
 
 <main class="main">
 
