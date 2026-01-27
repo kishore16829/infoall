@@ -26,6 +26,7 @@
 <body>
   <!-- Navbar -->
 <nav class="navbar">
+  
   <!-- Language Switch -->
 <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
@@ -59,31 +60,27 @@
 </header>
 
 <!-- Premium Hero Section -->
-<section class="hero">
+<section class="premium-hero">
 
-  <div class="hero-content">
-   <h1 data-en="Learn Smart. Achieve More."
-    data-ta="புத்திசாலித்தனமாக படித்து வெற்றி பெறுங்கள்">
-Learn Smart. Achieve More.
-</h1>
+  <div class="hero-overlay"></div>
 
-    <p data-en="Your complete platform for exams and careers."
-   data-ta="தேர்வுகள் மற்றும் தொழில்களுக்கு முழுமையான தளம்">
-Your complete platform for exams and careers.
-</p>
+  <div class="hero-box">
 
+    <h1>Turn Your Dreams Into Reality</h1>
 
-    <div class="hero-btns">
-      <a href="jee.html" class="btn-primary">Start Learning</a>
-      <a href="career.html" class="btn-secondary">Explore Careers</a>
+    <p>
+      Learn • Prepare • Succeed with InfoAll
+    </p>
+
+    <div class="hero-buttons">
+      <a href="jee.html" class="hero-btn main-btn">Start Learning</a>
+      <a href="career.html" class="hero-btn outline-btn">Explore Careers</a>
     </div>
-  </div>
 
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Students Learning">
   </div>
 
 </section>
+
 
 <!-- Feature Section -->
 <section class="features">
@@ -180,18 +177,7 @@ Your complete platform for exams and careers.
 
 </main>
 
-<!-- AI Button -->
-<button id="ai-btn">🤖 Help</button>
 
-<div id="ai-box">
-  <div class="ai-head">
-    Student AI
-    <span onclick="closeAI()">✖</span>
-  </div>
-  <div id="ai-msg"></div>
-  <input id="ai-text" placeholder="Ask here...">
-  <button onclick="sendAI()">Send</button>
-</div>
 <!-- Study Planner -->
 
 <section class="planner" id="planner">
@@ -220,8 +206,40 @@ Your complete platform for exams and careers.
   <p>© 2025 InfoAll</p>
 </footer>
 
-<script src="new.js"></script>
 
+<!-- AI STUDY COACH -->
+
+<div id="ai-open-btn" onclick="toggleCoach()">🤖</div>
+
+
+<div id="ai-coach">
+
+  <div class="coach-header">
+    🤖 AI Study Coach
+    <span onclick="toggleCoach()">✖</span>
+  </div>
+
+  <div id="coach-chat"></div>
+
+  <div class="coach-input">
+
+    <select id="lang">
+      <option value="en">English</option>
+      <option value="ta">தமிழ்</option>
+    </select>
+
+    <input type="text" id="coachText" placeholder="Type your message...">
+
+    <button onclick="sendCoach()">➤</button>
+
+  </div>
+
+</div>
+<!-- Scroll Buttons -->
+<button id="topBtn" onclick="scrollToTop()">⬆ Top</button>
+<button id="bottomBtn" onclick="scrollToBottom()">⬇ Bottom</button>
+
+<script src="new.js"></script>
 </body>
 
 </html>
