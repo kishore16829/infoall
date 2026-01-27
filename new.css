@@ -114,7 +114,7 @@ body{
 
 /* AI Button */
 
-#ai-btn{
+#ai-open-btn{
   position:fixed;
   bottom:25px;
   right:25px;
@@ -130,7 +130,7 @@ body{
   transition:.25s;
 }
 
-#ai-btn:hover{
+#ai-open-btn:hover{
   transform:scale(1.1);
 }
 
@@ -593,4 +593,247 @@ footer{
 .remind-btn:hover{
   transform:scale(1.05);
   opacity:.9;
+}
+/* ===== AI STUDY COACH ===== */
+
+#ai-open-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:linear-gradient(135deg,#6366f1,#9333ea);
+  color:white;
+  font-size:24px;
+  padding:15px;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:9999;
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+/* Chat Box */
+
+#ai-coach{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:320px;
+  max-height:450px;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:9999;
+}
+
+/* Header */
+
+.coach-header{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  color:white;
+  padding:12px;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Chat Area */
+
+#coach-chat{
+  flex:1;
+  padding:12px;
+  overflow-y:auto;
+  background:#f8fafc;
+}
+
+/* Messages */
+
+.user-msg{
+  background:#dbeafe;
+  padding:8px 12px;
+  margin:6px 0;
+  border-radius:10px;
+  max-width:80%;
+  align-self:flex-end;
+}
+
+.ai-msg{
+  background:#ede9fe;
+  padding:8px 12px;
+  margin:6px 0;
+  border-radius:10px;
+  max-width:80%;
+}
+
+/* Input */
+
+.coach-input{
+  display:flex;
+  gap:5px;
+  padding:10px;
+  border-top:1px solid #ddd;
+}
+
+.coach-input select,
+.coach-input input{
+  padding:6px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+.coach-input input{
+  flex:1;
+}
+
+.coach-input button{
+  background:#4f46e5;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+/* ===== PREMIUM HERO ===== */
+
+.premium-hero{
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* Dark Overlay */
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+/* Content Box */
+
+.hero-box{
+  position:relative;
+  text-align:center;
+  color:white;
+  max-width:700px;
+  padding:20px;
+  animation:fadeHero 1s ease;
+}
+
+.hero-box h1{
+  font-size:3.2rem;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.hero-box p{
+  font-size:1.2rem;
+  opacity:0.9;
+  margin-bottom:30px;
+}
+
+/* Buttons */
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.main-btn{
+  background:#6366f1;
+  color:white;
+}
+
+.main-btn:hover{
+  background:#4f46e5;
+}
+
+.outline-btn{
+  border:2px solid white;
+  color:white;
+}
+
+.outline-btn:hover{
+  background:white;
+  color:#4f46e5;
+}
+
+/* Animation */
+
+@keyframes fadeHero{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .hero-box h1{
+    font-size:2.2rem;
+  }
+
+  .hero-box p{
+    font-size:1rem;
+  }
+
+}
+/* Scroll Buttons */
+#topBtn, #bottomBtn {
+  position: fixed;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Top Button */
+#topBtn {
+  bottom: 90px;
+}
+
+/* Bottom Button */
+#bottomBtn {
+  bottom: 30px;
+}
+
+#topBtn:hover,
+#bottomBtn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #764ba2, #667eea);
 }
