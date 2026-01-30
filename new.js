@@ -99,6 +99,18 @@ function handleVoice(text){
     speak("Opening colleges");
     location.href="best-colleges.html";
   }
+   else if(text.includes("about")){
+    speak("Opening about");
+    location.href="about.html";
+  }
+   else if(text.includes("exam tips")){
+    speak("Opening exam tips");
+    location.href="exam.html";
+  }
+   else if(text.includes("formula")){
+    speak("Opening formula");
+    location.href="formula.html";
+  }
 
   else{
     speak("Please try again");
