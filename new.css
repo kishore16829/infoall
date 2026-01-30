@@ -404,6 +404,7 @@ footer{
   cursor:pointer;
 }
 
+
 /* Mobile Navbar */
 
 @media(max-width:900px){
@@ -836,4 +837,32 @@ footer{
 #bottomBtn:hover {
   transform: scale(1.1);
   background: linear-gradient(135deg, #764ba2, #667eea);
+}
+.trust{
+  padding:60px 10%;
+  background:#f1f5f9;
+  text-align:center;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+  margin-top:25px;
+}
+
+.trust-grid div{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+.ai-msg{
+  animation:fadeInChat .3s ease;
+}
+
+@keyframes fadeInChat{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
 }

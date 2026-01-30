@@ -2,32 +2,37 @@
 // PREMIUM WEBSITE MAIN SYSTEM
 // ================================
 
+window.addEventListener("offline", ()=>{
+  alert("You are offline. Some features may not work.");
+});
 
 // ===== SEARCH SYSTEM =====
 function searchSite(){
 
-  let q = document.getElementById("searchInput").value.toLowerCase();
+  let q = document.getElementById("searchInput").value.trim().toLowerCase();
 
   if(!q){
-    alert("Type something to search");
+    alert("Please enter a keyword");
     return;
   }
 
-  if(q.includes("jee") || q.includes("neet"))
-    location.href="jee.html";
+  const pages = {
+    jee: "jee.html",
+    neet: "jee.html",
+    career: "career.html",
+    college: "best-colleges.html",
+    government: "government.html",
+    upsc: "government.html"
+  };
 
-  else if(q.includes("career"))
-    location.href="career.html";
+  for(let key in pages){
+    if(q.includes(key)){
+      window.location.href = pages[key];
+      return;
+    }
+  }
 
-  else if(q.includes("college"))
-    location.href="best-colleges.html";
-
-  else if(q.includes("government") || q.includes("upsc"))
-    location.href="government.html";
-
-  else
-    alert("No result found");
-
+  alert("No matching content found");
 }
 
 
