@@ -354,3 +354,14 @@ function scrollToBottom() {
     behavior: "smooth"
   });
 }
+/* ===== MENU CONTROL ===== */
+
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", ()=>{
+
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+
+});
