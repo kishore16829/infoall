@@ -54,26 +54,40 @@
 <body>
   <!-- ===== Animated Navbar ===== -->
 
-<header class="navbar">
+<!-- HEADER -->
+<header class="main-header">
 
-  <div class="logo">InfoAll</div>
-
-  <div class="menu-btn" id="menuBtn">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="logo">
+    InfoAll
   </div>
 
-  <nav class="menu" id="menu">
+  <!-- Desktop Menu -->
+  <nav class="nav-links">
     <a href="index.html">Home</a>
     <a href="jee.html">JEE / NEET</a>
     <a href="career.html">Career</a>
+    <a href="colleges.html">Colleges</a>
     <a href="govt.html">Govt Exams</a>
-    <a href="contact.html">Contact</a>
-    <a href="#" class="login-btn">Login</a>
   </nav>
 
+  <!-- Mobile Menu Button -->
+  <div class="menu-btn" onclick="toggleMenu()">
+    ☰
+  </div>
+
 </header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="index.html">Home</a>
+  <a href="jee.html">JEE / NEET</a>
+  <a href="career.html">Career</a>
+  <a href="colleges.html">Colleges</a>
+  <a href="govt.html">Govt Exams</a>
+
+</div>
+
 
   <!-- Navbar -->
 <nav class="navbar">

@@ -1032,3 +1032,87 @@ footer{
 .menu-btn.active span:nth-child(3){
   transform:rotate(-45deg) translate(6px,-6px);
 }
+/* ===== HEADER ===== */
+
+.main-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:999;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+/* Desktop Menu */
+.nav-links{
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#22c55e;
+}
+
+/* Mobile Button */
+.menu-btn{
+  font-size:26px;
+  color:white;
+  display:none;
+  cursor:pointer;
+}
+
+
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu{
+  position:fixed;
+  top:65px;
+  right:-100%;
+  width:70%;
+  height:100%;
+  background:#0f172a;
+  display:flex;
+  flex-direction:column;
+  padding:30px;
+  gap:20px;
+  transition:0.4s;
+  z-index:998;
+}
+
+.mobile-menu a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+}
