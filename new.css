@@ -976,3 +976,69 @@ footer{
     width:100px;
   }
 }
+/* ===== MOBILE NAVBAR FIX ===== */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:rgba(10,10,30,0.95);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+  z-index:9999;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+}
+
+.signup-btn{
+  background:#22c55e;
+  color:black!important;
+  padding:6px 14px;
+  border-radius:20px;
+}
+
+.menu-btn{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+
+.menu-btn span{
+  width:26px;
+  height:3px;
+  background:white;
+}
+
+@media(max-width:900px){
+
+  .menu-btn{
+    display:flex;
+  }
+
+  .menu{
+    position:fixed;
+    top:70px;
+    right:-100%;
+    width:260px;
+    height:100vh;
+    background:#020617;
+    flex-direction:column;
+    padding:30px;
+    gap:20px;
+    transition:.4s;
+    z-index:9998;
+  }
+
+  .menu.active{
+    right:0;
+  }
+}

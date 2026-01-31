@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signup | InfoAll</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="login-container">
+  <h2>Create Account</h2>
+
+  <input type="text" id="user" placeholder="Username">
+  <input type="password" id="pass" placeholder="Password">
+
+  <button onclick="signup()">Signup</button>
+  <p id="msg"></p>
+</div>
+
+<script>
+function signup(){
+  let u=user.value,p=pass.value;
+  if(!u||!p)return msg.textContent="Fill fields";
+  localStorage.setItem("account",JSON.stringify({u,p}));
+  msg.style.color="green";
+  msg.textContent="Account Created";
+  setTimeout(()=>location.href="login.html",800);
+}
+</script>
+
+</body>
+</html>

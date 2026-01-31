@@ -158,13 +158,18 @@ function scrollToTop(){scrollTo({top:0,behavior:"smooth"});}
 function scrollToBottom(){scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}
 
 // MENU
-window.onload=()=>{
-  loadTasks();
-  const menuBtn=document.getElementById("menuBtn");
-  const menu=document.getElementById("menu");
+window.onload = ()=>{
 
-  menuBtn.addEventListener("click",()=>{
-    menu.classList.toggle("active");
-    menuBtn.classList.toggle("active");
-  });
+  loadTasks();
+
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  if(menuBtn && menu){
+    menuBtn.addEventListener("click",()=>{
+      menu.classList.toggle("active");
+      menuBtn.classList.toggle("active");
+    });
+  }
+
 };
