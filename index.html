@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4f46e5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5GW2KKG2Q9"></script>
 <script>
@@ -54,27 +60,13 @@
 <body>
   <!-- ===== Animated Navbar ===== -->
 
-<!-- HEADER -->
-<header class="main-header">
 
-  <div class="logo">
-    InfoAll
-  </div>
 
-  <!-- Desktop Menu -->
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="jee.html">JEE / NEET</a>
-    <a href="career.html">Career</a>
-    <a href="colleges.html">Colleges</a>
-    <a href="govt.html">Govt Exams</a>
-  </nav>
 
-  <!-- Mobile Menu Button -->
-  <div class="menu-btn" onclick="toggleMenu()">
-   <p> ☰</p>
-  </div>
+  
+  
 
+  
 </header>
 
 <!-- Mobile Menu -->
@@ -91,6 +83,25 @@
 
   <!-- Navbar -->
 <nav class="navbar">
+<nav class="navbar">
+  <div class="logo">InfoAll</div>
+
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="">Home</a>
+    <a href="jee.html">JEE/NEET</a>
+    <a href="career.html">Career</a>
+    <a href="about.html">About</a>
+    <a href="#" class="login-btn">Login</a>
+  </div>
+</nav>
+
+
   
   <!-- Language Switch -->
 <div class="lang-switch">
@@ -101,18 +112,7 @@
 <button class="voice-btn" onclick="startVoice()">🎤 Ask</button>
 
 
-  <div class="logo">InfoAll</div>
-
-  <ul class="nav-links">
-  <li><a href="about.html">About</a></li>
-  <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="jee.html">JEE / NEET</a></li>
-    <li><a href="career.html">Career</a></li>
-    <li><a href="best-colleges.html">Colleges</a></li>
-    <li><a href="government.html">Govt Exams</a></li>
-  </ul>
-
+  
   <!-- Search -->
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search courses...">
@@ -140,8 +140,8 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="jee.html" class="hero-btn main-btn">Start Learning</a>
-      <a href="career.html" class="hero-btn outline-btn">Explore Careers</a>
+      <a href="jee.html" class="hero-btn main-btn">Start Learning JEE and NEET</a>
+      <a href="career.html" class="hero-btn outline-btn">Explore Careers Info</a>
     </div>
 
   </div>
