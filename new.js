@@ -1,33 +1,20 @@
-// ================================
-// PREMIUM WEBSITE MAIN SYSTEM
-// ================================
-
-window.addEventListener("offline", ()=>{
-  alert("You are offline. Some features may not work.");
-});
-
-// ===== SEARCH SYSTEM =====
+// SEARCH
 function searchSite(){
-
   let q = document.getElementById("searchInput").value.trim().toLowerCase();
-
-  if(!q){
-    alert("Please enter a keyword");
-    return;
-  }
+  if(!q) return alert("Enter keyword");
 
   const pages = {
-    jee: "jee.html",
-    neet: "jee.html",
-    career: "career.html",
-    college: "best-colleges.html",
-    government: "government.html",
-    upsc: "government.html"
+    jee:"jee.html",
+    neet:"jee.html",
+    career:"career.html",
+    college:"best-colleges.html",
+    government:"government.html",
+    upsc:"government.html"
   };
 
-  for(let key in pages){
-    if(q.includes(key)){
-      window.location.href = pages[key];
+  for(let k in pages){
+    if(q.includes(k)){
+      location.href = pages[k];
       return;
     }
   }
@@ -35,53 +22,40 @@ function searchSite(){
   alert("No matching content found");
 }
 
-
-
-// ===== LANGUAGE SYSTEM =====
-
+// LANGUAGE
 function setLang(lang){
-  localStorage.setItem("lang", lang);
-  applyLang(lang);
+  localStorage.setItem("lang",lang);
 }
-
-function applyLang(lang){
-
-  document.querySelectorAll("[data-en]").forEach(el=>{
-
-    el.textContent =
-      lang==="ta"
-      ? el.getAttribute("data-ta")
-      : el.getAttribute("data-en");
-
-  });
-}
-
-
 
 // ===== VOICE SYSTEM =====
 
 function startVoice(){
 
-  if(!("webkitSpeechRecognition" in window)){
-    alert("Voice not supported");
+  if (!("webkitSpeechRecognition" in window) && !("SpeechRecognition" in window)) {
+    alert("Voice recognition not supported in this browser");
     return;
   }
 
-  const rec = new webkitSpeechRecognition();
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
 
-  rec.lang =
-    localStorage.getItem("lang")==="ta"
-    ? "ta-IN"
-    : "en-US";
+  recognition.lang = localStorage.getItem("lang") === "ta" ? "ta-IN" : "en-US";
+  recognition.interimResults = false;
+  recognition.continuous = false;
 
-  rec.start();
+  recognition.start();
+  speak("Listening");
 
-  rec.onresult = e => {
-    handleVoice(e.results[0][0].transcript.toLowerCase());
+  recognition.onresult = function (event) {
+    const text = event.results[0][0].transcript.toLowerCase();
+    console.log("Voice:", text);
+    handleVoice(text);
   };
 
+  recognition.onerror = function () {
+    speak("Sorry, I didn't catch that");
+  };
 }
-
 
 function handleVoice(text){
 
@@ -89,221 +63,108 @@ function handleVoice(text){
     speak("Opening JEE page");
     location.href="jee.html";
   }
-
+  else if(text.includes("neet")){
+    speak("Opening NEET page");
+    location.href="jee.html";
+  }
   else if(text.includes("career")){
     speak("Opening career page");
     location.href="career.html";
   }
-
   else if(text.includes("college")){
     speak("Opening colleges");
     location.href="best-colleges.html";
   }
-   else if(text.includes("about")){
-    speak("Opening about");
-    location.href="about.html";
+  else if(text.includes("government") || text.includes("upsc")){
+    speak("Opening government exams");
+    location.href="government.html";
   }
-   else if(text.includes("exam tips")){
+  else if(text.includes("exam")){
     speak("Opening exam tips");
     location.href="exam.html";
   }
-   else if(text.includes("formula")){
-    speak("Opening formula");
-    location.href="formula.html";
+  else if(text.includes("formula")){
+    speak("Opening formulas");
+    location.href="formulamain.html";
   }
-
+  else if(text.includes("home")){
+    speak("Going home");
+    location.href="index.html";
+  }
   else{
-    speak("Please try again");
+    speak("Command not recognized");
   }
-
 }
-
 
 function speak(msg){
 
-  let sp = new SpeechSynthesisUtterance();
+  const speech = new SpeechSynthesisUtterance(msg);
+  speech.lang = localStorage.getItem("lang") === "ta" ? "ta-IN" : "en-US";
+  speech.rate = 1;
+  speech.pitch = 1;
 
-  sp.lang =
-    localStorage.getItem("lang")==="ta"
-    ? "ta-IN"
-    : "en-US";
-
-  sp.text = msg;
-
-  speechSynthesis.speak(sp);
+  window.speechSynthesis.speak(speech);
 }
 
 
-
-// ===== STUDY PLANNER =====
-
+// STUDY PLANNER
 let tasks = JSON.parse(localStorage.getItem("studyTasks")) || [];
-
 
 function saveTasks(){
   localStorage.setItem("studyTasks",JSON.stringify(tasks));
 }
 
-
 function loadTasks(){
-
-  let list = document.getElementById("taskList");
+  const list = document.getElementById("taskList");
   if(!list) return;
-
   list.innerHTML="";
 
   tasks.forEach((t,i)=>{
-
-    let li = document.createElement("li");
-
-    li.innerHTML=`
-      ${t.time} - ${t.text}
-      <button onclick="deleteTask(${i})">✖</button>
-    `;
-
+    let li=document.createElement("li");
+    li.innerHTML = `${t.time} - ${t.text} <button onclick="deleteTask(${i})">✖</button>`;
     list.appendChild(li);
-
   });
-
 }
 
-
 function addTask(){
-
   let t = taskInput.value;
   let time = timeInput.value;
-
-  if(!t || !time){
-    alert("Fill all fields");
-    return;
-  }
+  if(!t||!time) return alert("Fill all fields");
 
   tasks.push({text:t,time});
-
   saveTasks();
   loadTasks();
-
   taskInput.value="";
   timeInput.value="";
 }
 
-
 function deleteTask(i){
-
   tasks.splice(i,1);
-
   saveTasks();
   loadTasks();
 }
 
-
-
-// ===== REMINDER =====
-
 function enableReminder(){
-
-  if(!("Notification" in window)){
-    alert("Not supported");
-    return;
-  }
-
-  Notification.requestPermission().then(p=>{
-
-    if(p==="granted"){
-      localStorage.setItem("reminder","on");
-      alert("Reminder ON");
-    }
-
-  });
-
+  alert("Reminder Enabled");
 }
 
+// SCROLL
+window.addEventListener("scroll",()=>{
+  topBtn.style.display = scrollY>200?"block":"none";
+  bottomBtn.style.display = (innerHeight+scrollY < document.body.scrollHeight-200)?"block":"none";
+});
 
-setInterval(()=>{
+function scrollToTop(){scrollTo({top:0,behavior:"smooth"});}
+function scrollToBottom(){scrollTo({top:document.body.scrollHeight,behavior:"smooth"});}
 
-  if(localStorage.getItem("reminder")!=="on") return;
-
-  let now = new Date();
-
-  if(now.getHours()==18 && now.getMinutes()==0){
-
-    new Notification("📚 Study Time!",{
-      body:"Start studying now 💪"
-    });
-
-  }
-
-},60000);
-
-
-
-
-
-
-
-// ===== STARTUP =====
-
-window.onload = ()=>{
-
-  applyLang(localStorage.getItem("lang")||"en");
-
+// MENU
+window.onload=()=>{
   loadTasks();
+  const menuBtn=document.getElementById("menuBtn");
+  const menu=document.getElementById("menu");
 
+  menuBtn.addEventListener("click",()=>{
+    menu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+  });
 };
-// Show/Hide Scroll Buttons
-window.addEventListener("scroll", () => {
-  const topBtn = document.getElementById("topBtn");
-  const bottomBtn = document.getElementById("bottomBtn");
-
-  if (window.scrollY > 200) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-
-  if (window.innerHeight + window.scrollY < document.body.offsetHeight - 200) {
-    bottomBtn.style.display = "block";
-  } else {
-    bottomBtn.style.display = "none";
-  }
-});
-
-// Scroll to Top
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-
-// Scroll to Bottom
-function scrollToBottom() {
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: "smooth"
-  });
-}
-/* ===== MENU CONTROL ===== */
-
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
-
-menuBtn.addEventListener("click", ()=>{
-
-  menu.classList.toggle("active");
-  menuBtn.classList.toggle("active");
-
-});
-/* MOBILE MENU */
-
-function toggleMenu(){
-
-  const menu = document.getElementById("mobileMenu");
-
-  if(menu.style.right === "0px"){
-    menu.style.right = "-100%";
-  }else{
-    menu.style.right = "0px";
-  }
-
-}
