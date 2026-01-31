@@ -29,10 +29,12 @@ function setLang(lang){
 
 // ===== VOICE SYSTEM =====
 
+// ===== MOBILE SAFE VOICE =====
+
 function startVoice(){
 
-  if (!("webkitSpeechRecognition" in window) && !("SpeechRecognition" in window)) {
-    alert("Voice recognition not supported in this browser");
+  if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+    alert("Voice not supported on this device");
     return;
   }
 
@@ -41,19 +43,25 @@ function startVoice(){
 
   recognition.lang = localStorage.getItem("lang") === "ta" ? "ta-IN" : "en-US";
   recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
   recognition.continuous = false;
 
-  recognition.start();
-  speak("Listening");
+  try{
+    recognition.start();
+    speak("Listening");
+  }catch(e){
+    console.log(e);
+  }
 
-  recognition.onresult = function (event) {
+  recognition.onresult = function(event){
     const text = event.results[0][0].transcript.toLowerCase();
     console.log("Voice:", text);
     handleVoice(text);
   };
 
-  recognition.onerror = function () {
-    speak("Sorry, I didn't catch that");
+  recognition.onerror = function(event){
+    console.log(event.error);
+    speak("Try again");
   };
 }
 
@@ -61,10 +69,6 @@ function handleVoice(text){
 
   if(text.includes("jee")){
     speak("Opening JEE page");
-    location.href="jee.html";
-  }
-  else if(text.includes("neet")){
-    speak("Opening NEET page");
     location.href="jee.html";
   }
   else if(text.includes("career")){
@@ -75,17 +79,9 @@ function handleVoice(text){
     speak("Opening colleges");
     location.href="best-colleges.html";
   }
-  else if(text.includes("government") || text.includes("upsc")){
+  else if(text.includes("government")){
     speak("Opening government exams");
     location.href="government.html";
-  }
-  else if(text.includes("exam")){
-    speak("Opening exam tips");
-    location.href="exam.html";
-  }
-  else if(text.includes("formula")){
-    speak("Opening formulas");
-    location.href="formulamain.html";
   }
   else if(text.includes("home")){
     speak("Going home");
@@ -98,12 +94,15 @@ function handleVoice(text){
 
 function speak(msg){
 
-  const speech = new SpeechSynthesisUtterance(msg);
-  speech.lang = localStorage.getItem("lang") === "ta" ? "ta-IN" : "en-US";
-  speech.rate = 1;
-  speech.pitch = 1;
+  if(!window.speechSynthesis) return;
 
-  window.speechSynthesis.speak(speech);
+  const sp = new SpeechSynthesisUtterance(msg);
+  sp.lang = localStorage.getItem("lang") === "ta" ? "ta-IN" : "en-US";
+  sp.rate = 1;
+  sp.pitch = 1;
+
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(sp);
 }
 
 
