@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Info All AI</title>
+
+<link rel="stylesheet"
+href="ai.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+<div id="statsDashboard"
+class="stats-dashboard">
+</div>
+<!-- LOGO -->
+
+<div class="logo">
+
+<div class="logo-icon">
+
+🤖
+
+</div>
+
+<div>
+
+<h2>Info All AI</h2>
+
+<p>Premium Assistant</p>
+
+</div>
+
+</div>
+
+<!-- NEW CHAT -->
+
+<button id="newChatBtn"
+class="new-chat-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+New Chat
+
+</button>
+
+<!-- SEARCH CHAT -->
+
+<div class="sidebar-search">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search chats...">
+
+</div>
+
+<!-- CHAT FOLDERS -->
+
+<div class="folder-section">
+
+<h3>
+
+Today
+
+</h3>
+
+<div id="chatHistory"
+class="chat-history">
+
+<div class="chat-folder active">
+
+<i class="fa-regular fa-message"></i>
+
+Travel Planning
+
+</div>
+
+<div class="chat-folder">
+
+<i class="fa-regular fa-message"></i>
+
+Hotels in Goa
+
+</div>
+
+<div class="chat-folder">
+
+<i class="fa-regular fa-message"></i>
+
+Weather Search
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SIDEBAR FOOTER -->
+
+<div class="sidebar-footer">
+
+<button id="darkModeBtn">
+
+🌙 Dark Mode
+
+</button>
+
+</div>
+
+</aside>
+
+<!-- MAIN CHAT AREA -->
+
+<div class="main-chat">
+
+<!-- TOP BAR -->
+
+<header class="topbar">
+
+<div class="model-name">
+
+Info All AI Pro
+
+</div>
+
+<div class="topbar-actions">
+
+<button id="exportBtn">
+
+<i class="fa-solid fa-download"></i>
+
+</button>
+
+<button id="clearBtn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- CHAT AREA -->
+
+<div id="chatBox"
+class="chat-box">
+
+<!-- AI WELCOME MESSAGE -->
+
+<div class="message ai">
+
+<div class="avatar">
+
+🤖
+
+</div>
+
+<div class="message-content">
+
+<h3>
+
+Welcome to Info All AI
+
+</h3>
+
+<p>
+
+Ask me anything about travel,
+weather, hotels, places,
+technology, education and more.
+
+</p>
+
+</div>
+
+</div>
+<!-- TYPING ANIMATION -->
+
+<div id="typingContainer"
+class="typing-container"
+style="display:none;">
+
+<div class="avatar">
+
+🤖
+
+</div>
+
+<div class="typing-indicator">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- INPUT AREA -->
+
+<div class="input-wrapper">
+
+<div class="input-container">
+
+<textarea
+
+id="userInput"
+
+placeholder="Message Info All AI..."
+
+rows="1">
+
+</textarea>
+
+<!-- VOICE BUTTON -->
+
+<button id="voiceBtn"
+class="input-btn">
+
+<i class="fa-solid fa-microphone"></i>
+
+</button>
+
+<!-- IMAGE BUTTON -->
+
+<button id="imageBtn"
+class="input-btn">
+
+<i class="fa-regular fa-image"></i>
+
+</button>
+
+<!-- SEND BUTTON -->
+
+<button id="sendBtn"
+class="send-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+<!-- QUICK ACTIONS -->
+
+<div class="quick-actions">
+
+<button class="quick-prompt">
+
+🌍 Plan a Trip
+
+</button>
+
+<button class="quick-prompt">
+
+🏨 Find Hotels
+
+</button>
+
+<button class="quick-prompt">
+
+🌦 Weather
+
+</button>
+
+<button class="quick-prompt">
+
+📍 Tourist Places
+
+</button>
+
+<button class="quick-prompt">
+
+💻 Technology
+
+</button>
+
+<button class="quick-prompt">
+
+📚 Education
+
+</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="chat-footer">
+
+Info All AI can make mistakes.
+Always verify important information.
+
+</div>
+
+</div>
+
+</div>
+
+<script src="ai.js"></script>
+
+</body>
+
+</html>

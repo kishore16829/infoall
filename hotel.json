@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Palace Resort",
+    "location": "Munnar, Kerala",
+    "category": "luxury",
+    "price": 8500,
+    "rating": 4.9,
+    "badge": "Top Rated",
+    "image": "images/hotels/hotel1.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Swimming Pool",
+      "Parking",
+      "Spa",
+      "Restaurant"
+    ],
+    "description": "Luxury mountain resort with panoramic valley views and premium amenities."
+  },
+  {
+    "id": 2,
+    "name": "Blue Ocean Beach Resort",
+    "location": "Goa",
+    "category": "resort",
+    "price": 7200,
+    "rating": 4.8,
+    "badge": "Best Seller",
+    "image": "images/hotels/hotel2.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Swimming Pool",
+      "Beach Access",
+      "Restaurant"
+    ],
+    "description": "Elegant beachfront resort with infinity pool and sea-view suites."
+  },
+  {
+    "id": 3,
+    "name": "Royal Heritage Hotel",
+    "location": "Jaipur, Rajasthan",
+    "category": "luxury",
+    "price": 9200,
+    "rating": 4.7,
+    "badge": "Luxury",
+    "image": "images/hotels/hotel3.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Parking",
+      "Spa",
+      "Fine Dining"
+    ],
+    "description": "Experience royal hospitality in a beautifully restored heritage palace."
+  },
+  {
+    "id": 4,
+    "name": "Hill View Residency",
+    "location": "Ooty, Tamil Nadu",
+    "category": "budget",
+    "price": 3200,
+    "rating": 4.4,
+    "badge": "Budget",
+    "image": "images/hotels/hotel4.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Parking",
+      "Breakfast"
+    ],
+    "description": "Comfortable hill station stay with scenic views and family-friendly rooms."
+  },
+  {
+    "id": 5,
+    "name": "Lake Paradise Resort",
+    "location": "Kodaikanal, Tamil Nadu",
+    "category": "resort",
+    "price": 6500,
+    "rating": 4.6,
+    "badge": "Popular",
+    "image": "images/hotels/hotel5.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Boating",
+      "Parking",
+      "Restaurant"
+    ],
+    "description": "Relax beside the lake in premium cottages surrounded by nature."
+  },
+  {
+    "id": 6,
+    "name": "City Business Inn",
+    "location": "Bengaluru, Karnataka",
+    "category": "business",
+    "price": 4800,
+    "rating": 4.3,
+    "badge": "Business",
+    "image": "images/hotels/hotel6.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Conference Hall",
+      "Parking",
+      "Gym"
+    ],
+    "description": "Modern business hotel close to IT parks and major commercial hubs."
+  },
+  {
+    "id": 7,
+    "name": "Golden Sands Hotel",
+    "location": "Pondicherry",
+    "category": "beach",
+    "price": 5900,
+    "rating": 4.5,
+    "badge": "Beachfront",
+    "image": "images/hotels/hotel7.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Beach Access",
+      "Swimming Pool",
+      "Restaurant"
+    ],
+    "description": "Premium beachfront hotel perfect for couples and family vacations."
+  },
+  {
+    "id": 8,
+    "name": "Forest Escape Eco Resort",
+    "location": "Wayanad, Kerala",
+    "category": "resort",
+    "price": 7800,
+    "rating": 4.8,
+    "badge": "Eco Stay",
+    "image": "images/hotels/hotel8.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Nature Trails",
+      "Parking",
+      "Restaurant"
+    ],
+    "description": "Eco-friendly forest retreat offering unique nature experiences."
+  },
+  {
+    "id": 9,
+    "name": "Comfort Budget Lodge",
+    "location": "Hyderabad, Telangana",
+    "category": "budget",
+    "price": 2500,
+    "rating": 4.2,
+    "badge": "Affordable",
+    "image": "images/hotels/hotel9.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Parking",
+      "Breakfast"
+    ],
+    "description": "Clean and affordable accommodation for business and leisure travelers."
+  },
+  {
+    "id": 10,
+    "name": "Skyline Grand Hotel",
+    "location": "Mumbai, Maharashtra",
+    "category": "luxury",
+    "price": 11500,
+    "rating": 4.9,
+    "badge": "5 Star",
+    "image": "images/hotels/hotel10.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Swimming Pool",
+      "Spa",
+      "Gym",
+      "Fine Dining"
+    ],
+    "description": "Iconic five-star luxury hotel featuring rooftop dining and city skyline views."
+  },
+  {
+    "id": 11,
+    "name": "Backwater Bliss Resort",
+    "location": "Alleppey, Kerala",
+    "category": "resort",
+    "price": 6900,
+    "rating": 4.7,
+    "badge": "Nature",
+    "image": "images/hotels/hotel11.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Houseboat Tours",
+      "Parking",
+      "Restaurant"
+    ],
+    "description": "Scenic backwater resort with traditional Kerala hospitality."
+  },
+  {
+    "id": 12,
+    "name": "Sunrise Family Hotel",
+    "location": "Mysuru, Karnataka",
+    "category": "family",
+    "price": 4100,
+    "rating": 4.4,
+    "badge": "Family",
+    "image": "images/hotels/hotel12.jpg",
+    "amenities": [
+      "Free WiFi",
+      "Parking",
+      "Kids Play Area",
+      "Restaurant"
+    ],
+    "description": "Family-friendly hotel offering spacious rooms and modern facilities."
+  }
+]

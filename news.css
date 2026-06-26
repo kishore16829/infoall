@@ -1,0 +1,1191 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#1e293b;
+
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:
+    rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.08);
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#2563eb;
+}
+
+.logo i{
+
+    font-size:28px;
+}
+
+.navbar nav{
+
+    display:flex;
+
+    gap:30px;
+}
+
+.navbar nav a{
+
+    text-decoration:none;
+
+    color:#334155;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.navbar nav a:hover{
+
+    color:#2563eb;
+}
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.login-btn{
+
+    padding:10px 22px;
+
+    border:2px solid #2563eb;
+
+    background:transparent;
+
+    color:#2563eb;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+.subscribe-btn{
+
+    padding:10px 22px;
+
+    border:none;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4);
+
+    color:white;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+/* ==========================================
+   BREAKING NEWS BAR
+========================================== */
+
+.breaking{
+
+    margin-top:85px;
+
+    display:flex;
+
+    height:55px;
+
+    overflow:hidden;
+
+    background:#ef4444;
+
+    color:white;
+}
+
+.breaking-title{
+
+    background:#dc2626;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 25px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+.ticker{
+
+    overflow:hidden;
+
+    width:100%;
+}
+
+.ticker-track{
+
+    display:inline-block;
+
+    white-space:nowrap;
+
+    padding-left:100%;
+
+    animation:ticker 25s linear infinite;
+}
+
+@keyframes ticker{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    position:relative;
+
+    height:90vh;
+
+    background:
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=2000")
+    center center/cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.55);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:20px;
+
+    color:white;
+}
+
+.hero-content h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+    margin-bottom:40px;
+}
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+.hero-search{
+
+    display:flex;
+
+    max-width:700px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:60px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+}
+
+.hero-search input{
+
+    flex:1;
+
+    padding:20px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+}
+
+.hero-search button{
+
+    width:80px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:20px;
+
+    transition:.3s;
+}
+
+.hero-search button:hover{
+
+    background:#1d4ed8;
+}
+/* ==========================================
+   CATEGORY SECTION
+========================================== */
+
+.category-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    padding:40px 20px;
+
+    background:white;
+}
+
+.category-section button{
+
+    padding:12px 24px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.category-section button:hover{
+
+    transform:translateY(-3px);
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.category-section button.active{
+
+    background:#2563eb;
+
+    color:white;
+
+    box-shadow:
+    0 10px 25px
+    rgba(37,99,235,.3);
+}
+
+/* ==========================================
+   FEATURED STORY
+========================================== */
+
+.featured{
+
+    display:grid;
+
+    grid-template-columns:
+    1.2fr 1fr;
+
+    gap:40px;
+
+    padding:80px 8%;
+
+    background:#f8fafc;
+}
+
+.featured-image{
+
+    overflow:hidden;
+
+    border-radius:25px;
+}
+
+.featured-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.featured-image:hover img{
+
+    transform:scale(1.05);
+}
+
+.featured-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.featured-content span{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.featured-content h2{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+.featured-content p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+}
+
+.featured-content button{
+
+    width:220px;
+
+    padding:16px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:40px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4);
+
+    transition:.3s;
+}
+
+.featured-content button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(37,99,235,.3);
+}
+
+/* ==========================================
+   NEWS SECTION
+========================================== */
+
+.news-container{
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr;
+
+    gap:40px;
+
+    padding:80px 8%;
+}
+
+.news-left h2{
+
+    font-size:42px;
+
+    margin-bottom:35px;
+}
+
+/* ==========================================
+   NEWS GRID
+========================================== */
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+}
+
+.news-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.08);
+}
+
+.news-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 25px 50px
+    rgba(0,0,0,.15);
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+}
+
+.news-content{
+
+    padding:25px;
+}
+
+.news-content .category{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.news-content h3{
+
+    font-size:24px;
+
+    line-height:1.4;
+
+    margin-bottom:15px;
+}
+
+.news-content p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+.news-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.news-footer button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    color:white;
+
+    background:#2563eb;
+
+    transition:.3s;
+}
+
+.news-footer button:hover{
+
+    background:#1d4ed8;
+}
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.news-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+}
+
+.sidebar-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.sidebar-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.sidebar-card h3{
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+    color:#0f172a;
+}
+
+.sidebar-card ul{
+
+    list-style:none;
+}
+
+.sidebar-card ul li{
+
+    padding:12px 0;
+
+    border-bottom:
+    1px solid #e2e8f0;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.sidebar-card ul li:hover{
+
+    color:#2563eb;
+
+    padding-left:10px;
+}
+
+.sidebar-card ul li:last-child{
+
+    border-bottom:none;
+}
+
+/* ==========================================
+   NEWSLETTER
+========================================== */
+
+.newsletter{
+
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4);
+
+    color:white;
+
+    text-align:center;
+}
+
+.newsletter h2{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+}
+
+.newsletter p{
+
+    font-size:18px;
+
+    opacity:.95;
+
+    margin-bottom:35px;
+}
+
+.newsletter-form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:60px;
+
+    background:white;
+}
+
+.newsletter-form input{
+
+    flex:1;
+
+    padding:20px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+}
+
+.newsletter-form button{
+
+    width:220px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:16px;
+}
+
+/* ==========================================
+   WEATHER SECTION
+========================================== */
+
+.weather-section{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:white;
+}
+
+.weather-section h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+}
+
+.weather-widget{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.weather-widget input{
+
+    width:350px;
+
+    padding:15px;
+
+    border-radius:40px;
+
+    border:2px solid #e2e8f0;
+
+    outline:none;
+}
+
+.weather-widget button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:#2563eb;
+}
+
+#weatherResult{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#334155;
+}
+
+/* ==========================================
+   API STATUS BAR
+========================================== */
+
+.api-status{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    padding:25px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    background:#020617;
+
+    color:white;
+
+    padding:80px 8% 30px;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+}
+
+.footer h3{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+}
+
+.footer a{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    margin-bottom:10px;
+
+    transition:.3s;
+}
+
+.footer a:hover{
+
+    color:white;
+
+    padding-left:5px;
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:
+    1px solid rgba(255,255,255,.1);
+
+    color:#94a3b8;
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    box-shadow:
+    0 10px 25px
+    rgba(37,99,235,.4);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+#backToTop:hover{
+
+    transform:translateY(-5px);
+}
+
+/* ==========================================
+   GLASS EFFECT
+========================================== */
+
+.news-card,
+.sidebar-card,
+.featured-content{
+
+    backdrop-filter:blur(20px);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+    .featured{
+
+        grid-template-columns:1fr;
+    }
+
+    .news-container{
+
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    .navbar nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+    }
+
+    .weather-widget{
+
+        flex-direction:column;
+    }
+
+    .weather-widget input{
+
+        width:100%;
+    }
+
+    .newsletter-form{
+
+        flex-direction:column;
+    }
+
+    .newsletter-form button{
+
+        width:100%;
+
+        padding:18px;
+    }
+
+    .newsletter h2{
+
+        font-size:36px;
+    }
+
+    .featured-content h2{
+
+        font-size:34px;
+    }
+}
+/* ==========================================
+   POPUP
+========================================== */
+
+.travel-popup{
+
+position:fixed;
+
+inset:0;
+
+background:
+rgba(0,0,0,.5);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+}
+
+.popup-box{
+
+background:white;
+
+padding:30px;
+
+width:350px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 20px 50px
+rgba(0,0,0,.2);
+}
+
+.popup-box h3{
+
+margin-bottom:15px;
+}
+
+.popup-box p{
+
+margin-bottom:20px;
+
+color:#64748b;
+}
+
+.popup-box button{
+
+padding:12px 25px;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+background:#2563eb;
+
+color:white;
+}
+
+/* ==========================================
+   CLOCK
+========================================== */
+
+#liveClock{
+
+font-size:14px;
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+#backToTop{
+
+display:none;
+}

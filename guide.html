@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Travel Guides | Explore India
+    </title>
+
+    <meta
+        name="description"
+        content="Explore premium travel guides, local tips, itineraries, food recommendations and hidden gems across India.">
+
+    <meta
+        name="keywords"
+        content="travel guide, India tourism, itinerary, travel tips, adventure, food guide">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Guide CSS -->
+
+    <link
+        rel="stylesheet"
+        href="guide.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            PAGE LOADER
+    =========================== -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+
+            <h2>Loading Travel Guides...</h2>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+            HEADER
+    =========================== -->
+
+    <header
+        class="header"
+        id="header">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo">
+
+                <i class="fa-solid fa-earth-asia"></i>
+
+                <div class="logo-text">
+                    <span>Explore</span>
+                    <strong>India</strong>
+                </div>
+
+            </a>
+
+            <!-- NAVIGATION -->
+
+            <nav class="navbar">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <!-- DESTINATION MEGA MENU -->
+
+                <div class="nav-dropdown">
+
+                    <a href="place.html">
+                        Destinations
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+                    <div class="mega-menu">
+
+                        <div class="mega-column">
+
+                            <h4>
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                Nature
+                            </h4>
+
+                            <a href="place.html">
+                                Hill Stations
+                            </a>
+
+                            <a href="place.html">
+                                Beaches
+                            </a>
+
+                            <a href="place.html">
+                                Lakes
+                            </a>
+
+                            <a href="place.html">
+                                Waterfalls
+                            </a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>
+                                <i class="fa-solid fa-landmark"></i>
+                                Heritage
+                            </h4>
+
+                            <a href="place.html">
+                                Temples
+                            </a>
+
+                            <a href="place.html">
+                                Forts
+                            </a>
+
+                            <a href="place.html">
+                                Museums
+                            </a>
+
+                            <a href="place.html">
+                                UNESCO Sites
+                            </a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>
+                                <i class="fa-solid fa-person-hiking"></i>
+                                Adventure
+                            </h4>
+
+                            <a href="guide.html">
+                                Trekking
+                            </a>
+
+                            <a href="guide.html">
+                                Camping
+                            </a>
+
+                            <a href="guide.html">
+                                Wildlife
+                            </a>
+
+                            <a href="guide.html">
+                                River Rafting
+                            </a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>
+                                <i class="fa-solid fa-star"></i>
+                                Top Picks
+                            </h4>
+
+                            <a href="place-details.html?id=munnar">
+                                Munnar
+                            </a>
+
+                            <a href="place-details.html?id=goa">
+                                Goa
+                            </a>
+
+                            <a href="place-details.html?id=ooty">
+                                Ooty
+                            </a>
+
+                            <a href="place-details.html?id=ladakh">
+                                Ladakh
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="hotel.html">
+                    Hotels
+                </a>
+
+                <a href="transport.html">
+                    Transport
+                </a>
+
+                <a
+                    href="guide.html"
+                    class="active">
+                    Guides
+                </a>
+
+                <a href="#aiGuide">
+                    AI Guide
+                </a>
+
+            </nav>
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+                <button
+                    id="searchToggle"
+                    class="icon-btn"
+                    type="button">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+                <button
+                    id="menuBtn"
+                    class="icon-btn mobile-only"
+                    type="button">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <a
+                    href="#featuredGuides"
+                    class="nav-btn">
+
+                    Explore Guides
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================
+        MOBILE DRAWER
+    =========================== -->
+
+    <aside
+        class="mobile-drawer"
+        id="mobileDrawer">
+
+        <div class="drawer-header">
+
+            <h2>Menu</h2>
+
+            <button
+                id="closeDrawer"
+                type="button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div class="drawer-links">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="place.html">
+                <i class="fa-solid fa-location-dot"></i>
+                Destinations
+            </a>
+
+            <a href="hotel.html">
+                <i class="fa-solid fa-hotel"></i>
+                Hotels
+            </a>
+
+            <a href="transport.html">
+                <i class="fa-solid fa-bus"></i>
+                Transport
+            </a>
+
+            <a href="guide.html">
+                <i class="fa-solid fa-book-open"></i>
+                Travel Guides
+            </a>
+
+            <a href="#aiGuide">
+                <i class="fa-solid fa-robot"></i>
+                AI Guide
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================
+        SEARCH OVERLAY
+    =========================== -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay">
+
+        <button
+            id="closeSearch"
+            class="close-search">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="search-overlay-content">
+
+            <h2>
+                Search Travel Guides
+            </h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="guideSearchInput"
+                    placeholder="Search destinations, guides, activities...">
+
+                <button
+                    type="button">
+
+                    <i class="fa-solid fa-search"></i>
+
+                </button>
+
+            </div>
+
+            <div
+                id="searchSuggestions"
+                class="suggestions-box">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+            HERO SECTION
+    =========================== -->
+
+    <section class="guide-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    <i class="fa-solid fa-compass"></i>
+                    Expert Travel Guides
+                </span>
+
+                <h1>
+                    Discover India
+                    <span>Like a Local</span>
+                </h1>
+
+                <p>
+                    Find expert travel tips, hidden gems, food recommendations,
+                    itineraries, adventure ideas and local experiences to make
+                    every journey unforgettable.
+                </p>
+
+                <!-- HERO SEARCH -->
+
+                <div class="hero-search">
+
+                    <div class="search-field">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                            type="text"
+                            id="heroGuideSearch"
+                            placeholder="Where do you want to go?">
+
+                    </div>
+
+                    <button
+                        id="heroSearchBtn"
+                        type="button">
+
+                        <i class="fa-solid fa-search"></i>
+
+                        Search
+
+                    </button>
+
+                </div>
+
+                <!-- TRENDING TAGS -->
+
+                <div class="hero-tags">
+
+                    <span>🔥 Trending:</span>
+
+                    <a href="#">Munnar Guide</a>
+
+                    <a href="#">Goa Beaches</a>
+
+                    <a href="#">Ooty 2-Day Trip</a>
+
+                    <a href="#">Ladakh Adventure</a>
+
+                </div>
+
+            </div>
+
+            <!-- HERO CARD -->
+
+            <div class="hero-side">
+
+                <div class="featured-guide-card">
+
+                    <div class="guide-image">
+
+                        <img
+                            src="images/guides/hero-guide.jpg"
+                            alt="Featured Guide">
+
+                        <div class="guide-badge">
+                            Editor's Choice
+                        </div>
+
+                    </div>
+
+                    <div class="guide-info">
+
+                        <span>
+                            ⭐ Featured Guide
+                        </span>
+
+                        <h3>
+                            Ultimate Kerala Road Trip
+                        </h3>
+
+                        <p>
+                            Explore Munnar, Alleppey, Thekkady and Varkala with
+                            a perfectly planned 7-day itinerary.
+                        </p>
+
+                        <div class="guide-meta">
+
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                12 min read
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-eye"></i>
+                                24K Views
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- QUICK STATS -->
+
+        <div class="hero-stats">
+
+            <div class="stat-card">
+                <h2>500+</h2>
+                <p>Travel Guides</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>28</h2>
+                <p>States Covered</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>2K+</h2>
+                <p>Travel Tips</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>1M+</h2>
+                <p>Monthly Readers</p>
+            </div>
+
+        </div>
+
+    </section>
+
+       <!-- ==========================
+        GUIDE CATEGORIES
+    =========================== -->
+
+    <section class="guide-categories">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Explore by Category
+            </span>
+
+            <h2>
+                Find The Perfect
+                <span>Travel Guide</span>
+            </h2>
+
+            <p>
+                Browse our handpicked travel guides designed for every type
+                of traveler—from adventure seekers to luxury explorers.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card active"
+                data-category="all">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <h3>All Guides</h3>
+
+                <p>500+ Articles</p>
+
+            </div>
+
+            <div class="category-card"
+                data-category="adventure">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-person-hiking"></i>
+                </div>
+
+                <h3>Adventure</h3>
+
+                <p>Trekking & Camping</p>
+
+            </div>
+
+            <div class="category-card"
+                data-category="food">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <h3>Food</h3>
+
+                <p>Local Cuisine</p>
+
+            </div>
+
+            <div class="category-card"
+                data-category="culture">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+
+                <h3>Culture</h3>
+
+                <p>Heritage & History</p>
+
+            </div>
+
+            <div class="category-card"
+                data-category="budget">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <h3>Budget</h3>
+
+                <p>Affordable Trips</p>
+
+            </div>
+
+            <div class="category-card"
+                data-category="luxury">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <h3>Luxury</h3>
+
+                <p>Premium Experiences</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        FEATURED GUIDES
+    =========================== -->
+
+    <section
+        class="featured-guides"
+        id="featuredGuides">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Featured Articles
+            </span>
+
+            <h2>
+                Top Travel Guides
+            </h2>
+
+            <p>
+                Discover trending destinations, expert itineraries and hidden
+                gems recommended by experienced travelers.
+            </p>
+
+        </div>
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="guide-filter">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="adventure">
+
+                Adventure
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="food">
+
+                Food
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="culture">
+
+                Culture
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="budget">
+
+                Budget
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="luxury">
+
+                Luxury
+
+            </button>
+
+        </div>
+
+        <!-- DYNAMIC GUIDE GRID -->
+
+        <div
+            class="guide-grid"
+            id="guideGrid">
+
+            <!-- guide.js loads cards here -->
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        POPULAR DESTINATIONS
+    =========================== -->
+
+    <section class="popular-guides">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Trending Now
+            </span>
+
+            <h2>
+                Most Popular
+                Travel Guides
+            </h2>
+
+        </div>
+
+        <div class="popular-grid">
+
+            <!-- CARD 1 -->
+
+            <article class="popular-card">
+
+                <div class="popular-image">
+
+                    <img
+                        src="images/guides/munnar.jpg"
+                        alt="Munnar">
+
+                    <span class="popular-badge">
+                        Adventure
+                    </span>
+
+                </div>
+
+                <div class="popular-content">
+
+                    <div class="popular-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            10 min read
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            18K
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Ultimate Guide to Munnar
+                    </h3>
+
+                    <p>
+                        Explore tea plantations, waterfalls and the
+                        best viewpoints in Kerala's hill paradise.
+                    </p>
+
+                    <a href="#"
+                        class="read-more">
+
+                        Read Guide
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 2 -->
+
+            <article class="popular-card">
+
+                <div class="popular-image">
+
+                    <img
+                        src="images/guides/goa.jpg"
+                        alt="Goa">
+
+                    <span class="popular-badge">
+                        Beaches
+                    </span>
+
+                </div>
+
+                <div class="popular-content">
+
+                    <div class="popular-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            8 min read
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            22K
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Goa Beyond The Beaches
+                    </h3>
+
+                    <p>
+                        Discover forts, local food, hidden beaches and
+                        vibrant nightlife across Goa.
+                    </p>
+
+                    <a href="#"
+                        class="read-more">
+
+                        Read Guide
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 3 -->
+
+            <article class="popular-card">
+
+                <div class="popular-image">
+
+                    <img
+                        src="images/guides/ladakh.jpg"
+                        alt="Ladakh">
+
+                    <span class="popular-badge">
+                        Road Trip
+                    </span>
+
+                </div>
+
+                <div class="popular-content">
+
+                    <div class="popular-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            14 min read
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            30K
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Ladakh Adventure Handbook
+                    </h3>
+
+                    <p>
+                        Complete travel tips for a memorable road trip
+                        through the mountains of Ladakh.
+                    </p>
+
+                    <a href="#"
+                        class="read-more">
+
+                        Read Guide
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        QUICK TRAVEL STATS
+    =========================== -->
+
+    <section class="travel-stats">
+
+        <div class="stats-container">
+
+            <div class="travel-stat">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h3>500+</h3>
+
+                <p>Travel Guides</p>
+
+            </div>
+
+            <div class="travel-stat">
+
+                <i class="fa-solid fa-map-location-dot"></i>
+
+                <h3>300+</h3>
+
+                <p>Destinations Covered</p>
+
+            </div>
+
+            <div class="travel-stat">
+
+                <i class="fa-solid fa-camera-retro"></i>
+
+                <h3>10K+</h3>
+
+                <p>Travel Photos</p>
+
+            </div>
+
+            <div class="travel-stat">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>1M+</h3>
+
+                <p>Monthly Readers</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+       <!-- ==========================
+            AI TRAVEL GUIDE
+    =========================== -->
+
+    <section
+        class="ai-guide"
+        id="aiGuide">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                AI Powered
+            </span>
+
+            <h2>
+                Smart AI Travel
+                Assistant
+            </h2>
+
+            <p>
+                Tell us your destination, budget and travel style.
+                Our AI assistant will suggest a personalized travel plan.
+            </p>
+
+        </div>
+
+        <div class="ai-guide-container">
+
+            <!-- FORM -->
+
+            <div class="ai-form-card">
+
+                <div class="input-group">
+
+                    <label>
+                        Destination
+                    </label>
+
+                    <input
+                        type="text"
+                        id="aiDestination"
+                        placeholder="Example: Munnar">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Budget
+                    </label>
+
+                    <select id="aiBudget">
+
+                        <option value="budget">
+                            Budget Friendly
+                        </option>
+
+                        <option value="mid">
+                            Mid Range
+                        </option>
+
+                        <option value="luxury">
+                            Luxury
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Travel Style
+                    </label>
+
+                    <select id="aiTravelStyle">
+
+                        <option>
+                            Adventure
+                        </option>
+
+                        <option>
+                            Family
+                        </option>
+
+                        <option>
+                            Solo
+                        </option>
+
+                        <option>
+                            Honeymoon
+                        </option>
+
+                        <option>
+                            Cultural
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button
+                    class="ai-btn"
+                    id="generateGuideBtn"
+                    type="button">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Generate Travel Plan
+
+                </button>
+
+            </div>
+
+            <!-- AI RESULT -->
+
+            <div
+                class="ai-result-card"
+                id="aiGuideResult">
+
+                <div class="ai-result-icon">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+                <h3>
+                    Your AI Guide
+                </h3>
+
+                <p>
+                    Enter your preferences and generate
+                    a personalized travel recommendation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        TRAVEL PLANNING TIMELINE
+    =========================== -->
+
+    <section class="travel-timeline">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Travel Planning
+            </span>
+
+            <h2>
+                Plan Your Journey
+                In 4 Easy Steps
+            </h2>
+
+        </div>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    1
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Choose Destination
+                    </h3>
+
+                    <p>
+                        Select the perfect destination based
+                        on season, budget and interests.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    2
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Book Hotels & Transport
+                    </h3>
+
+                    <p>
+                        Compare premium hotels and transport
+                        services for the best experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    3
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Explore Local Experiences
+                    </h3>
+
+                    <p>
+                        Discover local food, hidden gems,
+                        culture and activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    4
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Enjoy & Share Memories
+                    </h3>
+
+                    <p>
+                        Capture beautiful moments and
+                        create unforgettable memories.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            EXPLORE BY REGION
+    =========================== -->
+
+    <section class="region-section">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Explore India
+            </span>
+
+            <h2>
+                Travel Guides
+                By Region
+            </h2>
+
+        </div>
+
+        <div class="region-grid">
+
+            <div class="region-card">
+
+                <img
+                    src="images/guides/south-india.jpg"
+                    alt="South India">
+
+                <div class="region-overlay">
+
+                    <h3>
+                        South India
+                    </h3>
+
+                    <p>
+                        Kerala, Tamil Nadu,
+                        Karnataka & Andhra Pradesh
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="region-card">
+
+                <img
+                    src="images/guides/north-india.jpg"
+                    alt="North India">
+
+                <div class="region-overlay">
+
+                    <h3>
+                        North India
+                    </h3>
+
+                    <p>
+                        Himachal, Kashmir,
+                        Rajasthan & Delhi
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="region-card">
+
+                <img
+                    src="images/guides/east-india.jpg"
+                    alt="East India">
+
+                <div class="region-overlay">
+
+                    <h3>
+                        East India
+                    </h3>
+
+                    <p>
+                        Odisha, Sikkim,
+                        West Bengal & Assam
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="region-card">
+
+                <img
+                    src="images/guides/west-india.jpg"
+                    alt="West India">
+
+                <div class="region-overlay">
+
+                    <h3>
+                        West India
+                    </h3>
+
+                    <p>
+                        Goa, Gujarat,
+                        Maharashtra & More
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            LATEST BLOGS
+    =========================== -->
+
+    <section class="latest-blogs">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Editor's Picks
+            </span>
+
+            <h2>
+                Latest Travel Stories
+            </h2>
+
+            <p>
+                Read inspiring stories, expert travel advice
+                and destination guides from experienced travelers.
+            </p>
+
+        </div>
+
+        <div class="blog-grid">
+
+            <!-- BLOG 1 -->
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+
+                    <img
+                        src="images/guides/blog1.jpg"
+                        alt="Kerala">
+
+                    <span class="blog-category">
+                        Road Trip
+                    </span>
+
+                </div>
+
+                <div class="blog-content">
+
+                    <div class="blog-meta">
+
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                            Admin
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-calendar"></i>
+                            Jun 2026
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        7-Day Kerala Road Trip Itinerary
+                    </h3>
+
+                    <p>
+                        Discover the best route covering
+                        Munnar, Thekkady, Alleppey and Varkala.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="blog-link">
+
+                        Read Article
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- BLOG 2 -->
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+
+                    <img
+                        src="images/guides/blog2.jpg"
+                        alt="Ladakh">
+
+                    <span class="blog-category">
+                        Adventure
+                    </span>
+
+                </div>
+
+                <div class="blog-content">
+
+                    <div class="blog-meta">
+
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                            Editor
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-calendar"></i>
+                            Jun 2026
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Ladakh Travel Checklist
+                    </h3>
+
+                    <p>
+                        Everything you need to know before
+                        starting your Himalayan adventure.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="blog-link">
+
+                        Read Article
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- BLOG 3 -->
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+
+                    <img
+                        src="images/guides/blog3.jpg"
+                        alt="Goa">
+
+                    <span class="blog-category">
+                        Beaches
+                    </span>
+
+                </div>
+
+                <div class="blog-content">
+
+                    <div class="blog-meta">
+
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                            Travel Team
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-calendar"></i>
+                            Jun 2026
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Hidden Beaches of Goa
+                    </h3>
+
+                    <p>
+                        Escape the crowds and explore the
+                        most beautiful secret beaches.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="blog-link">
+
+                        Read Article
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+        <!-- ==========================
+            NEWSLETTER
+    =========================== -->
+
+    <section class="newsletter">
+
+        <div class="newsletter-container">
+
+            <div class="newsletter-content">
+
+                <span class="section-tag">
+                    Stay Updated
+                </span>
+
+                <h2>
+                    Get Weekly Travel Inspiration
+                </h2>
+
+                <p>
+                    Receive exclusive travel guides, destination updates,
+                    hidden gems and special travel offers directly in your inbox.
+                </p>
+
+            </div>
+
+            <div class="newsletter-form">
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Enter your email address">
+
+                <button
+                    id="subscribeBtn"
+                    type="button">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Subscribe
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            CALL TO ACTION
+    =========================== -->
+
+    <section class="guide-cta">
+
+        <div class="cta-container">
+
+            <div class="cta-text">
+
+                <span>
+                    🚀 Ready For Your Next Journey?
+                </span>
+
+                <h2>
+                    Plan Your Perfect Trip With
+                    Explore India
+                </h2>
+
+                <p>
+                    Discover amazing destinations, compare premium hotels,
+                    book transport and create unforgettable memories with
+                    our AI-powered travel platform.
+                </p>
+
+            </div>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="place.html"
+                    class="primary-btn">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Explore Places
+
+                </a>
+
+                <a
+                    href="hotel.html"
+                    class="secondary-btn">
+
+                    <i class="fa-solid fa-hotel"></i>
+
+                    Find Hotels
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            FOOTER
+    =========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <i class="fa-solid fa-earth-asia"></i>
+
+                    <div>
+                        <span>Explore</span>
+                        <strong>India</strong>
+                    </div>
+
+                </div>
+
+                <p>
+                    Your premium travel companion for discovering the
+                    beauty of India. Explore destinations, hotels,
+                    transport services and expert travel guides in one place.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="place.html">
+                    Destinations
+                </a>
+
+                <a href="hotel.html">
+                    Hotels
+                </a>
+
+                <a href="transport.html">
+                    Transport
+                </a>
+
+                <a href="guide.html">
+                    Travel Guides
+                </a>
+
+            </div>
+
+            <!-- DESTINATIONS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Top Destinations
+                </h3>
+
+                <a href="place-details.html?id=munnar">
+                    Munnar
+                </a>
+
+                <a href="place-details.html?id=goa">
+                    Goa
+                </a>
+
+                <a href="place-details.html?id=ooty">
+                    Ooty
+                </a>
+
+                <a href="place-details.html?id=ladakh">
+                    Ladakh
+                </a>
+
+                <a href="place-details.html?id=taj-mahal">
+                    Taj Mahal
+                </a>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    support@exploreindia.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    India
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    24×7 Travel Assistance
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="current-year"></span>
+                Explore India. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+                <a href="#">
+                    Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ==========================
+            BACK TO TOP
+    =========================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- ==========================
+            JAVASCRIPT FILES
+    =========================== -->
+
+   
+    <!-- Guide Page JS -->
+    <script src="guide.js"></script>
+
+</body>
+
+</html> 

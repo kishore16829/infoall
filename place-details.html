@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Destination Details</title>
+
+<link rel="stylesheet"
+href="place-detials.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+id="placeImage"
+src=""
+alt="Destination">
+
+<div class="overlay"></div>
+
+</div>
+
+<div class="hero-content">
+
+<div class="badges">
+
+<span
+id="placeCategory"
+class="badge">
+
+Destination
+
+</span>
+
+<span
+class="badge rating">
+
+⭐ <span id="placeRating">
+4.8
+</span>
+
+</span>
+
+</div>
+
+<h1
+id="placeName">
+
+Loading...
+
+</h1>
+
+<p
+class="location">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span
+id="placeState">
+
+India
+
+</span>
+
+</p>
+
+<div class="hero-buttons">
+
+<button
+id="openMapBtn">
+
+🗺 Open Map
+
+</button>
+
+<button
+id="shareBtn">
+
+📤 Share
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WEATHER SECTION -->
+
+<section class="weather-section">
+
+<div class="weather-card">
+
+<h2>
+
+Live Weather
+
+</h2>
+
+<img
+id="weatherIcon"
+src="">
+
+<h1
+id="weatherTemp">
+
+--°C
+
+</h1>
+
+<p
+id="weatherCondition">
+
+Loading...
+
+</p>
+
+</div>
+
+</section>
+<section class="premium-slider">
+
+<h2>Destination Highlights</h2>
+
+<div class="slider-container">
+
+<button class="slider-btn prev">
+❮
+</button>
+
+<div class="slider">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600" class="slide active">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600" class="slide">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" class="slide">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600" class="slide">
+
+</div>
+
+<button class="slider-btn next">
+❯
+</button>
+
+</div>
+
+</section>
+<!-- QUICK STATS -->
+
+<section class="quick-stats">
+
+<div class="stat-card">
+
+<h2 id="sideRating">
+
+4.8
+
+</h2>
+
+<p>
+
+Rating
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="sideBestTime">
+
+Oct-Feb
+
+</h2>
+
+<p>
+
+Best Time
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="sideCategory">
+
+Hill Station
+
+</h2>
+
+<p>
+
+Category
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="sideState">
+
+Tamil Nadu
+
+</h2>
+
+<p>
+
+Location
+
+</p>
+
+</div>
+
+</section>
+
+<!-- IMAGE GALLERY -->
+
+<section class="gallery">
+
+<h2>
+
+Destination Gallery
+
+</h2>
+
+<div class="gallery-grid">
+
+<img id="gallery1" src="">
+
+<img id="gallery2" src="">
+
+<img id="gallery3" src="">
+
+<img id="gallery4" src="">
+
+</div>
+
+</section>
+<!-- ==========================================
+     ABOUT DESTINATION
+========================================== -->
+
+<section class="about-section">
+
+<div class="container">
+
+<div class="about-content">
+
+<h2>
+
+About This Destination
+
+</h2>
+
+<p id="placeDescription">
+
+Loading destination details...
+
+</p>
+
+<ul id="placeHighlights">
+
+<li>Beautiful natural scenery</li>
+
+<li>Popular tourist attraction</li>
+
+<li>Family friendly destination</li>
+
+<li>Great photography locations</li>
+
+</ul>
+
+</div>
+
+<div class="travel-info">
+
+<h3>
+
+Travel Information
+
+</h3>
+
+<div class="info-row">
+
+<span>📍 State</span>
+
+<strong id="infoState">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="info-row">
+
+<span>🌤 Best Time</span>
+
+<strong id="infoBestTime">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="info-row">
+
+<span>⭐ Rating</span>
+
+<strong id="infoRating">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="info-row">
+
+<span>🏔 Category</span>
+
+<strong id="infoCategory">
+
+Loading...
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     GOOGLE MAP
+========================================== -->
+
+<section class="map-section">
+
+<div class="section-title">
+
+<h2>
+
+Interactive Location Map
+
+</h2>
+
+<p>
+
+Explore the destination location
+
+</p>
+
+</div>
+
+<div class="map-wrapper">
+
+<iframe
+id="googleMap"
+src=""
+loading="lazy"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     TOP ATTRACTIONS
+========================================== -->
+
+<section class="attractions">
+
+<div class="section-title">
+
+<h2>
+
+Top Attractions
+
+</h2>
+
+</div>
+
+<div class="attraction-grid">
+
+<div class="attraction-card">
+
+<div class="icon">
+
+🏞️
+
+</div>
+
+<h3>
+
+Nature Views
+
+</h3>
+
+<p>
+
+Beautiful landscapes and mountains
+
+</p>
+
+</div>
+
+<div class="attraction-card">
+
+<div class="icon">
+
+🏛️
+
+</div>
+
+<h3>
+
+Historic Places
+
+</h3>
+
+<p>
+
+Famous monuments and culture
+
+</p>
+
+</div>
+
+<div class="attraction-card">
+
+<div class="icon">
+
+🍽️
+
+</div>
+
+<h3>
+
+Food & Dining
+
+</h3>
+
+<p>
+
+Local food and restaurants
+
+</p>
+
+</div>
+
+<div class="attraction-card">
+
+<div class="icon">
+
+📸
+
+</div>
+
+<h3>
+
+Photography
+
+</h3>
+
+<p>
+
+Amazing photo spots
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     PREMIUM HOTELS
+========================================== -->
+
+<section class="hotels-section">
+
+<div class="section-title">
+
+<h2>
+
+Recommended Hotels
+
+</h2>
+
+<p>
+
+Best hotels near this destination
+
+</p>
+
+</div>
+
+<div id="hotelGrid"
+class="hotel-grid">
+
+<!-- JS WILL LOAD HOTELS -->
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     RESTAURANTS
+========================================== -->
+
+<section class="restaurants-section">
+
+<div class="section-title">
+
+<h2>
+
+Popular Restaurants
+
+</h2>
+
+</div>
+
+<div class="restaurant-grid">
+
+<div class="restaurant-card">
+
+<h3>
+
+Local Restaurant
+
+</h3>
+
+<p>
+
+Traditional regional food
+
+</p>
+
+</div>
+
+<div class="restaurant-card">
+
+<h3>
+
+Family Dining
+
+</h3>
+
+<p>
+
+Perfect for families
+
+</p>
+
+</div>
+
+<div class="restaurant-card">
+
+<h3>
+
+Luxury Dining
+
+</h3>
+
+<p>
+
+Premium dining experience
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     AI TRAVEL PLANNER
+========================================== -->
+
+<section class="ai-planner">
+
+<div class="planner-container">
+
+<h2>
+
+🤖 AI Travel Planner
+
+</h2>
+
+<p>
+
+Generate a smart travel plan for this destination.
+
+</p>
+
+<a href="ai.html"
+class="planner-btn">
+
+Plan My Trip
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     TRAVEL BUDGET ESTIMATOR
+========================================== -->
+
+<section class="budget-section">
+
+<div class="section-title">
+
+<h2>
+
+Estimated Travel Budget
+
+</h2>
+
+<p>
+
+Average costs for travelers
+
+</p>
+
+</div>
+
+<div class="budget-grid">
+
+<div class="budget-card">
+
+<h3>
+
+Budget Trip
+
+</h3>
+
+<p>
+
+₹5,000 - ₹10,000
+
+</p>
+
+</div>
+
+<div class="budget-card">
+
+<h3>
+
+Standard Trip
+
+</h3>
+
+<p>
+
+₹10,000 - ₹25,000
+
+</p>
+
+</div>
+
+<div class="budget-card">
+
+<h3>
+
+Luxury Trip
+
+</h3>
+
+<p>
+
+₹25,000+
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     USER REVIEWS
+========================================== -->
+
+<section class="reviews-section">
+
+<div class="section-title">
+
+<h2>
+
+Traveler Reviews
+
+</h2>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<p>
+
+Amazing destination with beautiful scenery.
+
+</p>
+
+<span>
+
+- Rahul
+
+</span>
+
+</div>
+
+<div class="review-card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<p>
+
+Perfect family trip destination.
+
+</p>
+
+<span>
+
+- Priya
+
+</span>
+
+</div>
+
+<div class="review-card">
+
+<h3>
+
+⭐⭐⭐⭐
+
+</h3>
+
+<p>
+
+Great experience and wonderful views.
+
+</p>
+
+<span>
+
+- Arjun
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     SIMILAR DESTINATIONS
+========================================== -->
+
+<section class="similar-section">
+
+<div class="section-title">
+
+<h2>
+
+Similar Destinations
+
+</h2>
+
+<p>
+
+Explore more places you may like
+
+</p>
+
+</div>
+
+<div id="similarPlaces"
+class="similar-grid">
+
+<!-- JS LOADS DESTINATIONS -->
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     NEWSLETTER
+========================================== -->
+
+<section class="newsletter">
+
+<div class="newsletter-content">
+
+<h2>
+
+📩 Travel Updates
+
+</h2>
+
+<p>
+
+Get latest travel news and destination updates.
+
+</p>
+
+<div class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     PREMIUM FOOTER
+========================================== -->
+
+<footer class="premium-footer">
+
+<div class="footer-container">
+
+<div class="footer-logo">
+
+<h2>
+
+🌍 Travel Explorer
+
+</h2>
+
+<p>
+
+Discover the world's best destinations.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+<a href="places.html">
+
+Places
+
+</a>
+
+<a href="hotel.html">
+
+Hotels
+
+</a>
+
+<a href="transport.html">
+
+Transport
+
+</a>
+
+<a href="ai.html">
+
+AI Planner
+
+</a>
+
+</div>
+
+<div class="footer-social">
+
+<h3>
+
+Follow Us
+
+</h3>
+
+<a href="#">
+
+Facebook
+
+</a>
+
+<a href="#">
+
+Instagram
+
+</a>
+
+<a href="#">
+
+YouTube
+
+</a>
+
+<a href="#">
+
+Twitter
+
+</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 Travel Explorer. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- ==========================================
+     FLOATING BUTTONS
+========================================== -->
+
+<div class="floating-buttons">
+
+<button
+class="float-btn"
+id="favoriteBtn">
+
+❤️
+
+</button>
+
+<button
+class="float-btn"
+id="scrollTopBtn">
+
+⬆️
+
+</button>
+
+</div>
+
+<script src="place-details.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login - Info All AI</title>
+
+<link rel="stylesheet" href="auth.css">
+
+</head>
+<body>
+
+<div class="auth-container">
+
+<div class="auth-card">
+
+<h1>🤖 Info All AI</h1>
+
+<p>Welcome Back</p>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+Login
+</button>
+<button id="googleLoginBtn" class="google-btn">
+
+<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg">
+
+Continue with Google
+
+</button>
+<a href="signup.html">
+Create Account
+</a>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>

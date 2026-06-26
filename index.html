@@ -1,0 +1,958 @@
+<!-- =========================================
+     PREMIUM NAVBAR
+========================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Info All AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Info All">
+
+        <span>Info All</span>
+
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="destinations.html">Destinations</a>
+
+        <a href="weather.html">Weather</a>
+
+        <a href="ai.html">AI Assistant</a>
+
+        <a href="news.html">News</a>
+
+         <a href="transport.html">Transport</a>
+
+    </nav>
+
+    <div class="nav-right">
+
+        <button id="darkModeBtn">
+
+            🌙
+
+        </button>
+
+        <div class="user-profile">
+
+            <img
+                id="userPhoto"
+                src="https://ui-avatars.com/api/?name=User"
+                alt="Profile">
+
+            <span id="userName">
+
+                Guest
+
+            </span>
+
+        </div>
+
+        <a href="login.html" class="login-btn">
+
+            Login
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- =========================================
+     MOBILE MENU BUTTON
+========================================= -->
+
+<button id="menuBtn" class="menu-btn">
+
+☰
+
+</button>
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+
+            Discover The World With
+
+            <span class="typing-text">
+
+                Info All
+
+            </span>
+
+        </h1>
+
+        <p>
+
+            Explore destinations, weather,
+            AI assistance, travel guides,
+            hotels and more in one place.
+
+        </p>
+
+        <!-- SEARCH BAR -->
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search places, weather, hotels, AI...">
+
+            <button id="voiceSearchBtn">
+
+                🎤
+
+            </button>
+
+            <button id="searchBtn">
+
+                🔍 Search
+
+            </button>
+
+        </div>
+
+        <!-- RECENT SEARCHES -->
+
+        <div id="recentSearches">
+
+        </div>
+
+        <!-- HERO BUTTONS -->
+
+        <div class="hero-buttons">
+
+            <a href="ai.html" class="primary-btn">
+
+                🤖 Ask AI
+
+            </a>
+
+            <a href="destinations.html" class="secondary-btn">
+
+                🌍 Explore Places
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     QUICK FEATURES
+========================================= -->
+
+<section class="quick-features">
+
+    <div class="feature-card">
+
+        <div class="icon">
+
+            🤖
+
+        </div>
+
+        <h3>AI Assistant</h3>
+
+        <p>
+
+            Get instant answers and travel help.
+
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <div class="icon">
+
+            🌤
+
+        </div>
+
+        <h3>Live Weather</h3>
+
+        <p>
+
+            Real-time forecasts worldwide.
+
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <div class="icon">
+
+            🏖
+
+        </div>
+
+        <h3>Tourist Places</h3>
+
+        <p>
+
+            Discover amazing destinations.
+
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <div class="icon">
+
+            🏨
+
+        </div>
+
+        <h3>Hotels</h3>
+
+        <p>
+
+            Find the best stays and resorts.
+
+        </p>
+
+    </div>
+
+</section>
+<!-- =========================================
+     TRENDING DESTINATIONS
+========================================= -->
+
+<section class="trending-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            🔥 Trending Destinations
+
+        </h2>
+
+        <p>
+
+            Explore the most popular places
+            visited by travelers.
+
+        </p>
+
+    </div>
+
+    <div class="destination-slider">
+
+        <div class="destination-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944"
+            alt="Munnar">
+
+            <div class="destination-info">
+
+                <h3>Munnar</h3>
+
+                <p>Kerala, India</p>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+            </div>
+
+        </div>
+
+        <div class="destination-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2"
+            alt="Goa">
+
+            <div class="destination-info">
+
+                <h3>Goa</h3>
+
+                <p>India</p>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+            </div>
+
+        </div>
+
+        <div class="destination-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5"
+            alt="Ooty">
+
+            <div class="destination-info">
+
+                <h3>Ooty</h3>
+
+                <p>Tamil Nadu</p>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+            </div>
+
+        </div>
+
+        <div class="destination-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1564507592333-c60657eea523"
+            alt="Mysore">
+
+            <div class="destination-info">
+
+                <h3>Mysore</h3>
+
+                <p>Karnataka</p>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     WEATHER SECTION
+========================================= -->
+
+<section class="weather-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            🌤 Live Weather
+
+        </h2>
+
+        <p>
+
+            Current weather conditions.
+
+        </p>
+
+    </div>
+
+    <div class="weather-widget">
+
+        <div class="weather-card">
+
+            <h3>
+
+                📍 Chennai
+
+            </h3>
+
+            <h1 id="temperature">
+
+                29°C
+
+            </h1>
+
+            <p id="weatherStatus">
+
+                Sunny
+
+            </p>
+
+            <div class="weather-details">
+
+                <span>
+
+                    💧 Humidity: 70%
+
+                </span>
+
+                <span>
+
+                    🌬 Wind: 15 km/h
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     STATISTICS SECTION
+========================================= -->
+
+<section class="stats-section">
+
+    <div class="stat-box">
+
+        <h2 class="counter"
+            data-target="50000">
+
+            0
+
+        </h2>
+
+        <p>
+
+            Users
+
+        </p>
+
+    </div>
+
+    <div class="stat-box">
+
+        <h2 class="counter"
+            data-target="100000">
+
+            0
+
+        </h2>
+
+        <p>
+
+            Searches
+
+        </p>
+
+    </div>
+
+    <div class="stat-box">
+
+        <h2 class="counter"
+            data-target="25000">
+
+            0
+
+        </h2>
+
+        <p>
+
+            Places
+
+        </p>
+
+    </div>
+
+    <div class="stat-box">
+
+        <h2 class="counter"
+            data-target="24">
+
+            0
+
+        </h2>
+
+        <p>
+
+            AI Support
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     AI SHOWCASE
+========================================= -->
+
+<section class="ai-showcase">
+
+    <div class="ai-left">
+
+        <img
+        src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+        alt="AI">
+
+    </div>
+
+    <div class="ai-right">
+
+        <h2>
+
+            🤖 Meet Info All AI
+
+        </h2>
+
+        <p>
+
+            Ask questions, get travel plans,
+            weather updates, coding help,
+            educational support and more.
+
+        </p>
+
+        <ul>
+
+            <li>✔ Smart AI Assistant</li>
+
+            <li>✔ Travel Planning</li>
+
+            <li>✔ AI Generated Images</li>
+
+            <li>✔ Real-Time Answers</li>
+
+            <li>✔ Voice Search Support</li>
+
+        </ul>
+
+        <a href="ai.html"
+           class="primary-btn">
+
+            Try AI Now
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     DESTINATION GALLERY
+========================================= -->
+
+<section class="gallery-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            📸 Featured Gallery
+
+        </h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+
+    </div>
+
+</section>
+<!-- =========================================
+     TESTIMONIALS
+========================================= -->
+
+<section class="testimonials-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            ⭐ What Our Users Say
+
+        </h2>
+
+        <p>
+
+            Trusted by thousands of travelers and AI users.
+
+        </p>
+
+    </div>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+
+            <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="User">
+
+            <h3>Arun Kumar</h3>
+
+            <span>Traveler</span>
+
+            <p>
+
+                "Info All helped me plan my entire trip.
+                The AI assistant is extremely useful."
+
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="User">
+
+            <h3>Priya</h3>
+
+            <span>Student</span>
+
+            <p>
+
+                "The AI assistant answers questions
+                quickly and accurately."
+
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img
+            src="https://randomuser.me/api/portraits/men/55.jpg"
+            alt="User">
+
+            <h3>Rahul</h3>
+
+            <span>Developer</span>
+
+            <p>
+
+                "The design is beautiful and the
+                weather updates are very useful."
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FAQ SECTION
+========================================= -->
+
+<section class="faq-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            ❓ Frequently Asked Questions
+
+        </h2>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                What is Info All?
+
+            </button>
+
+            <div class="faq-answer">
+
+                Info All is an all-in-one platform
+                for travel, AI assistance,
+                weather updates and information.
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Is Info All AI Free?
+
+            </button>
+
+            <div class="faq-answer">
+
+                Yes. Most features are available
+                for free.
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I use Voice Search?
+
+            </button>
+
+            <div class="faq-answer">
+
+                Yes. Voice search is supported
+                on modern browsers.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter">
+
+    <div class="newsletter-content">
+
+        <h2>
+
+            📧 Stay Updated
+
+        </h2>
+
+        <p>
+
+            Get travel tips, AI updates and
+            latest features directly in your inbox.
+
+        </p>
+
+        <div class="newsletter-form">
+
+            <input
+            type="email"
+            placeholder="Enter your email">
+
+            <button>
+
+                Subscribe
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     APP PROMOTION
+========================================= -->
+
+<section class="app-section">
+
+    <div class="app-content">
+
+        <h2>
+
+            📱 Info All Mobile App
+
+        </h2>
+
+        <p>
+
+            Coming Soon on Android and iOS.
+
+        </p>
+
+        <button class="primary-btn">
+
+            Notify Me
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     BACK TO TOP BUTTON
+========================================= -->
+
+<button id="backToTop">
+
+⬆
+
+</button>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-column">
+
+            <h3>
+
+                Info All
+
+            </h3>
+
+            <p>
+
+                Discover destinations,
+                AI assistance and weather
+                information all in one place.
+
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+            <a href="ai.html">
+
+                AI Assistant
+
+            </a>
+
+            <a href="weather.html">
+
+                Weather
+
+            </a>
+
+            <a href="destinations.html">
+
+                Destinations
+
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Support
+
+            </h3>
+
+            <a href="#">
+
+                Contact
+
+            </a>
+
+            <a href="#">
+
+                Privacy Policy
+
+            </a>
+
+            <a href="#">
+
+                Terms & Conditions
+
+            </a>
+
+            <a href="#">
+
+                FAQ
+
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Follow Us
+
+            </h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+
+                    Facebook
+
+                </a>
+
+                <a href="#">
+
+                    Instagram
+
+                </a>
+
+                <a href="#">
+
+                    YouTube
+
+                </a>
+
+                <a href="#">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Info All. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+     <script src="main.js"></script>
+</body>
+</html>

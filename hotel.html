@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Hotels & Resorts | Info All</title>
+
+    <meta name="description"
+        content="Discover luxury hotels, budget stays, resorts, homestays and premium accommodations across India.">
+
+    <link rel="stylesheet"
+        href="hotel.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+            LOADER
+    ========================== -->
+
+    <div id="loader">
+
+        <div class="loader-circle"></div>
+
+        <h2>Loading Hotels...</h2>
+
+    </div>
+
+    <!-- =========================
+            HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="nav-container">
+
+            <a href="index.html"
+                class="logo">
+
+                <i class="fa-solid fa-earth-asia"></i>
+
+                <span>Info All</span>
+
+            </a>
+
+            <nav class="navbar">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="places.html">
+                    Destinations
+                </a>
+
+                <div class="mega-parent">
+
+                    <a href="#">
+
+                        Hotels
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+                    <div class="mega-menu">
+
+                        <div class="mega-column">
+
+                            <h4>Categories</h4>
+
+                            <a href="#">
+                                Luxury Hotels
+                            </a>
+
+                            <a href="#">
+                                Budget Hotels
+                            </a>
+
+                            <a href="#">
+                                Family Resorts
+                            </a>
+
+                            <a href="#">
+                                Homestays
+                            </a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>Popular</h4>
+
+                            <a href="#">
+                                Beach Resorts
+                            </a>
+
+                            <a href="#">
+                                Hill Resorts
+                            </a>
+
+                            <a href="#">
+                                Business Hotels
+                            </a>
+
+                            <a href="#">
+                                Boutique Hotels
+                            </a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>Services</h4>
+
+                            <a href="ai.html">
+                                AI Hotel Planner
+                            </a>
+
+                            <a href="guide.html">
+                                Travel Guides
+                            </a>
+
+                            <a href="#">
+                                Deals & Offers
+                            </a>
+
+                            <a href="#">
+                                Contact Us
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="ai.html">
+                    AI Planner
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button id="searchToggle">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+                <button id="menuBtn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+        MOBILE DRAWER
+    ========================== -->
+
+    <div id="mobileDrawer">
+
+        <div class="drawer-header">
+
+            <h2>Menu</h2>
+
+            <button id="closeDrawer">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <nav class="drawer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="places.html">
+                Destinations
+            </a>
+
+            <a href="hotel.html">
+                Hotels
+            </a>
+
+            <a href="ai.html">
+                AI Planner
+            </a>
+
+            <a href="guide.html">
+                Travel Guides
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+    <!-- =========================
+            HERO SECTION
+    ========================== -->
+
+    <section class="hotel-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+
+                ✨ Premium Stays Across India
+
+            </span>
+
+            <h1>
+
+                Find Your Perfect
+                <span>Hotel & Resort</span>
+
+            </h1>
+
+            <p>
+
+                Discover luxury hotels, beach resorts,
+                mountain retreats, business stays and
+                affordable accommodations with the
+                best travel experience.
+
+            </p>
+
+            <!-- Search Box -->
+
+            <div class="hero-search">
+
+                <div class="search-group">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <input type="text"
+                        id="hotelSearch"
+                        placeholder="Search city, hotel or destination...">
+
+                </div>
+
+                <button id="searchBtn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Search
+
+                </button>
+
+            </div>
+
+            <!-- Live Suggestions -->
+
+            <div id="searchSuggestions"
+                class="search-suggestions">
+
+            </div>
+
+            <!-- Quick Categories -->
+
+            <div class="quick-tags">
+
+                <span>
+                    🏨 Luxury
+                </span>
+
+                <span>
+                    🏖 Beach
+                </span>
+
+                <span>
+                    🏔 Resort
+                </span>
+
+                <span>
+                    👨‍👩‍👧 Family
+                </span>
+
+                <span>
+                    💰 Budget
+                </span>
+
+                <span>
+                    ❤️ Couple
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        HOTEL CATEGORY SECTION
+    ========================== -->
+
+    <section class="hotel-categories">
+
+        <div class="section-header">
+
+            <h2>
+                Browse By Category
+            </h2>
+
+            <p>
+                Explore stays that match your travel style.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <i class="fa-solid fa-hotel"></i>
+                <h3>Luxury</h3>
+                <p>5-Star Premium Hotels</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>Budget</h3>
+                <p>Affordable Stays</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-water"></i>
+                <h3>Beach</h3>
+                <p>Coastal Resorts</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-mountain"></i>
+                <h3>Hill</h3>
+                <p>Mountain Retreats</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Couple</h3>
+                <p>Romantic Escapes</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-house"></i>
+                <h3>Homestay</h3>
+                <p>Local Experiences</p>
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =========================
+        FEATURED HOTELS
+    ========================== -->
+
+    <section class="featured-hotels">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-tag">
+                    ✨ Featured Collection
+                </span>
+
+                <h2>
+                    Handpicked Premium Hotels
+                </h2>
+
+                <p>
+                    Curated luxury stays and top-rated resorts loved by travelers.
+                </p>
+            </div>
+
+            <a href="#hotelListing"
+                class="view-all-btn">
+
+                View All Hotels
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+        <div class="featured-slider">
+
+            <div class="featured-card">
+
+                <div class="featured-image">
+
+                    <img src="images/hotels/luxury1.jpg"
+                        alt="Luxury Hotel">
+
+                    <span class="hotel-badge">
+                        Top Pick
+                    </span>
+
+                </div>
+
+                <div class="featured-content">
+
+                    <span class="hotel-type">
+                        Luxury Resort
+                    </span>
+
+                    <h3>
+                        The Royal Grand Resort
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Udaipur, Rajasthan
+
+                    </p>
+
+                    <div class="featured-footer">
+
+                        <div class="rating">
+
+                            ⭐ 4.9
+
+                        </div>
+
+                        <div class="price">
+
+                            ₹12,999
+                            <small>/ night</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="featured-card">
+
+                <div class="featured-image">
+
+                    <img src="images/hotels/beach1.jpg"
+                        alt="Beach Resort">
+
+                    <span class="hotel-badge popular">
+                        Bestseller
+                    </span>
+
+                </div>
+
+                <div class="featured-content">
+
+                    <span class="hotel-type">
+                        Beach Resort
+                    </span>
+
+                    <h3>
+                        Blue Ocean Paradise
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Goa
+
+                    </p>
+
+                    <div class="featured-footer">
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <div class="price">
+
+                            ₹8,499
+                            <small>/ night</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="featured-card">
+
+                <div class="featured-image">
+
+                    <img src="images/hotels/hill1.jpg"
+                        alt="Hill Resort">
+
+                    <span class="hotel-badge">
+                        Trending
+                    </span>
+
+                </div>
+
+                <div class="featured-content">
+
+                    <span class="hotel-type">
+                        Hill Resort
+                    </span>
+
+                    <h3>
+                        Misty Valley Retreat
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Munnar, Kerala
+
+                    </p>
+
+                    <div class="featured-footer">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <div class="price">
+
+                            ₹9,299
+                            <small>/ night</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+          HOTEL LISTING SECTION
+    ========================== -->
+
+    <section id="hotelListing"
+        class="hotel-listing">
+
+        <div class="section-header center">
+
+            <span class="section-tag">
+                🏨 Explore Hotels
+            </span>
+
+            <h2>
+                Find Your Ideal Stay
+            </h2>
+
+            <p>
+                Browse thousands of premium hotels, resorts and homestays.
+            </p>
+
+        </div>
+
+        <div class="listing-layout">
+
+            <!-- ========= FILTER SIDEBAR ========= -->
+
+            <aside class="filter-sidebar">
+
+                <div class="filter-box">
+
+                    <h3>
+                        Filters
+                    </h3>
+
+                    <button class="reset-filter">
+                        Reset All
+                    </button>
+
+                </div>
+
+                <div class="filter-box">
+
+                    <h4>
+                        Category
+                    </h4>
+
+                    <button class="filter-btn active"
+                        data-filter="all">
+
+                        All
+
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="luxury">
+
+                        Luxury
+
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="budget">
+
+                        Budget
+
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="resort">
+
+                        Resort
+
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="beach">
+
+                        Beach
+
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="family">
+
+                        Family
+
+                    </button>
+
+                </div>
+
+                <div class="filter-box">
+
+                    <h4>
+                        Rating
+                    </h4>
+
+                    <label>
+                        <input type="checkbox">
+                        ⭐ 4.5 & Above
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        ⭐ 4.0 & Above
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        ⭐ 3.5 & Above
+                    </label>
+
+                </div>
+
+                <div class="filter-box">
+
+                    <h4>
+                        Amenities
+                    </h4>
+
+                    <label>
+                        <input type="checkbox">
+                        Free WiFi
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Swimming Pool
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Restaurant
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Spa
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Parking
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Gym
+                    </label>
+
+                </div>
+
+                <div class="filter-box">
+
+                    <h4>
+                        Price Range
+                    </h4>
+
+                    <input type="range"
+                        min="1000"
+                        max="25000"
+                        value="10000"
+                        id="priceRange">
+
+                    <p>
+
+                        Up to
+
+                        <span id="priceValue">
+                            ₹10,000
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </aside>
+
+            <!-- ========= HOTEL GRID ========= -->
+
+            <div class="hotel-results">
+
+                <div class="result-header">
+
+                    <h3 id="totalHotels">
+
+                        0 Hotels Found
+
+                    </h3>
+
+                    <select id="sortHotels">
+
+                        <option value="popular">
+                            Sort: Most Popular
+                        </option>
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Dynamic cards generated by hotel.js -->
+
+                <div id="hotelGrid"
+                    class="hotel-grid">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        AI HOTEL RECOMMENDATION
+    ========================== -->
+
+    <section class="ai-hotel">
+
+        <div class="ai-container">
+
+            <div class="ai-left">
+
+                <span class="section-tag">
+
+                    🤖 Smart Travel Assistant
+
+                </span>
+
+                <h2>
+
+                    AI Hotel Recommendation
+
+                </h2>
+
+                <p>
+
+                    Tell us your destination, budget and travel style.
+                    Our intelligent planner will help you discover the
+                    best hotels for your journey.
+
+                </p>
+
+                <ul class="ai-features">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        Personalized hotel suggestions
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        Budget-based recommendations
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        Family, luxury and couple stay matching
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        Instant travel planning
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="ai-right">
+
+                <div class="planner-card">
+
+                    <h3>
+
+                        Find My Perfect Hotel
+
+                    </h3>
+
+                    <input type="text"
+                        id="aiDestination"
+                        placeholder="Destination">
+
+                    <input type="number"
+                        id="aiBudget"
+                        placeholder="Budget per Night (₹)">
+
+                    <select id="aiCategory">
+
+                        <option value="Luxury">
+                            Luxury
+                        </option>
+
+                        <option value="Budget">
+                            Budget
+                        </option>
+
+                        <option value="Family">
+                            Family
+                        </option>
+
+                        <option value="Resort">
+                            Resort
+                        </option>
+
+                        <option value="Beach">
+                            Beach
+                        </option>
+
+                    </select>
+
+                    <button id="generateHotelPlan">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Get Recommendation
+
+                    </button>
+
+                    <div id="aiResult">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- =========================
+        NEWSLETTER SECTION
+    ========================== -->
+
+    <section class="newsletter-section">
+
+        <div class="newsletter-container">
+
+            <div class="newsletter-left">
+
+                <span class="section-tag">
+                    📩 Stay Updated
+                </span>
+
+                <h2>
+                    Get Exclusive Hotel Deals & Travel Offers
+                </h2>
+
+                <p>
+                    Join thousands of travelers and receive premium hotel discounts,
+                    destination guides, travel tips, and exclusive seasonal offers.
+                </p>
+
+            </div>
+
+            <div class="newsletter-right">
+
+                <div class="newsletter-box">
+
+                    <input type="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email address">
+
+                    <button id="subscribeBtn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Subscribe
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        MOBILE APP PROMOTION
+    ========================== -->
+
+    <section class="app-section">
+
+        <div class="app-container">
+
+            <div class="app-content">
+
+                <span class="section-tag">
+                    📱 Mobile Experience
+                </span>
+
+                <h2>
+                    Download the Info All Travel App
+                </h2>
+
+                <p>
+                    Book hotels, discover destinations, create AI-powered travel
+                    plans and manage your trips anywhere with our upcoming mobile app.
+                </p>
+
+                <div class="app-buttons">
+
+                    <a href="#"
+                        class="store-btn">
+
+                        <i class="fa-brands fa-google-play"></i>
+
+                        Google Play
+
+                    </a>
+
+                    <a href="#"
+                        class="store-btn">
+
+                        <i class="fa-brands fa-apple"></i>
+
+                        App Store
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="app-image">
+
+                <div class="phone-mockup">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+            FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <i class="fa-solid fa-earth-asia"></i>
+
+                    <span>Info All</span>
+
+                </div>
+
+                <p>
+                    Explore the best destinations, premium hotels,
+                    travel guides and AI-powered trip planning in one place.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="places.html">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hotel.html">
+                            Hotels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Travel Guides
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            AI Planner
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Hotel Categories -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Hotel Categories
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Luxury Hotels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Budget Hotels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Resorts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Beach Hotels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Homestays
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Support -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Help Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contact Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            FAQs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-left">
+
+                © 2026 <strong>Info All</strong>.
+                All Rights Reserved.
+
+            </div>
+
+            <div class="footer-bottom-right">
+
+                Made with
+
+                <i class="fa-solid fa-heart"></i>
+
+                for Travelers Around the World.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+        BACK TO TOP BUTTON
+    ========================== -->
+
+    <button id="backToTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- =========================
+            JAVASCRIPT
+    ========================== -->
+
+    <script src="hotel.js"></script>
+
+</body>
+
+</html>

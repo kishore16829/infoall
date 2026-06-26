@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Munnar",
+    "state": "Kerala",
+    "category": "Hill Station",
+    "rating": 4.8,
+    "bestTime": "September - March",
+    "description": "Munnar is one of India's most beautiful hill stations, famous for tea plantations, waterfalls, mist-covered mountains and pleasant weather throughout the year.",
+    "image": "images/munnar.jpg",
+    "highlights": [
+      "Tea Gardens",
+      "Eravikulam National Park",
+      "Mattupetty Dam",
+      "Echo Point",
+      "Top Station"
+    ]
+  },
+
+  {
+    "name": "Ooty",
+    "state": "Tamil Nadu",
+    "category": "Hill Station",
+    "rating": 4.7,
+    "bestTime": "October - June",
+    "description": "Ooty is known for its rolling hills, botanical gardens, scenic train ride and cool climate, making it one of South India's top tourist destinations.",
+    "image": "images/ooty.jpg",
+    "highlights": [
+      "Botanical Garden",
+      "Ooty Lake",
+      "Doddabetta Peak",
+      "Toy Train",
+      "Rose Garden"
+    ]
+  },
+
+  {
+    "name": "Goa",
+    "state": "Goa",
+    "category": "Beach",
+    "rating": 4.9,
+    "bestTime": "November - February",
+    "description": "Goa is India's most popular beach destination, offering vibrant nightlife, Portuguese heritage, adventure sports and beautiful coastline.",
+    "image": "images/goa.jpg",
+    "highlights": [
+      "Baga Beach",
+      "Calangute Beach",
+      "Fort Aguada",
+      "Dudhsagar Falls",
+      "Cruise Experience"
+    ]
+  },
+
+  {
+    "name": "Kodaikanal",
+    "state": "Tamil Nadu",
+    "category": "Hill Station",
+    "rating": 4.7,
+    "bestTime": "October - June",
+    "description": "Kodaikanal is known as the Princess of Hill Stations, with forests, waterfalls, lakes and breathtaking viewpoints.",
+    "image": "images/kodaikanal.jpg",
+    "highlights": [
+      "Kodai Lake",
+      "Coaker's Walk",
+      "Pillar Rocks",
+      "Bryant Park",
+      "Silver Cascade Falls"
+    ]
+  },
+
+  {
+    "name": "Leh Ladakh",
+    "state": "Ladakh",
+    "category": "Adventure",
+    "rating": 4.9,
+    "bestTime": "May - September",
+    "description": "Leh Ladakh offers dramatic landscapes, high-altitude passes, monasteries and thrilling road-trip adventures.",
+    "image": "images/ladakh.jpg",
+    "highlights": [
+      "Pangong Lake",
+      "Nubra Valley",
+      "Magnetic Hill",
+      "Khardung La",
+      "Shanti Stupa"
+    ]
+  }
+]

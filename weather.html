@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Weather Center</title>
+
+<link rel="stylesheet"
+href="weather.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background-overlay"></div>
+
+<header class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+<span>Weather Center</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="places.html">Place</a>
+
+<a href="news.css">News</a>
+
+<a href="transport.html">Transport</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+Real-Time Weather Forecast
+
+</h1>
+
+<p>
+
+Get accurate weather updates
+for any city worldwide.
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="cityInput"
+placeholder="Enter city name">
+
+<button
+id="searchBtn">
+
+Search
+
+</button>
+
+</div>
+
+</section>
+
+<section class="weather-main">
+
+<div class="current-weather">
+
+<h2 id="cityName">
+
+Chennai
+
+</h2>
+
+<img
+id="weatherIcon"
+src="">
+
+<h1 id="temperature">
+
+--°C
+
+</h1>
+
+<p id="condition">
+
+Loading...
+
+</p>
+
+</div>
+
+<div class="weather-details">
+
+<div class="detail-card">
+
+<i class="fa-solid fa-water"></i>
+
+<h3>Humidity</h3>
+
+<p id="humidity">
+
+--
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<i class="fa-solid fa-wind"></i>
+
+<h3>Wind</h3>
+
+<p id="wind">
+
+--
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<i class="fa-solid fa-gauge"></i>
+
+<h3>Pressure</h3>
+
+<p id="pressure">
+
+--
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Visibility</h3>
+
+<p id="visibility">
+
+--
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     7 DAY FORECAST
+========================================== -->
+
+<section class="forecast-section">
+
+<h2>
+
+7-Day Forecast
+
+</h2>
+
+<div id="forecastContainer"
+class="forecast-grid">
+
+<!-- JS Loads Forecast -->
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     AIR QUALITY
+========================================== -->
+
+<section class="air-quality">
+
+<h2>
+
+Air Quality Index
+
+</h2>
+
+<div class="air-card">
+
+<div>
+
+<h3>AQI</h3>
+
+<p id="aqiValue">
+
+--
+
+</p>
+
+</div>
+
+<div>
+
+<h3>PM2.5</h3>
+
+<p id="pm25">
+
+--
+
+</p>
+
+</div>
+
+<div>
+
+<h3>PM10</h3>
+
+<p id="pm10">
+
+--
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     SUNRISE & SUNSET
+========================================== -->
+
+<section class="sun-section">
+
+<div class="sun-card">
+
+<i class="fa-solid fa-sun"></i>
+
+<h3>Sunrise</h3>
+
+<p id="sunrise">
+
+--
+
+</p>
+
+</div>
+
+<div class="sun-card">
+
+<i class="fa-solid fa-moon"></i>
+
+<h3>Sunset</h3>
+
+<p id="sunset">
+
+--
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     WEATHER HIGHLIGHTS
+========================================== -->
+
+<section class="highlights">
+
+<h2>
+
+Today's Highlights
+
+</h2>
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+
+🌡️ Real-Time Temperature
+
+</div>
+
+<div class="highlight-card">
+
+☁️ Weather Conditions
+
+</div>
+
+<div class="highlight-card">
+
+💧 Humidity Tracking
+
+</div>
+
+<div class="highlight-card">
+
+🌬️ Wind Monitoring
+
+</div>
+
+<div class="highlight-card">
+
+👁️ Visibility Status
+
+</div>
+
+<div class="highlight-card">
+
+🌍 Global Forecast
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<h2>
+
+Weather Center
+
+</h2>
+
+<p>
+
+Professional weather forecasts
+powered by WeatherAPI.
+
+</p>
+
+<p>
+
+© 2026 Weather Center
+
+</p>
+
+</div>
+
+</footer>
+
+<button id="backToTop">
+
+↑
+
+</button>
+
+<script src="weather.js"></script>
+
+</body>
+</html>

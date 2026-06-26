@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Travel News Hub
+</title>
+
+<link rel="stylesheet"
+href="news.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-earth-asia"></i>
+
+<span>
+Travel News Hub
+</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="weather.html">Weather</a>
+
+<a href="places.html">Destinations</a>
+
+<a href="hotel.html">Hotels</a>
+
+<a href="transport.html">Flights</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="nav-buttons">
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<button class="subscribe-btn">
+
+Subscribe
+
+</button>
+
+</div>
+
+</header>
+
+<!-- BREAKING NEWS -->
+
+<section class="breaking">
+
+<div class="breaking-title">
+
+🔥 BREAKING
+
+</div>
+
+<div class="ticker">
+
+<div class="ticker-track">
+
+✈️ International flights expanded •
+🏨 Luxury hotels opening across Asia •
+🌍 Top destinations for 2026 •
+🚆 New tourism train packages announced •
+🌦 Travel weather alerts updated daily
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Explore The World
+With Latest Travel Updates
+
+</h1>
+
+<p>
+
+Real-time travel news,
+destination updates,
+tourism trends and expert guides.
+
+</p>
+
+<div class="hero-search">
+
+<input
+type="text"
+id="searchNews"
+placeholder="Search travel news...">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CATEGORY FILTER -->
+
+<section class="category-section">
+
+<button class="active">
+
+All
+
+</button>
+
+<button>
+
+Destinations
+
+</button>
+
+<button>
+
+Hotels
+
+</button>
+
+<button>
+
+Flights
+
+</button>
+
+<button>
+
+Railways
+
+</button>
+
+<button>
+
+Travel Tips
+
+</button>
+
+</section>
+
+<!-- FEATURED ARTICLE -->
+
+<section class="featured">
+
+<div class="featured-image">
+
+<img
+src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600"
+alt="featured">
+
+</div>
+
+<div class="featured-content">
+
+<span>
+
+FEATURED STORY
+
+</span>
+
+<h2>
+
+Best International Destinations
+To Visit This Year
+
+</h2>
+
+<p>
+
+Explore trending destinations,
+luxury escapes and unforgettable journeys.
+
+</p>
+
+<button>
+
+Read Full Story
+
+</button>
+
+</div>
+
+</section>
+
+<!-- NEWS SECTION -->
+
+<section class="news-container">
+
+<div class="news-left">
+
+<h2>
+
+Latest Travel News
+
+</h2>
+
+<div id="newsGrid"
+class="news-grid">
+
+<!-- JS LOADS NEWS -->
+
+</div>
+
+</div>
+
+<div class="news-right">
+
+<div class="sidebar-card">
+
+<h3>
+
+🔥 Trending
+
+</h3>
+
+<ul>
+
+<li>Best Beaches 2026</li>
+
+<li>Luxury Hotel Trends</li>
+
+<li>Budget Travel Tips</li>
+
+<li>Top Hill Stations</li>
+
+<li>Travel Safety Updates</li>
+
+</ul>
+
+</div>
+
+<div class="sidebar-card">
+
+<h3>
+
+📈 Popular Destinations
+
+</h3>
+
+<ul>
+
+<li>Munnar</li>
+
+<li>Ooty</li>
+
+<li>Kodaikanal</li>
+
+<li>Goa</li>
+
+<li>Kashmir</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     NEWSLETTER SECTION
+========================================== -->
+
+<section class="newsletter">
+
+<div class="newsletter-content">
+
+<h2>
+
+Get Daily Travel Updates
+
+</h2>
+
+<p>
+
+Subscribe to receive breaking travel news,
+destination updates and tourism trends.
+
+</p>
+
+<div class="newsletter-form">
+
+<input
+type="email"
+id="newsletterEmail"
+placeholder="Enter your email address">
+
+<button
+id="subscribeBtn">
+
+Subscribe Now
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     LIVE TRAVEL WEATHER
+========================================== -->
+
+<section class="weather-section">
+
+<h2>
+
+🌦 Travel Weather Updates
+
+</h2>
+
+<div class="weather-widget">
+
+<input
+type="text"
+id="cityInput"
+placeholder="Enter city">
+
+<button
+id="weatherBtn">
+
+Get Weather
+
+</button>
+
+</div>
+
+<div
+id="weatherResult">
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     REAL API STATUS BAR
+========================================== -->
+
+<section class="api-status">
+
+<div>
+
+📰 Live News API Connected
+
+</div>
+
+<div>
+
+🌍 Real Travel Updates
+
+</div>
+
+<div>
+
+⚡ Updated Every Minute
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+Travel News Hub
+
+</h3>
+
+<p>
+
+Premium travel news platform
+with real-time updates.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+<a href="places.html">
+
+Places
+
+</a>
+
+<a href="hotel.html">
+
+Hotels
+
+</a>
+
+<a href="transport.html">
+
+Transport
+
+</a>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<a href="#">
+
+Travel Guides
+
+</a>
+
+<a href="#">
+
+Weather
+
+</a>
+
+<a href="#">
+
+Tour Packages
+
+</a>
+
+<a href="#">
+
+News Updates
+
+</a>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+support@travelhub.com
+
+</p>
+
+<p>
+
++91 9876543210
+
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Travel News Hub.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+<!-- BACK TO TOP -->
+
+<button
+id="backToTop">
+
+↑
+
+</button>
+
+<script src="news.js"></script>
+
+</body>
+</html>

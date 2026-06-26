@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explore Destinations | Info All</title>
+
+<meta name="description"
+content="Explore India's most beautiful tourist destinations with travel guides, hotels and AI trip planning.">
+
+<link rel="stylesheet" href="place.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =======================
+        NAVBAR
+======================= -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <i class="fa-solid fa-earth-asia"></i>
+        <span>Info All</span>
+    </a>
+
+    <nav class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+
+            <a href="#">
+                Destinations
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+
+            <div class="mega-menu">
+
+                <div class="menu-column">
+                    <h4>Nature</h4>
+                    <a href="#">Hill Stations</a>
+                    <a href="#">Waterfalls</a>
+                    <a href="#">Lakes</a>
+                    <a href="#">Forests</a>
+                </div>
+
+                <div class="menu-column">
+                    <h4>Culture</h4>
+                    <a href="#">Temples</a>
+                    <a href="#">Heritage</a>
+                    <a href="#">Museums</a>
+                    <a href="#">Festivals</a>
+                </div>
+
+                <div class="menu-column">
+                    <h4>Adventure</h4>
+                    <a href="#">Trekking</a>
+                    <a href="#">Camping</a>
+                    <a href="#">Wildlife</a>
+                    <a href="#">Photography</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="hotel.html">Hotels</a>
+        <a href="transport.html">Transport</a>
+        <a href="guide.html">Travel Guides</a>
+        <a href="ai.html">AI Planner</a>
+
+    </nav>
+
+    <div class="header-right">
+
+        <button class="premium-btn">
+            Plan Trip
+        </button>
+
+        <button id="menuBtn" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+<!-- =======================
+      MOBILE DRAWER
+======================= -->
+
+<div class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-top">
+        <h2>Info All</h2>
+
+        <button id="closeDrawer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <a href="index.html">Home</a>
+    <a href="places.html">Destinations</a>
+    <a href="hotel.html">Hotels</a>
+    <a href="transport.html">Transport</a>
+    <a href="guide.html">Travel Guides</a>
+    <a href="ai.html">AI Planner</a>
+    <a href="#">Contact</a>
+
+</div>
+
+<!-- =======================
+        HERO
+======================= -->
+
+<section class="places-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            ✈ Premium Travel Collection
+        </span>
+
+        <h1>
+            Discover Incredible India
+        </h1>
+
+        <p>
+            Explore handpicked destinations, hidden gems,
+            luxury stays and unforgettable adventures.
+        </p>
+
+        <div class="hero-search">
+
+            <div class="search-wrapper">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search destination, state or category...">
+
+                <div id="searchSuggestions"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================
+     CATEGORY FILTERS
+======================= -->
+
+<section class="filter-section">
+
+    <div class="filter-container">
+
+        <button class="filter-btn active"
+        data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn"
+        data-filter="hill">
+            🏔 Hill Stations
+        </button>
+
+        <button class="filter-btn"
+        data-filter="beach">
+            🏖 Beaches
+        </button>
+
+        <button class="filter-btn"
+        data-filter="heritage">
+            🏛 Heritage
+        </button>
+
+        <button class="filter-btn"
+        data-filter="nature">
+            🌿 Nature
+        </button>
+
+        <button class="filter-btn"
+        data-filter="adventure">
+            🚵 Adventure
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =======================
+   FEATURED COLLECTIONS
+======================= -->
+
+<section class="featured-strip">
+
+    <div class="featured-card">
+
+        <i class="fa-solid fa-fire"></i>
+
+        <h3>Trending Places</h3>
+
+        <p>
+            Explore the most visited destinations this season.
+        </p>
+
+    </div>
+
+    <div class="featured-card">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h3>Top Rated</h3>
+
+        <p>
+            Highest rated places selected by travelers.
+        </p>
+
+    </div>
+
+    <div class="featured-card">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <h3>Hidden Gems</h3>
+
+        <p>
+            Discover underrated and beautiful locations.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =======================
+   DESTINATIONS GRID
+======================= -->
+
+<section class="places-section">
+
+    <div class="section-header">
+
+        <div>
+            <h2>
+                Explore Destinations
+            </h2>
+
+            <p>
+                Handpicked travel experiences across India.
+            </p>
+        </div>
+
+        <div class="place-count">
+            <span id="totalPlaces">
+                Loading...
+            </span>
+        </div>
+
+    </div>
+
+    <div id="placesGrid"
+    class="places-grid">
+
+        <!-- Loaded from place.json -->
+
+    </div>
+
+</section>
+
+<!-- =======================
+      AI PLANNER CTA
+======================= -->
+
+<section class="planner-banner">
+
+    <div class="planner-content">
+
+        <h2>
+            Build Your Perfect Trip
+        </h2>
+
+        <p>
+            Let our AI planner generate a personalized travel itinerary.
+        </p>
+
+        <a href="#" class="planner-btn">
+            Launch AI Planner
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =======================
+        NEWSLETTER
+======================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Travel Smarter
+    </h2>
+
+    <p>
+        Get destination ideas, travel tips and exclusive updates.
+    </p>
+
+    <div class="newsletter-form">
+
+        <input
+        type="email"
+        placeholder="Enter your email address">
+
+        <button>
+            Subscribe
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =======================
+        FOOTER
+======================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>Info All</h3>
+
+            <p>
+                India's premium travel and tourism discovery platform.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="places.html">Destinations</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Travel Guides</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Categories</h3>
+
+            <ul>
+                <li><a href="#">Hill Stations</a></li>
+                <li><a href="#">Beaches</a></li>
+                <li><a href="#">Heritage</a></li>
+                <li><a href="#">Adventure</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Info All. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- =======================
+   LOADING SCREEN
+======================= -->
+
+<div id="loader">
+
+    <div class="loader-circle"></div>
+
+    <h3>
+        Loading Destinations...
+    </h3>
+
+</div>
+
+<script src="place.js"></script>
+
+</body>
+</html>
