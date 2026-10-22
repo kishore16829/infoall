@@ -1,0 +1,1624 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071426">
+
+  <meta
+    name="description"
+    content="Plan your journey with InfoAll. Explore flights, trains, buses, hotels, travel offers, and AI-powered travel recommendations."
+  >
+
+  <title>Transport & Travel Booking | InfoAll</title>
+
+  <!-- Custom stylesheet: Part 2 -->
+  <link rel="stylesheet" href="transport.css">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- =====================================================
+       1. ANNOUNCEMENT BAR
+  ====================================================== -->
+
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <p>
+        <i class="fa-solid fa-sparkles"></i>
+        Your next journey starts with InfoAll
+      </p>
+
+      <a href="#travel-offers">
+        Explore travel offers
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       2. MAIN HEADER
+  ====================================================== -->
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html" aria-label="InfoAll homepage">
+        <span class="brand-symbol">
+          <i class="fa-solid fa-compass"></i>
+        </span>
+
+        <span class="brand-text">
+          <strong>Info<span>All</span></strong>
+          <small>THE WORLD, CONNECTED</small>
+        </span>
+      </a>
+
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="#booking" class="nav-link active">
+          Transport
+        </a>
+
+        <a href="#travel-offers" class="nav-link">
+          Offers
+        </a>
+
+        <a href="#popular-routes" class="nav-link">
+          Popular routes
+        </a>
+
+        <a href="#ai-planner" class="nav-link nav-ai-link">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          AI Planner
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+        <button
+          class="icon-button theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          title="Change theme"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button
+          class="header-account"
+          id="accountButton"
+          type="button"
+        >
+          <span class="account-avatar">
+            <i class="fa-regular fa-user"></i>
+          </span>
+
+          <span class="account-label">My account</span>
+
+          <i class="fa-solid fa-chevron-down account-chevron"></i>
+        </button>
+
+        <button
+          class="mobile-menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       3. HERO SECTION
+  ====================================================== -->
+
+  <main>
+
+    <section class="transport-hero" id="booking">
+
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-grid-pattern"></div>
+      </div>
+
+      <div class="hero-container">
+
+        <div class="hero-copy">
+
+          <div class="hero-eyebrow">
+            <span class="live-dot"></span>
+            YOUR JOURNEY. YOUR WAY.
+          </div>
+
+          <h1>
+            Go beyond<br>
+            <span>the ordinary.</span>
+          </h1>
+
+          <p class="hero-description">
+            Discover routes, compare travel options, find better fares,
+            and plan your next adventure — all in one place.
+          </p>
+
+          <div class="hero-benefits">
+
+            <div class="hero-benefit">
+              <span class="benefit-icon">
+                <i class="fa-solid fa-route"></i>
+              </span>
+
+              <span>
+                <strong>Smart routes</strong>
+                <small>Plan with confidence</small>
+              </span>
+            </div>
+
+            <div class="hero-benefit">
+              <span class="benefit-icon">
+                <i class="fa-solid fa-wallet"></i>
+              </span>
+
+              <span>
+                <strong>Compare fares</strong>
+                <small>Find options for your budget</small>
+              </span>
+            </div>
+
+            <div class="hero-benefit">
+              <span class="benefit-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </span>
+
+              <span>
+                <strong>AI trip planner</strong>
+                <small>Personalized travel ideas</small>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Decorative journey card -->
+        <aside class="hero-journey-card" aria-label="Journey inspiration">
+
+          <div class="journey-card-top">
+            <span class="journey-card-label">
+              <i class="fa-solid fa-location-dot"></i>
+              YOUR NEXT ADVENTURE
+            </span>
+
+            <span class="journey-card-badge">Explore</span>
+          </div>
+
+          <div class="journey-route-visual">
+
+            <div class="journey-city">
+              <span class="journey-city-marker"></span>
+
+              <div>
+                <strong>Chennai</strong>
+                <small>Start somewhere</small>
+              </div>
+            </div>
+
+            <div class="journey-route-line">
+              <span class="route-line"></span>
+              <span class="route-plane">
+                <i class="fa-solid fa-plane"></i>
+              </span>
+            </div>
+
+            <div class="journey-city journey-city-end">
+              <span class="journey-city-marker"></span>
+
+              <div>
+                <strong>Anywhere</strong>
+                <small>Your next destination</small>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="journey-card-bottom">
+            <span>
+              <i class="fa-solid fa-earth-asia"></i>
+              Endless possibilities
+            </span>
+
+            <a href="#popular-routes" aria-label="Explore popular routes">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+
+      <!-- =================================================
+           4. MAIN BOOKING PANEL
+      ================================================== -->
+
+      <div class="booking-container">
+
+        <section class="booking-panel" aria-label="Search transport">
+
+          <!-- Transport category tabs -->
+          <div class="booking-topbar">
+
+            <div
+              class="transport-tabs"
+              role="tablist"
+              aria-label="Choose transport type"
+            >
+
+              <button
+                class="transport-tab active"
+                id="tabFlights"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="transportSearchForm"
+                data-transport-tab="flight"
+              >
+                <i class="fa-solid fa-plane"></i>
+                <span>Flights</span>
+              </button>
+
+              <button
+                class="transport-tab"
+                id="tabTrains"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="transportSearchForm"
+                data-transport-tab="train"
+              >
+                <i class="fa-solid fa-train"></i>
+                <span>Trains</span>
+              </button>
+
+              <button
+                class="transport-tab"
+                id="tabBuses"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="transportSearchForm"
+                data-transport-tab="bus"
+              >
+                <i class="fa-solid fa-bus"></i>
+                <span>Buses</span>
+              </button>
+
+              <a class="transport-tab transport-tab-link" href="hotel.html">
+                <i class="fa-solid fa-hotel"></i>
+                <span>Hotels</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+              </a>
+
+            </div>
+
+            <div class="booking-secure-label">
+              <i class="fa-solid fa-shield-halved"></i>
+              Smart travel search
+            </div>
+
+          </div>
+
+
+          <!-- Trip type -->
+          <div class="booking-form-area">
+
+            <div class="booking-form-heading">
+              <div>
+                <h2>Where are you headed?</h2>
+                <p>Choose your journey details to explore available options.</p>
+              </div>
+
+              <span class="form-step-indicator">
+                <span></span>
+                Search
+              </span>
+            </div>
+
+
+            <form id="transportSearchForm" autocomplete="off">
+
+              <input
+                type="hidden"
+                id="transportType"
+                name="transportType"
+                value="flight"
+              >
+
+
+              <!-- Trip options -->
+              <div class="trip-options" role="group" aria-label="Trip type">
+
+                <label class="trip-option is-active">
+                  <input
+                    type="radio"
+                    name="tripType"
+                    value="round"
+                    checked
+                  >
+
+                  <span class="custom-radio"></span>
+                  <span>Round trip</span>
+                </label>
+
+                <label class="trip-option">
+                  <input
+                    type="radio"
+                    name="tripType"
+                    value="oneway"
+                  >
+
+                  <span class="custom-radio"></span>
+                  <span>One way</span>
+                </label>
+
+              </div>
+
+
+              <!-- Origin, destination and dates -->
+              <div class="search-fields-grid">
+
+                <!-- Origin -->
+                <div class="search-field location-field" id="originField">
+
+                  <label for="origin" class="field-label">
+                    <i class="fa-solid fa-location-dot"></i>
+                    FROM
+                  </label>
+
+                  <input
+                    type="text"
+                    id="origin"
+                    name="origin"
+                    class="field-input location-input"
+                    placeholder="Departure city"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-controls="originSuggestions"
+                    required
+                  >
+
+                  <div
+                    class="location-suggestions suggestion-list"
+                    id="originSuggestions"
+                    role="listbox"
+                    aria-label="Departure city suggestions"
+                    hidden
+                  ></div>
+
+                  <p class="field-help">Choose your starting point</p>
+
+                </div>
+
+
+                <!-- Swap button -->
+                <button
+                  type="button"
+                  class="swap-locations"
+                  id="swapLocations"
+                  aria-label="Swap departure and destination"
+                  title="Swap locations"
+                >
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+
+                <!-- Destination -->
+                <div class="search-field location-field" id="destinationField">
+
+                  <label for="destination" class="field-label">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    TO
+                  </label>
+
+                  <input
+                    type="text"
+                    id="destination"
+                    name="destination"
+                    class="field-input location-input"
+                    placeholder="Arrival city"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-controls="destinationSuggestions"
+                    required
+                  >
+
+                  <div
+                    class="location-suggestions suggestion-list"
+                    id="destinationSuggestions"
+                    role="listbox"
+                    aria-label="Destination city suggestions"
+                    hidden
+                  ></div>
+
+                  <p class="field-help">Choose where you want to go</p>
+
+                </div>
+
+
+                <!-- Departure -->
+                <div class="search-field date-field">
+
+                  <label for="departureDate" class="field-label">
+                    <i class="fa-regular fa-calendar"></i>
+                    DEPARTURE
+                  </label>
+
+                  <input
+                    type="date"
+                    id="departureDate"
+                    name="departureDate"
+                    class="field-input"
+                    required
+                  >
+
+                  <p class="field-help">Your departure date</p>
+
+                </div>
+
+
+                <!-- Return -->
+                <div class="search-field date-field" id="returnDateField">
+
+                  <label for="returnDate" class="field-label">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    RETURN
+                  </label>
+
+                  <input
+                    type="date"
+                    id="returnDate"
+                    name="returnDate"
+                    class="field-input"
+                  >
+
+                  <p class="field-help">Optional for one-way trips</p>
+
+                </div>
+
+
+                <!-- Travellers -->
+                <div class="search-field passenger-field">
+
+                  <label for="travellers" class="field-label">
+                    <i class="fa-solid fa-users"></i>
+                    TRAVELLERS
+                  </label>
+
+                  <select
+                    id="travellers"
+                    name="travellers"
+                    class="field-input field-select"
+                  >
+                    <option value="1">1 traveller</option>
+                    <option value="2" selected>2 travellers</option>
+                    <option value="3">3 travellers</option>
+                    <option value="4">4 travellers</option>
+                    <option value="5">5 travellers</option>
+                    <option value="6">6 travellers</option>
+                    <option value="7">7 travellers</option>
+                    <option value="8">8 travellers</option>
+                    <option value="9">9 travellers</option>
+                  </select>
+
+                  <p class="field-help">Who is travelling?</p>
+
+                </div>
+
+
+                <!-- Cabin / class -->
+                <div class="search-field cabin-field" id="cabinField">
+
+                  <label for="cabinClass" class="field-label">
+                    <i class="fa-solid fa-chair"></i>
+                    CLASS
+                  </label>
+
+                  <select
+                    id="cabinClass"
+                    name="cabinClass"
+                    class="field-input field-select"
+                  >
+                    <option value="economy">Economy</option>
+                    <option value="premium_economy">Premium economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First class</option>
+                  </select>
+
+                  <p class="field-help">Choose your comfort</p>
+
+                </div>
+
+              </div>
+
+
+              <!-- Search options -->
+              <div class="search-options-row">
+
+                <div class="search-options-left">
+
+                  <label class="checkbox-option" id="directFlightsOption">
+                    <input
+                      type="checkbox"
+                      id="directFlights"
+                      name="directFlights"
+                    >
+                    <span class="checkbox-custom"></span>
+                    <span>Direct journeys only</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input
+                      type="checkbox"
+                      id="flexibleDates"
+                      name="flexibleDates"
+                    >
+                    <span class="checkbox-custom"></span>
+                    <span>Flexible dates</span>
+                  </label>
+
+                </div>
+
+                <span class="search-options-note">
+                  <i class="fa-solid fa-circle-info"></i>
+                  Final fares depend on the provider.
+                </span>
+
+              </div>
+
+
+              <!-- Search CTA -->
+              <div class="search-submit-row">
+
+                <div class="search-assurance">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+
+                  <span>
+                    <strong>One search, more possibilities.</strong>
+                    <small>Explore journeys that match your plans.</small>
+                  </span>
+                </div>
+
+                <button
+                  class="search-button"
+                  id="searchButton"
+                  type="submit"
+                >
+                  <span class="search-button-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+
+                  <span id="searchButtonText">Search journeys</span>
+
+                  <i class="fa-solid fa-arrow-right search-button-arrow"></i>
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="booking-bottom-strip">
+            <span>
+              <i class="fa-solid fa-compass"></i>
+              Explore new destinations
+            </span>
+
+            <span>
+              <i class="fa-solid fa-sliders"></i>
+              Compare available options
+            </span>
+
+            <span>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              Designed for every screen
+            </span>
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         5. TRUST / FEATURE STRIP
+    ==================================================== -->
+
+    <section class="trust-strip section-container" aria-label="InfoAll features">
+
+      <div class="trust-item">
+        <span class="trust-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </span>
+
+        <div>
+          <strong>Compare your options</strong>
+          <p>Explore the results available to you.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">
+          <i class="fa-solid fa-route"></i>
+        </span>
+
+        <div>
+          <strong>Plan with clarity</strong>
+          <p>Keep your route and travel dates organized.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">
+          <i class="fa-solid fa-brain"></i>
+        </span>
+
+        <div>
+          <strong>Travel smarter with AI</strong>
+          <p>Get ideas tailored to your journey.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         6. TRAVEL OFFERS
+    ==================================================== -->
+
+    <section class="page-section offers-section" id="travel-offers">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+            <span class="section-eyebrow">MAKE YOUR BUDGET GO FURTHER</span>
+            <h2>Travel offers & inspiration</h2>
+
+            <p>
+              Discover ideas for your next trip and check the terms
+              before booking with a travel provider.
+            </p>
+          </div>
+
+          <a class="section-link" href="#booking">
+            Plan a journey
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+          <article class="offer-card offer-card-primary">
+
+            <div class="offer-visual offer-visual-flight">
+              <span class="offer-floating-icon">
+                <i class="fa-solid fa-plane-departure"></i>
+              </span>
+
+              <span class="offer-category">FLIGHT IDEAS</span>
+
+              <div class="offer-visual-decoration">
+                <i class="fa-solid fa-cloud"></i>
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+            </div>
+
+            <div class="offer-content">
+              <span class="offer-label">YOUR NEXT ESCAPE</span>
+
+              <h3>Find your next destination</h3>
+
+              <p>
+                Explore available flight options and choose a journey
+                that fits your dates.
+              </p>
+
+              <a href="#booking" class="offer-link">
+                Explore flights
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </article>
+
+
+          <article class="offer-card">
+
+            <div class="offer-visual offer-visual-train">
+              <span class="offer-floating-icon">
+                <i class="fa-solid fa-train"></i>
+              </span>
+
+              <span class="offer-category">TRAIN JOURNEYS</span>
+            </div>
+
+            <div class="offer-content">
+              <span class="offer-label">ENJOY THE JOURNEY</span>
+
+              <h3>Explore routes by rail</h3>
+
+              <p>
+                Search train journeys between your preferred
+                departure and arrival cities.
+              </p>
+
+              <a
+                href="#booking"
+                class="offer-link"
+                data-transport-tab="train"
+              >
+                Explore trains
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </article>
+
+
+          <article class="offer-card">
+
+            <div class="offer-visual offer-visual-bus">
+              <span class="offer-floating-icon">
+                <i class="fa-solid fa-bus-simple"></i>
+              </span>
+
+              <span class="offer-category">ROAD TRAVEL</span>
+            </div>
+
+            <div class="offer-content">
+              <span class="offer-label">DISCOVER MORE</span>
+
+              <h3>Find your bus route</h3>
+
+              <p>
+                Compare bus options and prepare for your next
+                road journey.
+              </p>
+
+              <a
+                href="#booking"
+                class="offer-link"
+                data-transport-tab="bus"
+              >
+                Explore buses
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </article>
+
+        </div>
+
+        <p class="section-disclaimer">
+          <i class="fa-solid fa-circle-info"></i>
+          These are travel discovery cards, not guaranteed discounts.
+          Any fare or offer must be verified with the booking provider.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         7. SEARCH RESULTS
+    ==================================================== -->
+
+    <section
+      class="page-section results-section"
+      id="resultsSection"
+      aria-live="polite"
+      hidden
+    >
+
+      <div class="section-container">
+
+        <div class="results-header">
+
+          <div>
+            <span class="section-eyebrow">YOUR SEARCH</span>
+            <h2 id="resultsTitle">Available journeys</h2>
+            <p id="resultsSummary">Your selected journey details appear here.</p>
+          </div>
+
+          <div class="results-header-actions">
+
+            <span class="results-count" id="resultsCount">
+              0 journeys
+            </span>
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="saveCurrentSearch"
+            >
+              <i class="fa-regular fa-bookmark"></i>
+              Save route
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="results-layout">
+
+          <!-- Filters -->
+          <aside class="filter-panel" aria-label="Filter journeys">
+
+            <div class="filter-heading">
+              <h3>Filters</h3>
+
+              <button type="button" id="resetFilters" class="text-button">
+                Reset
+              </button>
+            </div>
+
+            <div class="filter-group">
+              <h4>Journey type</h4>
+
+              <label class="checkbox-option">
+                <input type="checkbox" id="filterDirect">
+                <span class="checkbox-custom"></span>
+                <span>Direct only</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" id="filterRefundable">
+                <span class="checkbox-custom"></span>
+                <span>Refundable</span>
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <label for="filterMaxPrice">
+                <h4>Maximum price (₹)</h4>
+              </label>
+
+              <input
+                type="number"
+                id="filterMaxPrice"
+                min="0"
+                step="100"
+                class="filter-price-input"
+                placeholder="No limit"
+              >
+            </div>
+
+            <div class="filter-note">
+              <i class="fa-solid fa-circle-info"></i>
+              Filters apply to the results returned by the provider.
+            </div>
+
+          </aside>
+
+
+          <!-- Results -->
+          <div class="results-main">
+
+            <div class="results-toolbar">
+
+              <div class="results-toolbar-copy">
+                <strong>Journey options</strong>
+                <span>Review times, prices and provider details.</span>
+              </div>
+
+              <label class="sort-control">
+                <span>Sort by</span>
+
+                <select id="sortResults">
+                  <option value="recommended">Recommended</option>
+                  <option value="price-low">Lowest price</option>
+                  <option value="price-high">Highest price</option>
+                  <option value="duration">Shortest duration</option>
+                  <option value="departure">Departure time</option>
+                </select>
+              </label>
+
+            </div>
+
+
+            <div class="results-notice" id="resultsNotice" hidden>
+              <i class="fa-solid fa-circle-info"></i>
+              <span id="resultsNoticeText"></span>
+            </div>
+
+
+            <div
+              class="results-loading"
+              id="resultsLoading"
+              role="status"
+              hidden
+            >
+              <span class="loading-spinner"></span>
+
+              <div>
+                <strong>Finding available journeys</strong>
+                <p>Checking the results returned by the search service…</p>
+              </div>
+            </div>
+
+
+            <div
+              class="results-error"
+              id="resultsError"
+              role="alert"
+              hidden
+            >
+              <i class="fa-solid fa-triangle-exclamation"></i>
+
+              <div>
+                <strong>We couldn't load your results</strong>
+                <p id="resultsErrorMessage">
+                  Please check your connection and try again.
+                </p>
+
+                <button type="button" id="retrySearch" class="secondary-button">
+                  <i class="fa-solid fa-rotate-right"></i>
+                  Try again
+                </button>
+              </div>
+            </div>
+
+
+            <div
+              class="results-list"
+              id="transportResultsList"
+              aria-label="Journey search results"
+            ></div>
+
+
+            <div class="results-empty" id="emptyResults" hidden>
+              <span class="empty-results-icon">
+                <i class="fa-solid fa-route"></i>
+              </span>
+
+              <h3>No matching journeys found</h3>
+
+              <p id="emptyResultsMessage">
+                Try changing your dates, locations, or filters.
+              </p>
+
+              <button
+                type="button"
+                class="secondary-button"
+                id="editSearchButton"
+              >
+                <i class="fa-solid fa-pen"></i>
+                Edit search
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         8. POPULAR ROUTES
+    ==================================================== -->
+
+    <section class="page-section routes-section" id="popular-routes">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+            <span class="section-eyebrow">WHERE WILL YOU GO?</span>
+            <h2>Popular routes to explore</h2>
+
+            <p>
+              Start with a destination idea. Choose your travel mode
+              and set the dates that work for you.
+            </p>
+          </div>
+
+          <a href="#booking" class="section-link">
+            Search all routes
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+
+        <div class="route-grid">
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Chennai"
+            data-destination="Bengaluru"
+            data-transport="train"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-train"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Chennai <i class="fa-solid fa-arrow-right"></i> Bengaluru</strong>
+              <small>Explore rail and road options</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Chennai"
+            data-destination="Mumbai"
+            data-transport="flight"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-plane"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Chennai <i class="fa-solid fa-arrow-right"></i> Mumbai</strong>
+              <small>Explore flight options</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Coimbatore"
+            data-destination="Chennai"
+            data-transport="train"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-train"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Coimbatore <i class="fa-solid fa-arrow-right"></i> Chennai</strong>
+              <small>Explore available journeys</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Madurai"
+            data-destination="Chennai"
+            data-transport="bus"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-bus"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Madurai <i class="fa-solid fa-arrow-right"></i> Chennai</strong>
+              <small>Explore bus options</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Chennai"
+            data-destination="Kochi"
+            data-transport="flight"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-plane"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Chennai <i class="fa-solid fa-arrow-right"></i> Kochi</strong>
+              <small>Explore flight options</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="route-card"
+            data-origin="Tiruchirappalli"
+            data-destination="Bengaluru"
+            data-transport="bus"
+          >
+            <span class="route-card-icon">
+              <i class="fa-solid fa-bus"></i>
+            </span>
+
+            <span class="route-card-content">
+              <strong>Trichy <i class="fa-solid fa-arrow-right"></i> Bengaluru</strong>
+              <small>Explore bus options</small>
+            </span>
+
+            <i class="fa-solid fa-chevron-right route-card-arrow"></i>
+          </button>
+
+        </div>
+
+        <p class="section-disclaimer">
+          Popular routes are suggestions, not live availability or fare quotations.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         9. AI TRAVEL PLANNER
+    ==================================================== -->
+
+    <section class="page-section ai-planner-section" id="ai-planner">
+
+      <div class="section-container">
+
+        <div class="ai-planner-card">
+
+          <div class="ai-planner-info">
+
+            <span class="ai-label">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              INFOALL INTELLIGENCE
+            </span>
+
+            <h2>
+              Meet your personal<br>
+              <span>AI travel planner.</span>
+            </h2>
+
+            <p>
+              Need help choosing a route, estimating a budget, or
+              organizing a trip? Describe your plans and ask the
+              travel assistant for suggestions.
+            </p>
+
+            <div class="ai-feature-list">
+
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Route and transport suggestions
+              </div>
+
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Trip planning around your budget
+              </div>
+
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Travel ideas for families and solo trips
+              </div>
+
+            </div>
+
+            <span class="ai-disclaimer">
+              AI suggestions may be inaccurate. Verify fares, schedules,
+              and travel rules with official providers.
+            </span>
+
+          </div>
+
+
+          <div class="ai-chat-panel">
+
+            <div class="ai-chat-header">
+
+              <div class="ai-assistant-avatar">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <div class="ai-assistant-details">
+                <strong>InfoAll Travel AI</strong>
+
+                <span>
+                  <span class="ai-status-dot"></span>
+                  Travel assistant
+                </span>
+              </div>
+
+              <button
+                type="button"
+                class="icon-button"
+                id="clearAIChat"
+                aria-label="Clear AI conversation"
+                title="New conversation"
+              >
+                <i class="fa-solid fa-rotate"></i>
+              </button>
+
+            </div>
+
+
+            <div
+              class="ai-messages"
+              id="aiMessages"
+              role="list"
+              aria-label="AI conversation"
+              aria-live="polite"
+            >
+              <div class="ai-message ai-message-assistant" role="listitem">
+                Hello! I'm your InfoAll travel assistant.
+                Tell me where you want to go, and I'll help you
+                explore your options.
+              </div>
+            </div>
+
+
+            <div class="ai-thinking" id="aiThinking" role="status" hidden>
+              <span class="loading-spinner"></span>
+              <span>Planning your journey…</span>
+            </div>
+
+
+            <div class="ai-suggestions" aria-label="Suggested questions">
+
+              <button
+                type="button"
+                class="ai-suggestion"
+                data-prompt="Help me plan a budget-friendly trip from Chennai."
+              >
+                <i class="fa-solid fa-wallet"></i>
+                Budget trip
+              </button>
+
+              <button
+                type="button"
+                class="ai-suggestion"
+                data-prompt="Compare the advantages of travelling by bus, train and flight."
+              >
+                <i class="fa-solid fa-scale-balanced"></i>
+                Compare transport
+              </button>
+
+              <button
+                type="button"
+                class="ai-suggestion"
+                data-prompt="Help me plan a family trip with a practical itinerary."
+              >
+                <i class="fa-solid fa-people-group"></i>
+                Family trip
+              </button>
+
+            </div>
+
+
+            <form class="ai-chat-form" id="aiChatForm">
+
+              <label for="aiPrompt" class="visually-hidden">
+                Ask the InfoAll travel assistant
+              </label>
+
+              <textarea
+                id="aiPrompt"
+                name="message"
+                rows="1"
+                placeholder="Ask anything about your journey..."
+                maxlength="2000"
+                required
+              ></textarea>
+
+              <button
+                type="submit"
+                class="ai-send-button"
+                id="sendAIMessage"
+                aria-label="Send message"
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+            </form>
+
+            <p class="ai-chat-footnote">
+              AI responses require a configured backend service.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         10. RECENT SEARCHES
+    ==================================================== -->
+
+    <section class="page-section recent-section" id="recentSection" hidden>
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+            <span class="section-eyebrow">PICK UP WHERE YOU LEFT OFF</span>
+            <h2>Your recent searches</h2>
+            <p>Quickly restore a journey you searched for earlier.</p>
+          </div>
+
+          <button type="button" class="text-button" id="clearRecent">
+            Clear history
+          </button>
+
+        </div>
+
+        <div class="recent-search-list" id="recentSearchList"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         11. SAVED TRIPS
+    ==================================================== -->
+
+    <section class="page-section saved-section" id="savedSection" hidden>
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+            <span class="section-eyebrow">YOUR PERSONAL TRAVEL SPACE</span>
+            <h2>Saved journeys</h2>
+            <p>Keep routes you want to revisit in one convenient place.</p>
+          </div>
+
+          <button type="button" class="text-button" id="clearSavedTrips">
+            Clear saved trips
+          </button>
+
+        </div>
+
+        <div class="saved-trip-list" id="savedTripList"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         12. TRAVEL PLANNING CTA
+    ==================================================== -->
+
+    <section class="planning-cta-section">
+
+      <div class="section-container">
+
+        <div class="planning-cta">
+
+          <div class="planning-cta-icon">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+
+          <div class="planning-cta-copy">
+            <span>THE JOURNEY IS YOURS</span>
+
+            <h2>Ready to make your next move?</h2>
+
+            <p>
+              Start with a destination, choose your dates,
+              and discover the options available to you.
+            </p>
+          </div>
+
+          <a href="#booking" class="planning-cta-button">
+            Plan my journey
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       13. FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="section-container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand-column">
+
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-symbol">
+              <i class="fa-solid fa-compass"></i>
+            </span>
+
+            <span class="brand-text">
+              <strong>Info<span>All</span></strong>
+              <small>THE WORLD, CONNECTED</small>
+            </span>
+          </a>
+
+          <p>
+            Discover places, compare travel options, and make
+            planning your next journey simpler.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+
+          <a href="index.html">Home</a>
+          <a href="#booking">Transport</a>
+          <a href="#popular-routes">Popular routes</a>
+          <a href="#travel-offers">Travel inspiration</a>
+        </div>
+
+
+        <div class="footer-column">
+          <h3>Plan your trip</h3>
+
+          <a href="#booking">Flights</a>
+          <a href="#booking" data-transport-tab="train">Trains</a>
+          <a href="#booking" data-transport-tab="bus">Buses</a>
+          <a href="hotel.html">Hotels</a>
+        </div>
+
+
+        <div class="footer-column">
+          <h3>InfoAll</h3>
+
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of use</a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear">2026</span> InfoAll.
+          All rights reserved.
+        </p>
+
+        <p>
+          Transport information and bookings depend on connected providers.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       14. ACCOUNT MENU
+  ====================================================== -->
+
+  <div class="account-menu" id="accountMenu" hidden>
+
+    <div class="account-menu-heading">
+      <span class="account-avatar">
+        <i class="fa-regular fa-user"></i>
+      </span>
+
+      <div>
+        <strong id="accountDisplayName">Welcome to InfoAll</strong>
+        <small id="accountDisplayEmail">Sign in to manage your trips</small>
+      </div>
+    </div>
+
+    <div class="account-menu-divider"></div>
+
+    <a href="login.html" id="loginLink">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      Sign in
+    </a>
+
+    <a href="#savedSection" id="accountSavedTrips">
+      <i class="fa-regular fa-bookmark"></i>
+      Saved journeys
+    </a>
+
+    <button type="button" id="logoutButton" hidden>
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Sign out
+    </button>
+
+  </div>
+
+
+  <!-- =====================================================
+       15. NOTIFICATIONS
+  ====================================================== -->
+
+  <div
+    class="toast-notification"
+    id="toastNotification"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- JavaScript: Part 3 -->
+  <script src="transport.js" defer></script>
+
+</body>
+</html>

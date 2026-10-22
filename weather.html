@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071522">
+  <meta name="description" content="Live weather, hourly conditions and a 7-day forecast with InfoAll Weather.">
+  <title>Live Weather | InfoAll</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weather.css">
+  <script src="weather.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="InfoAll home"><span class="brand-mark">i<span>•</span></span><span>info<span class="brand-light">all</span><small>TRAVEL INTELLIGENCE</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="place.html">Places</a><a href="hotel.html">Hotels</a><a href="transport.html">Transport</a><a class="active" href="weather.html">Weather</a><a href="guide.html">Guides</a>
+    </nav>
+    <div class="top-actions"><button class="icon-button" id="themeToggle" aria-label="Toggle light theme" title="Toggle theme">☼</button><button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button></div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a><a href="place.html">Places</a><a href="hotel.html">Hotels</a><a href="transport.html">Transport</a><a href="weather.html">Weather</a><a href="guide.html">Guides</a>
+  </nav>
+
+  <main class="page-shell">
+    <section class="intro">
+      <div class="eyebrow"><span class="live-dot"></span> LIVE WEATHER INTELLIGENCE</div>
+      <h1>Know the weather.<br><span>Make the most of everywhere.</span></h1>
+      <p>Real-time conditions and forecasts to help you plan your next journey with confidence.</p>
+    </section>
+
+    <section class="search-panel" aria-label="Find weather">
+      <div class="search-icon" aria-hidden="true">⌕</div>
+      <label class="sr-only" for="cityInput">Search city or destination</label>
+      <input id="cityInput" type="search" placeholder="Search a city or destination…" autocomplete="off" value="Trichy">
+      <button class="location-button" id="locationButton" title="Use my location"><span>◎</span><span class="location-label">My location</span></button>
+      <button class="search-button" id="searchButton">Search <span>↗</span></button>
+      <div class="suggestions" id="suggestions" role="listbox" hidden></div>
+    </section>
+    <div class="status-line"><span id="statusMessage" role="status">Getting the latest weather…</span><button id="refreshButton" class="text-button">↻ Refresh</button></div>
+
+    <section id="weatherContent" class="weather-content" aria-live="polite">
+      <div class="skeleton hero-skeleton"></div><div class="skeleton-row"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+    </section>
+    <footer class="footer"><div class="footer-brand">Info<span>All</span> <small>Weather for better journeys.</small></div><div class="footer-note">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · Forecasts are estimates and may change.</div></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+ 

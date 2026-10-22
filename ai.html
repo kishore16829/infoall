@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101116">
+  <meta name="description" content="Plan smarter journeys with InfoAll AI, your personal travel planning assistant.">
+  <title>InfoAll AI — Your Travel Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ai.css">
+</head>
+<body data-theme="dark">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Chat sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="index.html" aria-label="InfoAll home">
+          <span class="brand-logo"><span>i</span></span>
+          <span class="brand-text"><strong>InfoAll</strong><span>TRAVEL INTELLIGENCE</span></span>
+        </a>
+        <button class="icon-button sidebar-close" id="sidebarClose" type="button" aria-label="Close sidebar">×</button>
+      </div>
+
+      <button class="new-chat" id="newChatButton" type="button">
+        <span class="new-chat-icon" aria-hidden="true">+</span>
+        <span data-i18n="newChat">New chat</span>
+        <kbd>Ctrl ⇧ O</kbd>
+      </button>
+
+      <label class="sidebar-search" for="chatSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        <input id="chatSearch" type="search" placeholder="Search conversations" autocomplete="off" aria-label="Search conversations">
+        <kbd>/</kbd>
+      </label>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <p class="nav-label">WORKSPACE</p>
+        <a class="nav-item active" href="ai.html" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 14.5 9.5 21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"></path></svg>
+          AI Travel Assistant
+        </a>
+        <a class="nav-item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"></path></svg>Explore destinations</a>
+        <a class="nav-item" href="weather.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 18a4 4 0 1 1 .7-7.94A5.5 5.5 0 1 1 18 18H7Z"></path></svg>Weather</a>
+        <a class="nav-item" href="transport.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 17h14l-1.5-8h-11L5 17Z"></path><path d="M7 9V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M7 17l-1 3m12-3 1 3M8 13h.01M16 13h.01"></path></svg>Transport</a>
+      </nav>
+
+      <section class="history-section" aria-label="Conversation history">
+        <div class="history-heading"><span data-i18n="history">Recent chats</span><span aria-hidden="true">⌄</span></div>
+        <div class="history-list" id="historyList" aria-live="polite"></div>
+      </section>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-icon" aria-hidden="true">✦</div>
+          <div class="upgrade-content"><strong>Your journey, thoughtfully planned</strong><p>Ideas, itineraries and travel guidance in one place.</p></div>
+        </div>
+        <div class="profile-area">
+          <div class="profile-avatar" aria-hidden="true">G</div>
+          <div class="profile-info"><strong>Guest Traveller</strong><span>Personal workspace</span></div>
+          <button class="icon-button small" id="settingsButton" type="button" aria-label="Open settings" title="Settings">⚙</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" id="menuButton" type="button" aria-label="Open navigation">☰</button>
+          <div class="topbar-title"><strong class="topbar-brand" id="chatTitle">InfoAll AI</strong><span class="model-indicator"><i class="status-dot"></i> Travel assistant <span>·</span> Ready to help</span></div>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="themeButton" type="button" aria-label="Switch theme" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg></button>
+          <button class="icon-button" id="settingsButtonTop" type="button" aria-label="Settings" title="Settings" onclick="document.getElementById('settingsButton').click()">⚙</button>
+          <a class="topbar-home" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"></path></svg>Back to site</a>
+        </div>
+      </header>
+
+      <section class="chat-layout" aria-label="InfoAll AI conversation">
+        <section class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-content">
+            <div class="welcome-orb" aria-hidden="true"><span class="orb-ring orb-ring-one"></span><span class="orb-ring orb-ring-two"></span><span class="orb-core"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M24 5 28.5 19.5 43 24l-14.5 4.5L24 43l-4.5-14.5L5 24l14.5-4.5L24 5Z"></path><path d="m37 5 1.5 4.5L43 11l-4.5 1.5L37 17l-1.5-4.5L31 11l4.5-1.5L37 5Z"></path></svg></span></div>
+            <div class="welcome-eyebrow"><span class="welcome-eyebrow-dot"></span> YOUR PERSONAL TRAVEL COMPANION</div>
+            <h1 data-i18n="welcome">Where would you like to go?</h1>
+            <p class="welcome-description" data-i18n="subtitle">Plan smarter journeys with InfoAll AI. Get destination inspiration, practical itineraries, budget ideas and travel guidance.</p>
+            <div class="prompt-grid">
+              <button class="prompt-card prompt-purple" type="button" data-prompt="Suggest beautiful destinations in India for a 3-day family trip."><span class="prompt-icon">✧</span><strong class="prompt-text" data-i18n="tripIdeas">Discover destinations</strong><span class="prompt-description">Find places that fit your travel style</span><span class="prompt-arrow">↗</span></button>
+              <button class="prompt-card prompt-blue" type="button" data-prompt="Create a detailed 3-day itinerary for Munnar with travel times and a relaxed pace."><span class="prompt-icon">⌖</span><strong class="prompt-text" data-i18n="itinerary">Plan an itinerary</strong><span class="prompt-description">Build a practical day-by-day plan</span><span class="prompt-arrow">↗</span></button>
+              <button class="prompt-card prompt-green" type="button" data-prompt="Help me create a travel budget for a 3-day trip for 4 people in India."><span class="prompt-icon">₹</span><strong class="prompt-text" data-i18n="budget">Travel budget</strong><span class="prompt-description">Estimate costs and manage spending</span><span class="prompt-arrow">↗</span></button>
+              <button class="prompt-card prompt-orange" type="button" data-prompt="What weather factors should I check before planning a hill station trip in India?"><span class="prompt-icon">☼</span><strong class="prompt-text" data-i18n="weather">Travel weather</strong><span class="prompt-description">Prepare for conditions on your trip</span><span class="prompt-arrow">↗</span></button>
+            </div>
+          </div>
+        </section>
+
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+
+        <div class="composer-area">
+          <div class="composer-container">
+            <form class="composer" id="chatForm">
+              <div class="composer-main"><textarea id="messageInput" rows="1" maxlength="8000" placeholder="Ask anything about your next trip..." aria-label="Message InfoAll AI"></textarea></div>
+              <div class="composer-toolbar">
+                <div class="composer-tools"><span class="composer-mode"><i class="mode-dot"></i> Travel planning</span><span class="composer-divider"></span><span class="composer-disclaimer">AI can make mistakes. Verify important travel details.</span></div>
+                <div class="composer-right">
+                  <button class="stop-button" id="stopButton" type="button" hidden><span class="stop-square"></span> Stop</button>
+                  <button class="send-button" id="sendButton" type="submit" aria-label="Send message" title="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="settings-overlay" id="settingsOverlay" aria-hidden="true">
+    <section class="settings-panel" id="settingsPanel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <header class="settings-header"><div><span class="settings-eyebrow">PERSONALIZE</span><h2 id="settingsTitle">AI settings</h2></div><button class="icon-button" id="closeSettings" type="button" aria-label="Close settings">×</button></header>
+      <div class="settings-body">
+        <label class="settings-field">Language<select class="settings-select" id="languageSelect"><option value="en">English</option><option value="ta">தமிழ் (Tamil)</option><option value="hi">हिन्दी (Hindi)</option><option value="ml">Malayalam</option><option value="te">Telugu</option><option value="kn">Kannada</option><option value="fr">French</option><option value="es">Spanish</option><option value="de">German</option><option value="ar">Arabic</option><option value="ja">Japanese</option></select></label>
+        <label class="settings-field">Appearance<select class="settings-select" id="appearanceSelect"><option value="dark">Dark</option><option value="light">Light</option><option value="system">Use system setting</option></select></label>
+        <div class="settings-separator"></div>
+        <label class="settings-field">Response style<select class="settings-select" id="responseStyleSelect"><option value="balanced">Balanced</option><option value="friendly">Friendly</option><option value="professional">Professional</option><option value="concise">Concise</option></select></label>
+        <label class="settings-field">Answer length<select class="settings-select" id="responseLengthSelect"><option value="short">Short</option><option value="medium">Medium</option><option value="long">Detailed</option></select></label>
+        <label class="settings-field">Currency<select class="settings-select" id="currencySelect"><option value="INR">INR — Indian Rupee</option><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — Pound Sterling</option><option value="AED">AED — UAE Dirham</option><option value="JPY">JPY — Japanese Yen</option></select></label>
+        <p class="settings-note">Preferences are saved in this browser. AI replies require the configured server endpoint.</p>
+      </div>
+      <footer class="settings-footer"><button class="settings-reset" id="resetSettings" type="button">Reset</button><button class="settings-save" id="saveSettings" type="button">Save settings</button></footer>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./ai.js" defer></script>
+</body>
+</html>

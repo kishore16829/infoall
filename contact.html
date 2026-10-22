@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Contact the InfoAll team with feedback, corrections or questions.">
+  <title>Contact Us — InfoAll</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <script src="pages.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-row">
+    <a class="brand" href="index.html"><span class="brand-mark">i</span><span>info<span class="brand-accent">all</span><small>TRAVEL & DISCOVERY</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ <span>Menu</span></button>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Home</a><a href="news.html">Travel News</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+  </div></header>
+  <main>
+    <section class="page-hero compact"><div class="wrap"><div class="eyebrow">WE'RE LISTENING</div><h1>Let's start a <em>conversation.</em></h1><p>Have feedback, spotted an issue, or want to ask us something? Send a message using the form below.</p></div><div class="hero-orb orb-a"></div></section>
+    <section class="wrap contact-layout">
+      <div class="contact-info"><div class="eyebrow">GET IN TOUCH</div><h2>Your feedback helps us improve.</h2><p>Use this page for website feedback, content corrections, technical issues or general questions about InfoAll.</p>
+        <div class="contact-point"><span>✉</span><div><b>Email</b><p>Set your real contact email before publishing this website.</p></div></div>
+        <div class="contact-point"><span>◷</span><div><b>Response time</b><p>We aim to respond when possible. Response times may vary.</p></div></div>
+        <div class="contact-point"><span>↗</span><div><b>News correction</b><p>Include the article link and explain what needs correction.</p></div></div>
+        <div class="contact-note"><b>Privacy tip</b><p>Please do not include passwords, payment details, government ID numbers or other sensitive personal information in your message.</p></div>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-heading"><span class="form-icon">✦</span><div><h2>Send us a message</h2><p>Fields marked with * are required.</p></div></div>
+        <label for="name">Your name *</label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Enter your name">
+        <label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com">
+        <label for="subject">What is this about? *</label><select id="subject" name="subject" required><option value="">Choose a topic</option><option>General question</option><option>Website feedback</option><option>News correction</option><option>Technical problem</option><option>Privacy request</option><option>Other</option></select>
+        <label for="message">Message *</label><textarea id="message" name="message" rows="6" maxlength="5000" required placeholder="Tell us how we can help…"></textarea>
+        <p class="form-help">This demo form opens your email application if you configure the recipient in <code>pages.js</code>. It does not silently send data to a server.</p>
+        <button class="button button-primary submit-button" type="submit">Prepare email <span>→</span></button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-top"><a class="brand footer-brand" href="index.html"><span class="brand-mark">i</span><span>info<span class="brand-accent">all</span><small>TRAVEL & DISCOVERY</small></span></a><p>Curiosity is the best travel companion.</p><nav><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav></div><div class="wrap footer-bottom"><span>© <span data-year></span> InfoAll. All rights reserved.</span><span>Explore thoughtfully. Travel confidently.</span></div></footer>
+</body>
+</html>

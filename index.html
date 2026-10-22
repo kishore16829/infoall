@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="Discover remarkable destinations, thoughtful travel guides and smarter ways to plan your next journey with InfoAll.">
+  <title>InfoAll — Travel, thoughtfully discovered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+  <div class="announcement" id="announcementBar">
+    <span class="announcement-pulse"></span>
+    <span>A better kind of journey starts with a little curiosity.</span>
+    <a href="#explore">Find your next escape <span aria-hidden="true">↗</span></a>
+    <button id="announcementClose" aria-label="Dismiss announcement" type="button">×</button>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="InfoAll home">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M5 28 16 7l6 12 4-7 9 16H5Z" fill="currentColor"/><path d="m12 27 4-7 5 6 4-5 6 6H12Z" fill="#9de0ca"/><circle cx="30" cy="8" r="3" fill="#d8bd8a"/></svg></span>
+        <span class="brand-word">info<span>all</span><small>TRAVEL, WELL FOUND.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#explore">Destinations</a>
+        <a class="nav-link" href="#experiences">Experiences</a>
+        <a class="nav-link" href="#services">Travel tools</a>
+        <a class="nav-link" href="#stories">Guides</a>
+        <a class="nav-link" href="news.html">News</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="headerSearchButton" type="button" aria-label="Go to destination search" title="Search destinations"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Change appearance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.6 8.6 0 0 1 8.8 3.5 8.7 8.7 0 1 0 20.5 15.2Z"/></svg></button>
+        <a class="header-cta" href="ai.html">Plan with AI <span>↗</span></a>
+        <button class="menu-toggle" id="mobileMenuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M5 28 16 7l6 12 4-7 9 16H5Z" fill="currentColor"/><path d="m12 27 4-7 5 6 4-5 6 6H12Z" fill="#9de0ca"/></svg></span><span class="brand-word">info<span>all</span></span></a>
+      <button class="icon-button" id="mobileNavClose" type="button" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home">Home <span>↗</span></a><a href="#explore">Destinations <span>↗</span></a><a href="#experiences">Experiences <span>↗</span></a><a href="#services">Travel tools <span>↗</span></a><a href="place.html">Places <span>↗</span></a><a href="guide.html">Travel guides <span>↗</span></a><a href="ai.html">AI travel assistant <span>↗</span></a>
+    </nav>
+    <div class="mobile-nav-note">Discover more. Travel beyond.</div>
+  </aside>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+  <main id="mainContent">
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Sunlight spilling across a dramatic mountain lake"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow eyebrow-light"><span></span> THE WORLD, OPENED UP</div>
+        <h1>Go somewhere<br>that <em>moves you.</em></h1>
+        <p class="hero-copy">From quiet coastlines to mountain mornings, find places that feel like you — and make the journey there a little easier.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#explore">Explore destinations <span>↗</span></a>
+          <a class="hero-text-link" href="ai.html"><span class="play-mark">✳</span> Build a trip with InfoAll AI</a>
+        </div>
+        <div class="hero-footnote"><span class="hero-footnote-line"></span><span>GOOD JOURNEYS START WITH CURIOSITY</span></div>
+      </div>
+      <a class="hero-feature" href="place.html" aria-label="Explore Munnar destination">
+        <div class="feature-image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85" alt="Green mountain landscape" fetchpriority="low"></div>
+        <div class="feature-copy"><span class="feature-kicker">A PLACE TO BEGIN</span><strong>Munnar, in a slower rhythm</strong><span class="feature-link">Discover the feeling <b>↗</b></span></div>
+      </a>
+      <div class="hero-side-label">TRAVEL, THOUGHTFULLY DISCOVERED <span>— 01 / 04</span></div>
+    </section>
+
+    <section class="search-section" id="travelSearch" aria-labelledby="searchTitle">
+      <div class="search-shell">
+        <div class="search-intro"><span class="section-kicker">YOUR NEXT CHAPTER</span><h2 id="searchTitle">Where to next?</h2><p>Start with a place. We’ll help you shape the possibilities.</p></div>
+        <div class="search-main">
+          <div class="search-tabs" role="tablist" aria-label="Choose a travel search">
+            <button class="search-tab active" type="button" role="tab" aria-selected="true" data-trip-type="explore"><span>⌖</span> Explore</button>
+            <button class="search-tab" type="button" role="tab" aria-selected="false" data-trip-type="flight"><span>↗</span> Flights</button>
+            <button class="search-tab" type="button" role="tab" aria-selected="false" data-trip-type="hotel"><span>⌂</span> Stays</button>
+            <button class="search-tab" type="button" role="tab" aria-selected="false" data-trip-type="train"><span>↝</span> Trains</button>
+            <button class="search-tab" type="button" role="tab" aria-selected="false" data-trip-type="bus"><span>▤</span> Bus</button>
+          </div>
+          <form class="travel-search-form" id="travelSearchForm">
+            <label class="search-field destination-field"><span class="field-label">I’M DREAMING OF</span><span class="field-input"><span class="field-icon">⌖</span><input id="searchDestination" name="destination" type="text" placeholder="A place, a feeling, a city…" autocomplete="off" required aria-autocomplete="list" aria-controls="destinationSuggestions"></span><span class="search-suggestions" id="destinationSuggestions" role="listbox" aria-label="Destination suggestions"></span></label>
+            <label class="search-field"><span class="field-label">LEAVING FROM</span><span class="field-input"><span class="field-icon">↗</span><input id="searchOrigin" name="origin" type="text" placeholder="Your city" autocomplete="address-level2"></span></label>
+            <label class="search-field date-field"><span class="field-label">DEPARTURE</span><span class="field-input"><span class="field-icon">▦</span><input id="travelStartDate" name="departure" type="date" aria-label="Departure date"></span></label>
+            <label class="search-field date-field"><span class="field-label">RETURN</span><span class="field-input"><span class="field-icon">▦</span><input id="travelEndDate" name="return" type="date" aria-label="Return date"></span></label>
+            <label class="search-field traveller-field"><span class="field-label">TRAVELLERS</span><span class="field-input"><span class="field-icon">♙</span><select id="travellerCount" name="travellers"><option value="1">1 traveller</option><option value="2" selected>2 travellers</option><option value="3">3 travellers</option><option value="4">4 travellers</option><option value="5">5 travellers</option><option value="6">6 travellers</option><option value="7">7 travellers</option><option value="8">8 travellers</option></select></span></label>
+            <button class="search-submit" id="travelSearchSubmit" type="submit"><span>Explore</span><b>↗</b></button>
+          </form>
+          <div class="search-bottom"><span>IN NEED OF INSPIRATION?</span><div class="popular-destinations"><button type="button" class="popular-destination" data-destination="Munnar">Munnar</button><button type="button" class="popular-destination" data-destination="Goa">Goa</button><button type="button" class="popular-destination" data-destination="Jaipur">Jaipur</button><button type="button" class="popular-destination" data-destination="Bali">Bali</button><button type="button" class="popular-destination" data-destination="Swiss Alps">Swiss Alps</button></div><span class="search-assurance"><span>✳</span> No booking fees on InfoAll</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations section-wrap" id="explore">
+      <div class="section-heading reveal">
+        <div><span class="section-kicker">PLACES WITH A PULL</span><h2>Find your kind of <em>somewhere.</em></h2></div>
+        <a class="text-arrow" href="place.html">Explore all places <span>↗</span></a>
+      </div>
+      <div class="destination-toolbar reveal"><p>Consider this your sign to go.</p><div class="filter-chips" role="group" aria-label="Filter destinations"><button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">All places</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Nature</button><button class="filter-chip" type="button" data-filter="coast" aria-pressed="false">Coast</button><button class="filter-chip" type="button" data-filter="culture" aria-pressed="false">Culture</button></div></div>
+      <div class="destination-grid" id="destinationGrid">
+        <article class="destination-card destination-card-large reveal" data-name="Munnar" data-category="nature" data-description="Tea-covered hills, cool mornings and winding roads through the Western Ghats." data-best="October – March" data-duration="3–4 days" data-cost="Flexible">
+          <a class="destination-photo" href="place.html" aria-label="Explore Munnar"><img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=85" alt="Rolling green tea hills in Munnar" loading="lazy"><span class="photo-index">01 / INDIA</span></a>
+          <button class="save-place" type="button" data-save="munnar" aria-label="Save Munnar" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">NATURE · SLOW TRAVEL</span><h3>Munnar, Kerala</h3><p>Where the hills ask you to slow down.</p></div><a href="place.html" class="round-arrow" aria-label="Explore Munnar">↗</a></div>
+        </article>
+        <article class="destination-card reveal" data-name="Varkala" data-category="coast" data-description="Clifftop sunsets, laid-back cafés and the Arabian Sea at your feet." data-best="October – March" data-duration="2–3 days" data-cost="Flexible">
+          <a class="destination-photo" href="place.html" aria-label="Explore Varkala"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85" alt="Turquoise ocean waves along a sandy coast" loading="lazy"><span class="photo-index">02 / INDIA</span></a>
+          <button class="save-place" type="button" data-save="varkala" aria-label="Save Varkala" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">COAST · EASYGOING</span><h3>Varkala, Kerala</h3><p>Salt air and unhurried afternoons.</p></div><a href="place.html" class="round-arrow" aria-label="Explore Varkala">↗</a></div>
+        </article>
+        <article class="destination-card reveal" data-name="Jaipur" data-category="culture" data-description="Rose-coloured architecture, lively bazaars and a deep sense of history." data-best="November – February" data-duration="2–4 days" data-cost="Flexible">
+          <a class="destination-photo" href="place.html" aria-label="Explore Jaipur"><img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1000&q=85" alt="Historic pink sandstone architecture in Jaipur" loading="lazy"><span class="photo-index">03 / INDIA</span></a>
+          <button class="save-place" type="button" data-save="jaipur" aria-label="Save Jaipur" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">CULTURE · HERITAGE</span><h3>Jaipur, Rajasthan</h3><p>Colour, craft and stories in every lane.</p></div><a href="place.html" class="round-arrow" aria-label="Explore Jaipur">↗</a></div>
+        </article>
+        <article class="destination-card reveal" data-name="Swiss Alps" data-category="nature" data-description="Alpine villages, clear lakes and mountain views that make you pause." data-best="June – September" data-duration="5–7 days" data-cost="Plan ahead">
+          <a class="destination-photo" href="place.html" aria-label="Explore the Swiss Alps"><img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1000&q=85" alt="Snow-capped alpine mountain range" loading="lazy"><span class="photo-index">04 / SWITZERLAND</span></a>
+          <button class="save-place" type="button" data-save="swiss-alps" aria-label="Save Swiss Alps" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">MOUNTAINS · OUTDOORS</span><h3>The Swiss Alps</h3><p>Big skies and a different kind of quiet.</p></div><a href="place.html" class="round-arrow" aria-label="Explore the Swiss Alps">↗</a></div>
+        </article>
+        <article class="destination-card reveal" data-name="Maldives" data-category="coast" data-description="Warm water, coral islands and days with nowhere urgent to be." data-best="November – April" data-duration="4–6 days" data-cost="Plan ahead">
+          <a class="destination-photo" href="place.html" aria-label="Explore Maldives"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1000&q=85" alt="Tropical island surrounded by blue water" loading="lazy"><span class="photo-index">05 / INDIAN OCEAN</span></a>
+          <button class="save-place" type="button" data-save="maldives" aria-label="Save Maldives" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">ISLANDS · REST</span><h3>Maldives</h3><p>A little distance from the everyday.</p></div><a href="place.html" class="round-arrow" aria-label="Explore Maldives">↗</a></div>
+        </article>
+        <article class="destination-card reveal" data-name="Bali" data-category="culture" data-description="Temple mornings, green landscapes and a rich creative culture." data-best="April – October" data-duration="5–8 days" data-cost="Flexible">
+          <a class="destination-photo" href="place.html" aria-label="Explore Bali"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85" alt="Balinese temple and lush tropical landscape" loading="lazy"><span class="photo-index">06 / INDONESIA</span></a>
+          <button class="save-place" type="button" data-save="bali" aria-label="Save Bali" aria-pressed="false">♡</button>
+          <div class="destination-info"><div><span class="destination-type">CULTURE · ISLAND LIFE</span><h3>Bali, Indonesia</h3><p>Find your balance between wonder and rest.</p></div><a href="place.html" class="round-arrow" aria-label="Explore Bali">↗</a></div>
+        </article>
+      </div>
+      <p class="empty-state" id="destinationEmpty" hidden>No destinations match that filter just yet. Try another collection.</p>
+      <div class="destination-bottom"><span><b id="destinationCount">06</b> IDEAS TO GET YOU GOING</span><a href="place.html" class="text-arrow">See the full collection <span>↗</span></a></div>
+    </section>
+
+    <section class="experience-section" id="experiences">
+      <div class="experience-inner">
+        <div class="experience-copy reveal"><span class="section-kicker section-kicker-light">TRAVEL BY FEELING</span><h2>Less checklist.<br>More <em>feeling.</em></h2><p>Some trips are for switching off. Others are for getting wonderfully lost. Start with what you want to feel, then find the places that fit.</p><a href="guide.html" class="button button-outline-light">Explore travel guides <span>↗</span></a></div>
+        <div class="experience-list">
+          <a class="experience-item reveal" href="place.html"><span class="experience-number">01</span><span class="experience-icon">⌁</span><span class="experience-text"><strong>Out in nature</strong><small>Mountain air, forest paths and open skies</small></span><span class="experience-arrow">↗</span></a>
+          <a class="experience-item reveal" href="place.html"><span class="experience-number">02</span><span class="experience-icon">≈</span><span class="experience-text"><strong>By the water</strong><small>Coastal escapes and island time</small></span><span class="experience-arrow">↗</span></a>
+          <a class="experience-item reveal" href="guide.html"><span class="experience-number">03</span><span class="experience-icon">✳</span><span class="experience-text"><strong>Culture & character</strong><small>Local food, craft and living history</small></span><span class="experience-arrow">↗</span></a>
+          <a class="experience-item reveal" href="guide.html"><span class="experience-number">04</span><span class="experience-icon">☼</span><span class="experience-text"><strong>Slow travel</strong><small>Make space for the unexpected</small></span><span class="experience-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section section-wrap" id="services">
+      <div class="section-heading reveal"><div><span class="section-kicker">EVERYTHING IN ITS PLACE</span><h2>Thoughtful tools for <em>the way there.</em></h2></div><p class="heading-note">Useful travel essentials, brought together so you can spend less time juggling tabs and more time looking forward.</p></div>
+      <div class="tools-grid">
+        <a class="tool-card tool-card-featured reveal" href="ai.html"><span class="tool-icon">✳</span><span class="tool-label">YOUR PERSONAL TRAVEL SIDEKICK</span><h3>Meet InfoAll AI</h3><p>Shape itineraries, explore ideas and make sense of the details with a travel-focused assistant.</p><span class="tool-link">Start planning <b>↗</b></span><span class="tool-decoration" aria-hidden="true">✳</span></a>
+        <a class="tool-card reveal" href="transport.html"><span class="tool-icon">↗</span><span class="tool-label">GETTING AROUND</span><h3>Transport</h3><p>Explore options for flights, trains, buses and road journeys.</p><span class="tool-link">Explore transport <b>↗</b></span></a>
+        <a class="tool-card reveal" href="hotel.html"><span class="tool-icon">⌂</span><span class="tool-label">A PLACE TO LAND</span><h3>Stays & hotels</h3><p>Find inspiration for a stay that fits your pace and plans.</p><span class="tool-link">Explore stays <b>↗</b></span></a>
+        <a class="tool-card reveal" href="weather.html"><span class="tool-icon">☼</span><span class="tool-label">BE READY FOR THE ELEMENTS</span><h3>Weather</h3><p>Check conditions as part of a more considered travel plan.</p><span class="tool-link">Check weather <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section class="planner-banner" id="planner">
+      <div class="planner-image" role="img" aria-label="A winding road through a green mountain valley"></div><div class="planner-overlay"></div>
+      <div class="planner-content reveal"><span class="section-kicker section-kicker-light">YOUR IDEAS, INTO A JOURNEY</span><h2>Have a place in mind?<br><em>Let’s make a plan.</em></h2><p>Tell InfoAll AI what you’re imagining — a weekend away, a family adventure, or a trip with no fixed agenda.</p><a href="ai.html" class="button button-light">Build your itinerary <span>↗</span></a></div>
+      <div class="planner-stamp"><span>GO AT</span><strong>your<br>own pace</strong><span>INFOALL TRAVEL</span></div>
+    </section>
+
+    <section class="stories-section section-wrap" id="stories">
+      <div class="section-heading reveal"><div><span class="section-kicker">NOTES FOR THE ROAD</span><h2>Travel a little <em>wiser.</em></h2></div><a href="guide.html" class="text-arrow">Read all guides <span>↗</span></a></div>
+      <div class="stories-grid">
+        <a class="story-card reveal" href="guide.html"><div class="story-image"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Lake and mountains under a soft sky" loading="lazy"><span>THE SLOW EDIT</span></div><div class="story-copy"><span class="story-meta">PLANNING · 5 MIN READ</span><h3>Plan less. Experience more.</h3><p>A simple way to build a trip that leaves room for real life.</p><span class="story-arrow">Read the guide ↗</span></div></a>
+        <a class="story-card reveal" href="guide.html"><div class="story-image"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Colourful seaside village on a hillside" loading="lazy"><span>GO A LITTLE FURTHER</span></div><div class="story-copy"><span class="story-meta">DESTINATIONS · 7 MIN READ</span><h3>Find the places between the places.</h3><p>Why the unplanned stop can become the best part of a journey.</p><span class="story-arrow">Read the guide ↗</span></div></a>
+        <a class="story-card reveal" href="guide.html"><div class="story-image"><img src="https://images.unsplash.com/photo-1500534623283-312a5f4a6e0b?auto=format&fit=crop&w=900&q=85" alt="Open landscape beneath a warm evening sky" loading="lazy"><span>TRAVEL THOUGHTFULLY</span></div><div class="story-copy"><span class="story-meta">RESPONSIBLE TRAVEL · 4 MIN READ</span><h3>Leave a lighter footprint.</h3><p>Small choices that can make a journey more thoughtful.</p><span class="story-arrow">Read the guide ↗</span></div></a>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="newsletter-inner reveal"><div><span class="section-kicker section-kicker-light">A GOOD NOTE TO GET</span><h2>A little inspiration<br>for your <em>inbox.</em></h2><p>Occasional travel ideas, thoughtful guides and places worth knowing about.</p></div><form class="newsletter-form" id="newsletterForm"><label for="newsletterEmail">YOUR EMAIL ADDRESS</label><div class="newsletter-input-row"><input id="newsletterEmail" type="email" placeholder="you@example.com" autocomplete="email" required><button type="submit" aria-label="Subscribe to travel newsletter">Join us <span>↗</span></button></div><small>By subscribing, you agree to receive travel inspiration from InfoAll. This demo form does not send or store your email.</small></form></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><div class="footer-brand-col"><a class="brand brand-footer" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M5 28 16 7l6 12 4-7 9 16H5Z" fill="currentColor"/><path d="m12 27 4-7 5 6 4-5 6 6H12Z" fill="#9de0ca"/></svg></span><span class="brand-word">info<span>all</span><small>TRAVEL, WELL FOUND.</small></span></a><p>Thoughtful discovery for journeys that stay with you.</p><a class="footer-email" href="mailto:hello@infoall.online">hello@infoall.online ↗</a></div>
+      <div class="footer-column"><h3>Discover</h3><a href="place.html">Destinations</a><a href="#experiences">Experiences</a><a href="guide.html">Travel guides</a><a href="#stories">Inspiration</a></div>
+      <div class="footer-column"><h3>Travel tools</h3><a href="ai.html">InfoAll AI</a><a href="transport.html">Transport</a><a href="hotel.html">Stays & hotels</a><a href="weather.html">Weather</a></div>
+      <div class="footer-column"><h3>InfoAll</h3><a href="about.html">About us</a><a href="contact.html">Contact</a><a href="help.html">Help centre</a><a href="privacy.html">Privacy</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear">2026</span> InfoAll. All rights reserved.</span><span>Made for curious travellers <b>✳</b></span><button id="backToTop" type="button" aria-label="Back to top">Back to top ↑</button></div>
+  </footer>
+  <a class="floating-ai-button" href="ai.html" aria-label="Open InfoAll AI travel assistant"><span>✳</span><span class="floating-ai-label">Plan with AI</span></a>
+  <div class="toast" id="infoAllToast" role="status" aria-live="polite"></div>
+  <script src="main.js" defer></script>
+</body>
+</html>

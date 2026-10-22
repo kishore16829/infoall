@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Travel news, airline updates, railway news, destinations and travel inspiration from InfoAll.">
+  <title>Travel News — InfoAll</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="news.css">
+  <script src="news.js" defer></script>
+</head>
+<body>
+  <div class="topline"><div class="wrap topline-inner"><span class="live"><i></i> TRAVEL DESK</span><span id="statusText">Ready to explore</span><button id="refreshBtn" class="text-btn" type="button">↻ Refresh</button></div></div>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html" aria-label="InfoAll home"><span class="brand-mark">i</span><span>info<span class="brand-accent">all</span><small>TRAVEL JOURNAL</small></span></a>
+      <form id="searchForm" class="search" role="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search flights, destinations, railways…" aria-label="Search news"><button type="submit">Search</button></form>
+      <div class="header-actions"><button id="savedBtn" class="outline-btn" type="button">♡ Saved <b id="savedCount">0</b></button><button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle dark mode">☾</button></div>
+    </div>
+    <nav class="category-nav" aria-label="News categories"><div class="wrap nav-inner" id="categoryNav">
+      <button class="category active" data-category="all">Top stories</button><button class="category" data-category="india">India</button><button class="category" data-category="world">World</button><button class="category" data-category="destinations">Destinations</button><button class="category" data-category="flights">Flights</button><button class="category" data-category="trains">Trains</button><button class="category" data-category="buses">Road & bus</button><button class="category" data-category="hotels">Hotels</button><button class="category" data-category="adventure">Adventure</button><button class="category" data-category="tips">Travel tips</button>
+    </div></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span></span> THE WORLD, IN MOTION</div><h1>Travel smarter.<br><em>Know more.</em></h1><p>Fresh travel headlines, transport updates and destination inspiration — in one place.</p><div class="hero-meta"><span class="pulse-dot"></span><span id="updatedText">Connecting to the news service…</span></div></div>
+      <div class="hero-art" aria-label="Travel illustration"><div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="plane">✈</div><div class="art-card card-one"><span>✦</span><b>Discover</b><small>somewhere new</small></div><div class="art-card card-two"><span>↗</span><b>Go further</b><small>travel informed</small></div><div class="globe">◎</div></div>
+    </section>
+
+    <section class="quick-stats" aria-label="News feed information"><div><span class="stat-icon">◉</span><span><b id="storyCount">—</b><small>Stories loaded</small></span></div><div><span class="stat-icon">⌕</span><span><b id="currentCategory">Top stories</b><small>Selected feed</small></span></div><div><span class="stat-icon">↻</span><span><b>Live API</b><small>Server-connected feed</small></span></div></section>
+
+    <section class="content-layout">
+      <div class="feed-column">
+        <div class="section-heading"><div><div class="eyebrow">CURATED FOR CURIOUS TRAVELLERS</div><h2 id="feedTitle">Latest travel stories</h2><p id="feedDescription">News from around the travel world.</p></div><label class="sort-control">Sort <select id="sortSelect"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="source">Source A–Z</option></select></label></div>
+        <div id="filterPills" class="filter-pills" hidden><span id="filterText"></span><button id="clearFilters" type="button">Clear ×</button></div>
+        <div id="errorBox" class="message error" hidden><b>We couldn't load the news.</b><p id="errorText">Check the server and API key, then try again.</p><button id="retryBtn" class="primary-btn" type="button">Try again</button></div>
+        <div id="loadingBox" class="loading-state"><span class="spinner"></span><b>Loading travel stories…</b><p>Connecting to the InfoAll news service.</p></div>
+        <div id="emptyBox" class="message" hidden><b>No stories found</b><p>Try another category or a shorter search.</p><button id="resetBtn" class="primary-btn" type="button">Show top stories</button></div>
+        <div id="newsGrid" class="news-grid" aria-live="polite"></div>
+        <div class="load-row"><button id="loadMoreBtn" class="load-more" type="button" hidden>Load more stories <span>↓</span></button></div>
+        <p class="source-note">InfoAll displays summaries and links to the original publishers. Always verify travel advisories, schedules and entry rules with official sources.</p>
+      </div>
+      <aside class="sidebar">
+        <section class="side-card featured-side"><div class="side-label">YOUR NEXT JOURNEY</div><h3>Good trips start with good information.</h3><p>Use the topic shortcuts to explore the stories that matter to your plans.</p><div class="side-decoration">✈</div></section>
+        <section class="side-card"><div class="side-label">TRENDING SEARCHES</div><h3>Explore a topic</h3><div class="topic-list"><button data-topic="India tourism">India tourism <span>↗</span></button><button data-topic="airport flight updates">Flight updates <span>↗</span></button><button data-topic="railway news">Railway news <span>↗</span></button><button data-topic="budget travel">Budget travel <span>↗</span></button><button data-topic="holiday destinations">Holiday destinations <span>↗</span></button><button data-topic="travel safety">Travel safety <span>↗</span></button></div></section>
+        <section class="side-card saved-side"><div class="side-label">YOUR READING LIST</div><h3>Save it for later</h3><p>Bookmark articles you want to revisit. Saved items stay in this browser.</p><button id="viewSavedBtn" class="secondary-btn" type="button">View saved stories →</button></section>
+        <section class="api-health"><span class="health-indicator" id="healthIndicator"></span><div><b id="healthTitle">Checking service</b><small id="healthDetail">Verifying API connection…</small></div><button id="healthRetry" type="button" aria-label="Check API health">↻</button></section>
+      </aside>
+    </section>
+
+    <section id="savedSection" class="saved-section" hidden><div class="section-heading"><div><div class="eyebrow">BOOKMARKS</div><h2>Your saved stories</h2><p>Stored locally in this browser.</p></div><button id="closeSavedBtn" class="secondary-btn" type="button">Back to news ↑</button></div><div id="savedGrid" class="news-grid"></div><p id="savedEmpty" class="empty-saved">No saved stories yet. Use the bookmark icon on any article.</p></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">i</span><span>info<span class="brand-accent">all</span><small>TRAVEL JOURNAL</small></span></a><p>Curiosity is the best travel companion.</p><span>© <span id="year"></span> InfoAll</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
